@@ -1,0 +1,314 @@
+﻿function renderRepairRoomSection(roomId) {
+      const repair = ensureRepairDataStructure(roomId);
+      const metrics = getRepairRoomMetrics(roomId);
+      
+      return `
+        <div class="mb-2 sm:mb-3">
+          <div id="${roomId}_roughHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent" onclick="toggleWhatToDoSubSection('${roomId}_rough')">
+            <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_roughIcon" style="transform: rotate(-90deg)"></i>
+            <span>\u0427\u0435\u0440\u043D\u043E\u0432\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B</span>
+            <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_roughDone"></i>
+          </div>
+          <div id="${roomId}_roughContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2.5" style="display: none;">
+            <div class="repair-work-group">
+              <div id="${roomId}_floorLevelingHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_floorLeveling')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_floorLevelingIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u0412\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435 \u043F\u043E\u043B\u0430</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_floorLevelingDone"></i>
+              </div>
+              <div id="${roomId}_floorLevelingContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'floorLeveling', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_floorLeveling_count" value="${repair.rough?.floorLeveling?.length || 0}" min="0" max="3" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'floorLeveling')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'floorLeveling', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_floorLeveling_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_wallPlasterHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_wallPlaster')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_wallPlasterIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u0428\u0442\u0443\u043A\u0430\u0442\u0443\u0440\u043A\u0430 \u0441\u0442\u0435\u043D</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_wallPlasterDone"></i>
+              </div>
+              <div id="${roomId}_wallPlasterContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wallPlaster', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_wallPlaster_count" value="${repair.rough?.wallPlaster?.length || 0}" min="0" max="5" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'wallPlaster')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wallPlaster', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_wallPlaster_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_wallPuttyHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_wallPutty')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_wallPuttyIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u0428\u043F\u0430\u043A\u043B\u0435\u0432\u043A\u0430 \u0441\u0442\u0435\u043D</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_wallPuttyDone"></i>
+              </div>
+              <div id="${roomId}_wallPuttyContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wallPutty', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_wallPutty_count" value="${repair.rough?.wallPutty?.length || 0}" min="0" max="3" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'wallPutty')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wallPutty', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_wallPutty_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_ceilingPrepHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_ceilingPrep')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_ceilingPrepIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430 \u043F\u043E\u0442\u043E\u043B\u043A\u0430</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_ceilingPrepDone"></i>
+              </div>
+              <div id="${roomId}_ceilingPrepContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ceilingPrep', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_ceilingPrep_count" value="${repair.rough?.ceilingPrep?.length || 0}" min="0" max="2" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'ceilingPrep')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ceilingPrep', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_ceilingPrep_list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-2 sm:mb-3">
+          <div id="${roomId}_engineeringHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent" onclick="toggleWhatToDoSubSection('${roomId}_engineering')">
+            <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_engineeringIcon" style="transform: rotate(-90deg)"></i>
+            <span>\u0418\u043D\u0436\u0435\u043D\u0435\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B</span>
+            <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_engineeringDone"></i>
+          </div>
+          <div id="${roomId}_engineeringContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+            <div class="repair-work-group">
+              <div id="${roomId}_electricalHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_electrical')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_electricalIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u042D\u043B\u0435\u043A\u0442\u0440\u0438\u043A\u0430</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_electricalDone"></i>
+              </div>
+              <div id="${roomId}_electricalContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'electrical', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_electrical_count" value="${repair.engineering?.electrical?.length || 0}" min="0" max="12" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'electrical')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'electrical', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_electrical_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_ventilationHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_ventilation')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_ventilationIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041C\u043E\u043D\u0442\u0430\u0436 \u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0446\u0438\u0438 / \u043A\u043E\u043D\u0434\u0438\u0446\u0438\u043E\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_ventilationDone"></i>
+              </div>
+              <div id="${roomId}_ventilationContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ventilation', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_ventilation_count" value="${repair.engineering?.ventilation?.length || 0}" min="0" max="20" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'ventilation')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ventilation', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_ventilation_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_waterHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_water')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_waterIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u0412\u043E\u0434\u043E\u0441\u043D\u0430\u0431\u0436\u0435\u043D\u0438\u0435</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_waterDone"></i>
+              </div>
+              <div id="${roomId}_waterContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'water', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_water_count" value="${repair.engineering?.water?.length || 0}" min="0" max="10" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'water')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'water', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_water_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_drainageHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_drainage')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_drainageIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041A\u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_drainageDone"></i>
+              </div>
+              <div id="${roomId}_drainageContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'drainage', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_drainage_count" value="${repair.engineering?.drainage?.length || 0}" min="0" max="10" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'drainage')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'drainage', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_drainage_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_heatingHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_heating')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_heatingIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041E\u0442\u043E\u043F\u043B\u0435\u043D\u0438\u0435</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_heatingDone"></i>
+              </div>
+              <div id="${roomId}_heatingContent" class="pl-3 sm:pl-4 mt-1 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'heating', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_heating_count" value="${repair.engineering?.heating?.length || 0}" min="0" max="10" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'heating')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'heating', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_heating_list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-2 sm:mb-3">
+          <div id="${roomId}_finishingHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent" onclick="toggleWhatToDoSubSection('${roomId}_finishing')">
+            <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_finishingIcon" style="transform: rotate(-90deg)"></i>
+            <span>\u0427\u0438\u0441\u0442\u043E\u0432\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B</span>
+            <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_finishingDone"></i>
+          </div>
+          <div id="${roomId}_finishingContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2.5" style="display: none;">
+            <div class="repair-work-group">
+              <div id="${roomId}_floorFinishHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_floorFinish')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_floorFinishIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041F\u043E\u043B</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_floorFinishDone"></i>
+              </div>
+              <div id="${roomId}_floorFinishContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'floor', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_floorFinish_count" value="${repair.finishing?.floor?.length || 0}" min="0" max="8" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'floor')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'floor', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_floorFinish_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_wallFinishHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_wallFinish')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_wallFinishIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u0421\u0442\u0435\u043D\u044B</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_wallFinishDone"></i>
+              </div>
+              <div id="${roomId}_wallFinishContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wall', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_wallFinish_count" value="${repair.finishing?.wall?.length || 0}" min="0" max="12" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'wall')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'wall', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_wallFinish_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_ceilingFinishHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_ceilingFinish')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_ceilingFinishIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041F\u043E\u0442\u043E\u043B\u043E\u043A</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_ceilingFinishDone"></i>
+              </div>
+              <div id="${roomId}_ceilingFinishContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-controls py-2">
+                  <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                  <div class="repair-qty">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ceiling', -1)">\u2212</button>
+                    <input type="number" id="${roomId}_ceilingFinish_count" value="${repair.finishing?.ceiling?.length || 0}" min="0" max="6" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairCategoryInput('${roomId}', 'ceiling')">
+                    <button type="button" class="qty-btn-mini" onclick="updateRepairCategoryCount('${roomId}', 'ceiling', 1)">+</button>
+                  </div>
+                </div>
+                <div id="${roomId}_ceilingFinish_list"></div>
+              </div>
+            </div>
+            <div class="repair-work-group">
+              <div id="${roomId}_openingsMountHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_openingsMount')">
+                <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_openingsMountIcon" style="transform: rotate(-90deg)"></i>
+                <span>\u041C\u043E\u043D\u0442\u0430\u0436 \u043F\u0440\u043E\u0435\u043C\u043E\u0432</span>
+                <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_openingsMountDone"></i>
+              </div>
+              <div id="${roomId}_openingsMountContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                <div class="repair-work-group">
+                  <div id="${roomId}_doorOpeningMountHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_doorOpeningMount')">
+                    <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_doorOpeningMountIcon" style="transform: rotate(-90deg)"></i>
+                    <span>\u0414\u0432\u0435\u0440\u043D\u043E\u0439 \u043F\u0440\u043E\u0435\u043C</span>
+                    <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_doorOpeningMountDone"></i>
+                  </div>
+                  <div id="${roomId}_doorOpeningMountContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                    <div class="repair-controls py-2">
+                      <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                      <div class="repair-qty">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'door', -1)">\u2212</button>
+                        <input type="number" id="${roomId}_doorOpeningMount_count" value="${repair.finishing?.openings?.door?.length || 0}" min="0" max="${getRepairOpeningConfig('door').countMax}" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairOpeningInput('${roomId}', 'door')">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'door', 1)">+</button>
+                      </div>
+                    </div>
+                    <div id="${roomId}_doorOpeningMount_list"></div>
+                  </div>
+                </div>
+                <div class="repair-work-group">
+                  <div id="${roomId}_windowOpeningMountHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_windowOpeningMount')">
+                    <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_windowOpeningMountIcon" style="transform: rotate(-90deg)"></i>
+                    <span>\u041E\u043A\u043E\u043D\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043C</span>
+                    <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_windowOpeningMountDone"></i>
+                  </div>
+                  <div id="${roomId}_windowOpeningMountContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                    <div class="repair-controls py-2">
+                      <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                      <div class="repair-qty">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'window', -1)">\u2212</button>
+                        <input type="number" id="${roomId}_windowOpeningMount_count" value="${repair.finishing?.openings?.window?.length || 0}" min="0" max="${getRepairOpeningConfig('window').countMax}" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairOpeningInput('${roomId}', 'window')">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'window', 1)">+</button>
+                      </div>
+                    </div>
+                    <div id="${roomId}_windowOpeningMount_list"></div>
+                  </div>
+                </div>
+                <div class="repair-work-group">
+                  <div id="${roomId}_balconyOpeningMountHeader" class="flex items-center gap-2 py-1.5 cursor-pointer text-sm text-gray-600 border-2 border-transparent rounded" onclick="toggleWhatToDoSubSection('${roomId}_balconyOpeningMount')">
+                    <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform" id="${roomId}_balconyOpeningMountIcon" style="transform: rotate(-90deg)"></i>
+                    <span>\u0411\u0430\u043B\u043A\u043E\u043D\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043C</span>
+                    <i class="fas fa-check text-green-500 text-xs hidden" id="${roomId}_balconyOpeningMountDone"></i>
+                  </div>
+                  <div id="${roomId}_balconyOpeningMountContent" class="pl-3 sm:pl-4 mt-1.5 sm:mt-2" style="display: none;">
+                    <div class="repair-controls py-2">
+                      <label class="text-sm text-gray-500 w-20 sm:w-24">\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E:</label>
+                      <div class="repair-qty">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'balcony', -1)">\u2212</button>
+                        <input type="number" id="${roomId}_balconyOpeningMount_count" value="${repair.finishing?.openings?.balcony?.length || 0}" min="0" max="${getRepairOpeningConfig('balcony').countMax}" class="repair-count-input px-2 py-1 text-sm border rounded" oninput="handleRepairOpeningInput('${roomId}', 'balcony')">
+                        <button type="button" class="qty-btn-mini" onclick="updateRepairOpeningCount('${roomId}', 'balcony', 1)">+</button>
+                      </div>
+                    </div>
+                    <div id="${roomId}_balconyOpeningMount_list"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    

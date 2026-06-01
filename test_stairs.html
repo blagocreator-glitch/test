@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест лестниц</title>
+    <script src="calc-init.js"></script>
+    <script src="detailed-calc.js"></script>
+</head>
+<body>
+    <h1>Тест синхронизации лестниц</h1>
+    <div id="test-results"></div>
+
+    <script>
+        // Тестируем после загрузки всех скриптов
+        window.addEventListener('load', () => {
+            // Вызываем loadPrices чтобы инициализировать данные
+            if (typeof loadPrices === 'function') {
+                loadPrices();
+                
+                setTimeout(() => {
+                    testStairsIntegration();
+                }, 1000);
+            } else {
+                document.getElementById('test-results').innerHTML = '<p>loadPrices function not found</p>';
+            }
+        });
+
+        function testStairsIntegration() {
+            const results = document.getElementById('test-results');
+
+            // Создаем тестовую комнату
+            const roomId = 'test_room_1';
+            const repair = ensureRepairDataStructure(roomId);
+
+            // Проверяем, что stairs инициализированы
+            const stairsInitialized = Array.isArray(repair.finishing?.stairs);
+            results.innerHTML += `<p>Stairs initialized: ${stairsInitialized}</p>`;
+
+            // Проверяем конфигурацию
+            const config = getRepairCategoryConfig('stairs');
+            results.innerHTML += `<p>Config exists: ${!!config}</p>`;
+            results.innerHTML += `<p>Config title: ${config?.title}</p>`;
+
+            // Проверяем опции
+            const options = repairFinishingOptions?.stairs;
+            results.innerHTML += `<p>Options count: ${options?.length || 0}</p>`;
+
+            // Проверяем функцию checkRepairDone
+            const testData = {
+                finishing: {
+                    stairs: [{ type: 'stair_install_concrete_straight' }]
+                }
+            };
+            const isDone = checkRepairDone(testData, 'stairsMount', roomId);
+            results.innerHTML += `<p>checkRepairDone for stairs: ${isDone}</p>`;
+
+            // Проверяем buildInstallationOptionsFromPriceList
+            try {
+                const priceOptions = buildInstallationOptionsFromPriceList('categories.finishing.subcategories.stairs');
+                results.innerHTML += `<p>Price options loaded: ${priceOptions?.length || 0}</p>`;
+            } catch (e) {
+                results.innerHTML += `<p>Error loading price options: ${e.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

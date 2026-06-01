@@ -1,0 +1,125 @@
+﻿function renderRepairCategoryFields(roomId, category, count = null, changeSource = 'system') {
+      let categoryKey = category;
+      let section = 'rough';
+      if (['electrical', 'ventilation', 'water', 'drainage', 'heating'].includes(category)) {
+        section = 'engineering';
+        categoryKey = category;
+      } else if (['floor', 'wall', 'ceiling'].includes(category)) {
+        section = 'finishing';
+        categoryKey = category;
+      }
+      
+      const domKey = getRepairCategoryDomKey(category);
+      const container = document.getElementById(`${roomId}_${domKey}_list`);
+      if (!container) return;
+      
+      const repair = ensureRepairDataStructure(roomId);
+      const config = getRepairCategoryConfig(category);
+      const metrics = getRepairRoomMetrics(roomId);
+      const defaultArea = getRepairAutoAreaValue(category, metrics, config);
+      const items = repair[section][categoryKey];
+      const previousLength = items.length;
+      const finalCount = count === null ? items.length : count;
+      
+      items.length = finalCount;
+      for (let i = 0; i < finalCount; i++) {
+        if (!items[i]) {
+          if (section === 'engineering') {
+            const measureMeta = getRepairEngineeringMeasureMeta(category, config.defaultType);
+            items[i] = { type: config.defaultType, [measureMeta.field]: 0 };
+          } else if (section === 'finishing') {
+            const measureMeta = getRepairFinishingMeasureMeta(category, config.defaultType);
+            const defaultValue = measureMeta.field === 'area' && defaultArea > 0
+              ? Number(defaultArea.toFixed(2))
+              : 0;
+            items[i] = { type: config.defaultType, [measureMeta.field]: defaultValue, autoFilled: measureMeta.field === 'area' };
+          } else {
+            items[i] = { type: config.defaultType, area: defaultArea > 0 ? Number(defaultArea.toFixed(2)) : 0, autoFilled: true };
+          }
+          if (changeSource === 'manual') {
+            items[i].manualEntry = true;
+          }
+        } else {
+          if (!items[i].type) items[i].type = config.defaultType;
+          if (section === 'rough') {
+            if (items[i].autoFilled !== false) {
+              items[i].area = defaultArea > 0 ? Number(defaultArea.toFixed(2)) : 0;
+              items[i].autoFilled = true;
+            }
+          }
+          if (section === 'finishing') {
+            const measureMeta = getRepairFinishingMeasureMeta(category, items[i].type);
+            if (measureMeta.field === 'area' && items[i].autoFilled !== false) {
+              items[i][measureMeta.field] = defaultArea > 0 ? Number(defaultArea.toFixed(2)) : 0;
+              items[i].autoFilled = true;
+            }
+          } else if (section !== 'engineering' && (items[i].area === undefined || items[i].area === null || items[i].area === '')) {
+            items[i].area = defaultArea > 0 ? Number(defaultArea.toFixed(2)) : 0;
+            items[i].autoFilled = true;
+          }
+        }
+        if (changeSource === 'manual' && i >= previousLength && items[i].autoSource !== 'quest') {
+          items[i].manualEntry = true;
+        }
+      }
+      
+      let optionsGroup = repairRoughOptions[category] || repairEngineeringOptions[category] || repairFinishingOptions[category];
+      if (!optionsGroup) optionsGroup = repairFinishingOptions[category];
+      
+      let html = '';
+      for (let i = 0; i < finalCount; i++) {
+        const item = items[i] || {};
+        const currentType = item.type || config.defaultType;
+        const itemLabel = `${config.itemLabel}_${i + 1}`;
+        const isEngineeringCategory = section === 'engineering';
+        const isFinishingCategory = section === 'finishing';
+        const measureMeta = isEngineeringCategory
+          ? getRepairEngineeringMeasureMeta(category, currentType)
+          : isFinishingCategory
+            ? getRepairFinishingMeasureMeta(category, currentType)
+            : { field: 'area', label: '\u041F\u043B\u043E\u0449\u0430\u0434\u044C (\u043C\u00B2)', step: '0.01', min: '0', unit: '\u043C\u00B2' };
+        const rawValue = isEngineeringCategory
+          ? getRepairEngineeringValue(item, measureMeta)
+          : isFinishingCategory
+            ? getRepairFinishingValue(item, measureMeta)
+            : Number(item.area || 0);
+        const inputValue = isEngineeringCategory || isFinishingCategory
+          ? (measureMeta.field === 'qty' ? String(Math.round(rawValue)) : String(rawValue || 0))
+          : Number(rawValue).toFixed(2);
+        const autoFilledBadge = renderRepairItemStatusBadge(item);
+        const selectOptionsHtml = isEngineeringCategory
+          ? optionsGroup.map(option => `<option value="${option.value}" ${currentType === option.value ? 'selected' : ''}>${option.label}</option>`).join('')
+          : isFinishingCategory
+            ? optionsGroup.map(option => `<option value="${option.value}" ${currentType === option.value ? 'selected' : ''}>${option.label}</option>`).join('')
+            : optionsGroup.map(option => `<option value="${option}" ${currentType === option ? 'selected' : ''}>${option}</option>`).join('');
+        
+        html += `
+          <div class="repair-item">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="text-xs font-medium text-gray-500">${itemLabel}</div>
+              ${autoFilledBadge}
+            </div>
+            <div class="repair-grid gap-2">
+              <div>
+                <label class="text-xs text-gray-500 block mb-1">${config.itemLabel}:</label>
+                <select id="${roomId}_${category}_${i}_type" class="repair-type-select w-full px-2 py-1 text-sm border rounded" onchange="updateRepairItem('${roomId}', '${category}', ${i}, 'type')">
+                  ${selectOptionsHtml}
+                </select>
+              </div>
+              <div class="repair-grid cols-2">
+                <div>
+                  <label class="text-xs text-gray-500 block mb-1">${measureMeta.label}:</label>
+                  <input type="number" id="${roomId}_${category}_${i}_value" value="${inputValue}" min="${measureMeta.min}" step="${measureMeta.step}" class="repair-area-input w-full px-2 py-1 text-sm border rounded" onchange="updateRepairItem('${roomId}', '${category}', ${i}, 'value')">
+                </div>
+              </div>
+            </div>
+          </div>`;
+      }
+      
+      container.innerHTML = html;
+      updateWhatToDoAutofillIndicators();
+      checkRepairDone(roomId, category);
+      const parentSubType = getRepairParentSubType(category);
+      if (parentSubType) checkRepairDone(roomId, parentSubType);
+    }
+    

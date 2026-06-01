@@ -1,0 +1,9 @@
+prices_list water: True
+prices_list drainage: True
+prices_list plumbing: True
+prices_list heating: True
+demolition Water oninput: True, render_end: True
+demolition Drainage oninput: True, render_end: True
+demolition Plumbing oninput: True, render_end: True
+demolition Heating oninput: True, render_end: True
+done

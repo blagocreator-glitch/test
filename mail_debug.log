@@ -1,0 +1,1420 @@
+[2026-03-21 16:03:36] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-21 16:03:36] REQUEST_METHOD
+POST
+--------------------------------------------------
+[2026-03-21 16:03:36] HTTP_ORIGIN
+https://xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-21 16:03:36] HTTP_REFERER
+https://xn--80aaafrq2a8ahk5d.xn--p1acf/
+--------------------------------------------------
+[2026-03-21 16:03:36] REMOTE_ADDR
+78.31.250.16
+--------------------------------------------------
+[2026-03-21 16:03:36] REQUEST_URI
+/send-mail.php
+--------------------------------------------------
+[2026-03-21 16:03:36] DEBUG MODE: CORS headers set to allow all
+--------------------------------------------------
+[2026-03-21 16:03:36] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"тест88","date":"21.03.2026, 16:03"}
+--------------------------------------------------
+[2026-03-21 16:03:36] DECODED JSON
+Array
+(
+    [name] => Дмитрий
+    [phone] => +7 (985) 123-45-77
+    [service] => Косметический ремонт
+    [comment] => тест88
+    [date] => 21.03.2026, 16:03
+)
+
+--------------------------------------------------
+[2026-03-21 16:03:36] CLEANED DATA
+Array
+(
+    [name] => Дмитрий
+    [phone] => +7 (985) 123-45-77
+    [service] => Косметический ремонт
+    [comment] => тест88
+    [date] => 21.03.2026, 16:03
+)
+
+--------------------------------------------------
+[2026-03-21 16:03:36] mail() function exists
+1
+--------------------------------------------------
+[2026-03-21 16:03:36] sendmail_path
+/usr/sbin/sendmail -t -i -f webmaster@xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-21 16:03:36] Attempting to send email...
+--------------------------------------------------
+[2026-03-21 16:03:36] To
+info@вашимастера.рус
+--------------------------------------------------
+[2026-03-21 16:03:36] Subject
+=?UTF-8?B?8J+UlCDQndC+0LLQsNGPINC30LDRj9Cy0LrQsCDRgSDRgdCw0LnRgtCw?=
+--------------------------------------------------
+[2026-03-21 16:03:36] Headers
+MIME-Version: 1.0
+Content-type: text/html; charset=UTF-8
+From: =?UTF-8?B?0KHQsNC50YIg0JLQsNGI0Lgg0JzQsNGB0YLQtdGA0LA=?= <noreply@вашимастера.рус>
+Reply-To: noreply@вашимастера.рус
+
+--------------------------------------------------
+[2026-03-21 16:03:36] mail() result
+FAILED
+--------------------------------------------------
+[2026-03-21 16:03:36] Last error
+--------------------------------------------------
+[2026-03-21 16:03:36] RESPONSE
+Array
+(
+    [success] => 
+    [message] => Failed to send email
+    [debug] => Array
+        (
+            [mail_function_exists] => 1
+            [sendmail_path] => /usr/sbin/sendmail -t -i -f webmaster@xn--80aaafrq2a8ahk5d.xn--p1acf
+            [mail_result] => 
+            [last_error] => 
+            [to] => info@вашимастера.рус
+            [data_received] => Array
+                (
+                    [name] => Дмитрий
+                    [phone] => +7 (985) 123-45-77
+                    [service] => Косметический ремонт
+                )
+
+        )
+
+)
+
+--------------------------------------------------
+[2026-03-21 17:09:51] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-21 17:09:51] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест","date":"21.03.2026, 17:09"}
+--------------------------------------------------
+[2026-03-21 17:09:51] === ПОПЫТКА 1: popen() к sendmail ===
+--------------------------------------------------
+[2026-03-21 17:09:51] popen() with /usr/sbin/sendmail
+Exit code: 1
+--------------------------------------------------
+[2026-03-21 17:09:51] popen() with /usr/lib/sendmail
+Exit code: 1
+--------------------------------------------------
+[2026-03-21 17:09:51] popen() with /usr/local/bin/sendmail
+Exit code: 127
+--------------------------------------------------
+[2026-03-21 17:09:51] popen() with sendmail
+Exit code: 1
+--------------------------------------------------
+[2026-03-21 17:09:51] popen() result
+Array
+(
+    [success] => 
+    [error] => popen() failed for all sendmail paths
+)
+
+--------------------------------------------------
+[2026-03-21 17:09:51] === ПОПЫТКА 2: SMTP через сокеты ===
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-67.sas.yp-c.yandex.net Ok 1774102191-p9R7tbFGr0U0
+
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP: EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+250-mail-nwsmtp-smtp-production-main-67.sas.yp-c.yandex.net
+
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP: AUTH LOGIN
+250-8BITMIME
+
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP: 0JLQkNCoX9Cv0KnQmNCaQHlhbmRleC5ydQ==
+250-PIPELINING
+
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP: 0J/QkNCg0J7Qm9CsX9Cf0KDQmNCb0J7QltCV0J3QmNCv
+250-SIZE 53477376
+
+--------------------------------------------------
+[2026-03-21 17:09:51] SMTP result
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed
+)
+
+--------------------------------------------------
+[2026-03-21 17:09:51] === ПОПЫТКА 3: Внешний API ===
+--------------------------------------------------
+[2026-03-21 17:09:51] FINAL RESULT
+Array
+(
+    [success] => 
+    [message] => Все методы отправки не сработали
+    [attempts] => Array
+        (
+            [popen] => Array
+                (
+                    [success] => 
+                    [error] => popen() failed for all sendmail paths
+                )
+
+            [smtp_yandex] => Array
+                (
+                    [success] => 
+                    [error] => SMTP auth failed
+                )
+
+            [external_api] => Array
+                (
+                    [success] => 
+                    [error] => Не настроен внешний SMTP
+                )
+
+        )
+
+    [instructions] => Для работы почты нужно: 1) Настроить SMTP Яндекса (заполнить данные в коде) или 2) Использовать внешний сервис
+)
+
+--------------------------------------------------
+[2026-03-22 00:34:34] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 00:34:34] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"Тест_10","date":"22.03.2026, 00:34"}
+--------------------------------------------------
+[2026-03-22 00:34:34] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 00:34:34] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 00:34:34] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-99.klg.yp-c.yandex.net Ok 1774128874-YYYfA2JG24Y0
+--------------------------------------------------
+[2026-03-22 00:34:34] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 00:34:34] EHLO response
+250-mail-nwsmtp-smtp-production-main-99.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 00:34:34] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 00:34:34] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 00:34:34] Sent command
+QmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 00:34:34] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 00:34:34] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 00:34:34] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774128874-YYYfA2JG24Y0
+--------------------------------------------------
+[2026-03-22 00:34:34] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774128874-YYYfA2JG24Y0
+)
+
+--------------------------------------------------
+[2026-03-22 00:37:23] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 00:37:23] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"Тест_12","date":"22.03.2026, 00:37"}
+--------------------------------------------------
+[2026-03-22 00:37:23] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 00:37:23] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 00:37:24] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-81.klg.yp-c.yandex.net Ok 1774129044-ObYW7tIGpKo0
+--------------------------------------------------
+[2026-03-22 00:37:24] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 00:37:24] EHLO response
+250-mail-nwsmtp-smtp-production-main-81.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 00:37:24] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 00:37:24] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 00:37:24] Sent command
+QmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 00:37:24] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 00:37:24] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 00:37:24] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774129044-ObYW7tIGpKo0
+--------------------------------------------------
+[2026-03-22 00:37:24] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774129044-ObYW7tIGpKo0
+)
+
+--------------------------------------------------
+[2026-03-22 00:53:27] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 00:53:27] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест_13","date":"22.03.2026, 00:53"}
+--------------------------------------------------
+[2026-03-22 00:53:27] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 00:53:27] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 00:53:27] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-89.sas.yp-c.yandex.net Ok 1774130007-RrYtFTJG7Cg0
+--------------------------------------------------
+[2026-03-22 00:53:27] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 00:53:27] EHLO response
+250-mail-nwsmtp-smtp-production-main-89.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 00:53:27] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 00:53:27] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 00:53:27] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 00:53:27] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 00:53:27] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 00:53:27] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774130007-RrYtFTJG7Cg0
+--------------------------------------------------
+[2026-03-22 00:53:27] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774130007-RrYtFTJG7Cg0
+)
+
+--------------------------------------------------
+[2026-03-22 00:57:02] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 00:57:02] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест_14","date":"22.03.2026, 00:57"}
+--------------------------------------------------
+[2026-03-22 00:57:02] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 00:57:02] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 00:57:02] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-69.iva.yp-c.yandex.net Ok 1774130222-2vYNqp9GpuQ0
+--------------------------------------------------
+[2026-03-22 00:57:02] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 00:57:02] EHLO response
+250-mail-nwsmtp-smtp-production-main-69.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 00:57:02] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 00:57:02] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 00:57:02] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 00:57:02] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 00:57:02] Sent command
+U0pxLTlLZC1yTWUtNmdS
+--------------------------------------------------
+[2026-03-22 00:57:02] Password response
+535 5.7.8 Error: authentication failed: Invalid user or password! 1774130222-2vYNqp9GpuQ0
+--------------------------------------------------
+[2026-03-22 00:57:02] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: Invalid user or password! 1774130222-2vYNqp9GpuQ0
+)
+
+--------------------------------------------------
+[2026-03-22 01:04:34] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:04:34] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"тест15","date":"22.03.2026, 01:04"}
+--------------------------------------------------
+[2026-03-22 01:04:34] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:04:34] Connecting to
+smtp.yandex.com.tr:465
+--------------------------------------------------
+[2026-03-22 01:04:34] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-87.sas.yp-c.yandex.net Ok 1774130674-Y4ZMDdJGw0U0
+--------------------------------------------------
+[2026-03-22 01:04:34] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:04:34] EHLO response
+250-mail-nwsmtp-smtp-production-main-87.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:04:34] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:04:34] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:04:34] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 01:04:34] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:04:34] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:04:34] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774130674-Y4ZMDdJGw0U0
+--------------------------------------------------
+[2026-03-22 01:04:34] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774130674-Y4ZMDdJGw0U0
+)
+
+--------------------------------------------------
+[2026-03-22 01:15:08] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:15:08] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест","date":"22.03.2026, 01:15"}
+--------------------------------------------------
+[2026-03-22 01:15:08] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:15:08] Connecting to
+smtp.yandex.com.tr:465
+--------------------------------------------------
+[2026-03-22 01:15:08] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-77.klg.yp-c.yandex.net Ok 1774131308-8FZuhPJGAOs0
+--------------------------------------------------
+[2026-03-22 01:15:08] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:15:08] EHLO response
+250-mail-nwsmtp-smtp-production-main-77.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:15:08] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:15:08] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:15:08] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 01:15:08] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:15:08] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:15:08] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774131308-8FZuhPJGAOs0
+--------------------------------------------------
+[2026-03-22 01:15:08] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774131308-8FZuhPJGAOs0
+)
+
+--------------------------------------------------
+[2026-03-22 01:33:07] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:33:07] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест_15","date":"22.03.2026, 01:33"}
+--------------------------------------------------
+[2026-03-22 01:33:07] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:33:07] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:33:07] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-85.iva.yp-c.yandex.net Ok 1774132387-7XZlp1HGwqM0
+--------------------------------------------------
+[2026-03-22 01:33:07] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:33:07] EHLO response
+250-mail-nwsmtp-smtp-production-main-85.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:33:07] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:33:07] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:33:07] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 01:33:07] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:33:07] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:33:07] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774132387-7XZlp1HGwqM0
+--------------------------------------------------
+[2026-03-22 01:33:07] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774132387-7XZlp1HGwqM0
+)
+
+--------------------------------------------------
+[2026-03-22 01:39:54] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:39:54] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"тест_17","date":"22.03.2026, 01:39"}
+--------------------------------------------------
+[2026-03-22 01:39:54] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:39:54] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:39:54] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-73.sas.yp-c.yandex.net Ok 1774132794-sdZv52KGBCg0
+--------------------------------------------------
+[2026-03-22 01:39:54] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:39:54] EHLO response
+250-mail-nwsmtp-smtp-production-main-73.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:39:54] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:39:54] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:39:54] Sent command
+YmxhZ29jcmVhdG9y
+--------------------------------------------------
+[2026-03-22 01:39:54] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:39:54] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:39:54] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774132794-sdZv52KGBCg0
+--------------------------------------------------
+[2026-03-22 01:39:54] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774132794-sdZv52KGBCg0
+)
+
+--------------------------------------------------
+[2026-03-22 01:46:55] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:46:55] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"тест","date":"22.03.2026, 01:46"}
+--------------------------------------------------
+[2026-03-22 01:46:55] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:46:55] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:46:55] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-95.iva.yp-c.yandex.net Ok 1774133215-tkZ06CHG1uQ0
+--------------------------------------------------
+[2026-03-22 01:46:55] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:46:55] EHLO response
+250-mail-nwsmtp-smtp-production-main-95.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:46:55] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:46:55] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:46:56] Sent command
+YmxhZ29jcmVhdG9y
+--------------------------------------------------
+[2026-03-22 01:46:56] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:46:56] Sent command
+eWx0dm9laHJrZHBtdnRxbg==
+--------------------------------------------------
+[2026-03-22 01:46:56] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133216-tkZ06CHG1uQ0
+--------------------------------------------------
+[2026-03-22 01:46:56] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133216-tkZ06CHG1uQ0
+)
+
+--------------------------------------------------
+[2026-03-22 01:47:42] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:47:42] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"Дмитрий","date":"22.03.2026, 01:47"}
+--------------------------------------------------
+[2026-03-22 01:47:42] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:47:42] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:47:42] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-98.sas.yp-c.yandex.net Ok 1774133262-glZGN2KG6Ko0
+--------------------------------------------------
+[2026-03-22 01:47:42] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:47:42] EHLO response
+250-mail-nwsmtp-smtp-production-main-98.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:47:42] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:47:42] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:47:42] Sent command
+YmxhZ29jcmVhdG9y
+--------------------------------------------------
+[2026-03-22 01:47:42] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:47:42] Sent command
+eWx0dm9laHJrZHBtdnRxbg==
+--------------------------------------------------
+[2026-03-22 01:47:42] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133262-glZGN2KG6Ko0
+--------------------------------------------------
+[2026-03-22 01:47:42] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133262-glZGN2KG6Ko0
+)
+
+--------------------------------------------------
+[2026-03-22 01:49:41] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:49:41] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"123","date":"22.03.2026, 01:49"}
+--------------------------------------------------
+[2026-03-22 01:49:41] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:49:41] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:49:41] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-92.vla.yp-c.yandex.net Ok 1774133381-fnZHeSLG60U0
+--------------------------------------------------
+[2026-03-22 01:49:41] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:49:41] EHLO response
+250-mail-nwsmtp-smtp-production-main-92.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:49:41] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:49:42] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:49:42] Sent command
+YmxhZ29jcmVhdG9y
+--------------------------------------------------
+[2026-03-22 01:49:42] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:49:42] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:49:42] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133382-fnZHeSLG60U0
+--------------------------------------------------
+[2026-03-22 01:49:42] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133382-fnZHeSLG60U0
+)
+
+--------------------------------------------------
+[2026-03-22 01:51:27] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 01:51:27] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"1234","date":"22.03.2026, 01:51"}
+--------------------------------------------------
+[2026-03-22 01:51:27] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 01:51:27] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 01:51:27] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-52.klg.yp-c.yandex.net Ok 1774133487-RpZMX1KHgOs0
+--------------------------------------------------
+[2026-03-22 01:51:27] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 01:51:27] EHLO response
+250-mail-nwsmtp-smtp-production-main-52.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 01:51:27] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 01:51:27] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 01:51:27] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 01:51:27] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 01:51:27] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 01:51:27] Password response
+535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133487-RpZMX1KHgOs0
+--------------------------------------------------
+[2026-03-22 01:51:27] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => SMTP auth failed: 535 5.7.8 Error: authentication failed: This user does not have access rights to this service 1774133487-RpZMX1KHgOs0
+)
+
+--------------------------------------------------
+[2026-03-22 02:01:22] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:01:22] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"test","date":"22.03.2026, 02:01"}
+--------------------------------------------------
+[2026-03-22 02:01:22] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:01:22] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:01:22] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-77.klg.yp-c.yandex.net Ok 1774134082-M1a77oJGIuQ0
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:01:22] EHLO response
+250-mail-nwsmtp-smtp-production-main-77.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:01:22] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:01:22] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:01:22] Password response
+235 2.7.0 Authentication successful. 1774134082-M1a77oJGIuQ0
+--------------------------------------------------
+[2026-03-22 02:01:22] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:01:22] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774134082-M1a77oJGIuQ0-DjROuSIH
+--------------------------------------------------
+[2026-03-22 02:01:22] Sent command
+RCPT TO: <info@вашимастера.рус>
+--------------------------------------------------
+[2026-03-22 02:01:22] RCPT TO response
+501 5.1.3 Bad recipient address syntax 1774134082-M1a77oJGIuQ0-DjROuSIH
+--------------------------------------------------
+[2026-03-22 02:01:22] FINAL RESULT
+Array
+(
+    [success] => 
+    [error] => RCPT TO failed: 501 5.1.3 Bad recipient address syntax 1774134082-M1a77oJGIuQ0-DjROuSIH
+)
+
+--------------------------------------------------
+[2026-03-22 02:04:42] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:04:42] RAW INPUT
+{"name":"Дмитрий ","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"тест_18","date":"22.03.2026, 02:04"}
+--------------------------------------------------
+[2026-03-22 02:04:42] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:04:42] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:04:42] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-81.vla.yp-c.yandex.net Ok 1774134282-g4amMqLGbCg0
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:04:42] EHLO response
+250-mail-nwsmtp-smtp-production-main-81.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:04:42] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:04:42] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:04:42] Password response
+235 2.7.0 Authentication successful. 1774134282-g4amMqLGbCg0
+--------------------------------------------------
+[2026-03-22 02:04:42] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:04:42] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774134282-g4amMqLGbCg0-anuZebJZ
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:04:42] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774134282-g4amMqLGbCg0-anuZebJZ
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 02:04:42] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 02:04:42] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-81.vla.yp-c.yandex.net 1774134282-g4amMqLGbCg0-anuZebJZ
+--------------------------------------------------
+[2026-03-22 02:04:42] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 02:04:42] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 02:08:39] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:08:39] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-45","service":"Косметический ремонт","comment":"тест_19","date":"22.03.2026, 02:08"}
+--------------------------------------------------
+[2026-03-22 02:08:39] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:08:39] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:08:39] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net Ok 1774134519-d8aY8cHG6qM0
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:08:39] EHLO response
+250-mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:08:39] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:08:39] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:08:39] Password response
+235 2.7.0 Authentication successful. 1774134519-d8aY8cHG6qM0
+--------------------------------------------------
+[2026-03-22 02:08:39] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:08:39] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774134519-d8aY8cHG6qM0-Z2eIbx8v
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:08:39] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774134519-d8aY8cHG6qM0-Z2eIbx8v
+--------------------------------------------------
+[2026-03-22 02:08:39] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 02:08:39] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 02:08:41] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net 1774134521-d8aY8cHG6qM0-Z2eIbx8v
+--------------------------------------------------
+[2026-03-22 02:08:41] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 02:08:41] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 02:39:36] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:39:36] RAW INPUT
+{"name":"Вероника","phone":"+7 (985) 123-45-67","service":"Косметический ремонт","comment":"тест_11","date":"22.03.2026, 02:39"}
+--------------------------------------------------
+[2026-03-22 02:39:36] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:39:36] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:39:36] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-92.iva.yp-c.yandex.net Ok 1774136376-adaLsYHGvSw0
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:39:36] EHLO response
+250-mail-nwsmtp-smtp-production-main-92.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:39:36] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:39:36] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:39:36] Password response
+235 2.7.0 Authentication successful. 1774136376-adaLsYHGvSw0
+--------------------------------------------------
+[2026-03-22 02:39:36] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:39:36] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774136376-adaLsYHGvSw0-a3c4EV3Z
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:39:36] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774136376-adaLsYHGvSw0-a3c4EV3Z
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 02:39:36] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 02:39:36] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-92.iva.yp-c.yandex.net 1774136376-adaLsYHGvSw0-a3c4EV3Z
+--------------------------------------------------
+[2026-03-22 02:39:36] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 02:39:36] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 02:56:43] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:56:43] RAW INPUT
+{"name":"Вероника_1","phone":"+7 (985) 123-45-77","service":"Дизайн интерьера","comment":"Тест_22","date":"22.03.2026, 02:56"}
+--------------------------------------------------
+[2026-03-22 02:56:43] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:56:43] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:56:43] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-63.sas.yp-c.yandex.net Ok 1774137403-huaOamKGtqM0
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:56:43] EHLO response
+250-mail-nwsmtp-smtp-production-main-63.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:56:43] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:56:43] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:56:43] Password response
+235 2.7.0 Authentication successful. 1774137403-huaOamKGtqM0
+--------------------------------------------------
+[2026-03-22 02:56:43] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:56:43] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774137403-huaOamKGtqM0-eDriPmyk
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:56:43] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774137403-huaOamKGtqM0-eDriPmyk
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 02:56:43] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 02:56:43] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-63.sas.yp-c.yandex.net 1774137403-huaOamKGtqM0-eDriPmyk
+--------------------------------------------------
+[2026-03-22 02:56:43] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 02:56:43] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 02:57:56] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 02:57:56] RAW INPUT
+{"name":"Вероника_2","phone":"+7 (985) 123-45-77","service":"Дизайн интерьера","comment":"Тест_33","date":"22.03.2026, 02:57"}
+--------------------------------------------------
+[2026-03-22 02:57:56] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 02:57:56] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 02:57:56] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-95.vla.yp-c.yandex.net Ok 1774137476-uvaqb5MGJmI0
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 02:57:56] EHLO response
+250-mail-nwsmtp-smtp-production-main-95.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 02:57:56] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 02:57:56] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 02:57:56] Password response
+235 2.7.0 Authentication successful. 1774137476-uvaqb5MGJmI0
+--------------------------------------------------
+[2026-03-22 02:57:56] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:57:56] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774137476-uvaqb5MGJmI0-BUItwMvm
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 02:57:56] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774137476-uvaqb5MGJmI0-BUItwMvm
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 02:57:56] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 02:57:56] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-95.vla.yp-c.yandex.net 1774137476-uvaqb5MGJmI0-BUItwMvm
+--------------------------------------------------
+[2026-03-22 02:57:56] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 02:57:56] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 03:02:31] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 03:02:31] RAW INPUT
+{"name":"Вероника_3","phone":"+7 (985) 123-45-77","service":"Премиальный ремонт","comment":"Тест_44","date":"22.03.2026, 03:02"}
+--------------------------------------------------
+[2026-03-22 03:02:31] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 03:02:31] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 03:02:31] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-69.iva.yp-c.yandex.net Ok 1774137751-V2E3UmAG8W20
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 03:02:31] EHLO response
+250-mail-nwsmtp-smtp-production-main-69.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 03:02:31] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 03:02:31] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 03:02:31] Password response
+235 2.7.0 Authentication successful. 1774137751-V2E3UmAG8W20
+--------------------------------------------------
+[2026-03-22 03:02:31] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 03:02:31] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774137751-V2E3UmAG8W20-IHbL5wbD
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 03:02:31] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774137751-V2E3UmAG8W20-IHbL5wbD
+--------------------------------------------------
+[2026-03-22 03:02:31] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 03:02:31] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 03:02:32] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-69.iva.yp-c.yandex.net 1774137752-V2E3UmAG8W20-IHbL5wbD
+--------------------------------------------------
+[2026-03-22 03:02:32] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 03:02:32] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------
+[2026-03-22 03:03:00] === НОВЫЙ ЗАПРОС ===
+--------------------------------------------------
+[2026-03-22 03:03:00] RAW INPUT
+{"name":"Вероника_5","phone":"+7 (985) 123-45-77","service":"Капитальный ремонт","comment":"Тест_55","date":"22.03.2026, 03:03"}
+--------------------------------------------------
+[2026-03-22 03:03:00] === SMTP ЯНДЕКС ===
+--------------------------------------------------
+[2026-03-22 03:03:00] Connecting to
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 03:03:00] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-73.sas.yp-c.yandex.net Ok 1774137780-03ENviKGKW20
+--------------------------------------------------
+[2026-03-22 03:03:00] Sent command
+EHLO xn--80aaafrq2a8ahk5d.xn--p1acf
+--------------------------------------------------
+[2026-03-22 03:03:00] EHLO response
+250-mail-nwsmtp-smtp-production-main-73.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 03:03:00] Sent command
+AUTH LOGIN
+--------------------------------------------------
+[2026-03-22 03:03:01] AUTH LOGIN response
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+YmxhZ29jcmVhdG9yQHlhbmRleC5ydQ==
+--------------------------------------------------
+[2026-03-22 03:03:01] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+eWV6enZ1YWRodXJqeGdsdA==
+--------------------------------------------------
+[2026-03-22 03:03:01] Password response
+235 2.7.0 Authentication successful. 1774137781-03ENviKGKW20
+--------------------------------------------------
+[2026-03-22 03:03:01] SMTP auth successful
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+MAIL FROM: <blagocreator@yandex.ru>
+--------------------------------------------------
+[2026-03-22 03:03:01] MAIL FROM response
+250 2.1.0 <blagocreator@yandex.ru> ok 1774137781-03ENviKGKW20-xyjSqsJu
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+RCPT TO: <dmitry.fedishin@yandex.ru>
+--------------------------------------------------
+[2026-03-22 03:03:01] RCPT TO response
+250 2.1.5 <dmitry.fedishin@yandex.ru> recipient ok 1774137781-03ENviKGKW20-xyjSqsJu
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+DATA
+--------------------------------------------------
+[2026-03-22 03:03:01] DATA response
+354 Start mail input, end with <CRLF>.<CRLF>
+--------------------------------------------------
+[2026-03-22 03:03:01] DATA sent response
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-73.sas.yp-c.yandex.net 1774137781-03ENviKGKW20-xyjSqsJu
+--------------------------------------------------
+[2026-03-22 03:03:01] Sent command
+QUIT
+--------------------------------------------------
+[2026-03-22 03:03:01] FINAL RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent via Yandex SMTP
+)
+
+--------------------------------------------------

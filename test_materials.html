@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест Прайс-листа Материалов</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .status {
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      background: #e8f4f8;
+      border-left: 4px solid #0ea5e9;
+    }
+    .info {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>🧪 Тест Прайс-листа Материалов</h1>
+    
+    <div class="status">
+      <strong>Статус загрузки:</strong>
+      <div class="info" id="status">Загружаю компоненты...</div>
+    </div>
+
+    <div id="materialsPriceListSettings"></div>
+    <div id="materialsPriceListContent" class="mt-4"></div>
+  </div>
+
+  <script>
+    // Simple test for materials price list
+    console.log('=== Materials Price List Test ===');
+    
+    // Test 1: Check if prices_materials.json exists
+    fetch('prices_materials.json?v=materials-work-link-20260508')
+      .then(response => {
+        if (!response.ok) throw new Error('File not found');
+        return response.json();
+      })
+      .then(data => {
+        console.log('✅ prices_materials.json loaded successfully');
+        console.log('   - Version:', data.meta.version);
+        console.log('   - Currency:', data.meta.currency);
+        
+        const demolitionCount = Object.keys(data.materials.demolition.categories || {}).length;
+        const installCount = Object.keys(data.materials.installation.categories || {}).length;
+        const recipesCount = Object.keys(data.workMaterialRecipes || {}).length;
+        const catalogCount = Object.keys(data.materialCatalog || {}).length;
+        console.log(`✅ Found ${demolitionCount} demolition categories and ${installCount} installation categories`);
+        console.log(`✅ Work-linked recipes: ${recipesCount}, material catalog: ${catalogCount}`);
+        
+        // Update status
+        document.getElementById('status').innerHTML = `
+          ✅ Файл успешно загружен<br>
+          Найдено категорий: ${demolitionCount + installCount}<br>
+          Связано работ с материалами: ${recipesCount}<br>
+          Материалов в каталоге: ${catalogCount}<br>
+          Города: ${Object.keys(data.countries.RU.cities).join(', ')}<br>
+          Рынки: ${Object.keys(data.markets).join(', ')}
+        `;
+      })
+      .catch(error => {
+        console.error('❌ Error loading prices_materials.json:', error);
+        document.getElementById('status').innerHTML = '❌ Ошибка загрузки файла: ' + error.message;
+      });
+  </script>
+
+  <script src="prices_materials.js?v=materials-work-link-20260508"></script>
+</body>
+</html>
