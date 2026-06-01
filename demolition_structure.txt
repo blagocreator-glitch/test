@@ -1,0 +1,282 @@
+СТРУКТУРА РАЗДЕЛА "Демонтажные работы"
+
+=================================================================
+ОСНОВНАЯ СТРУКТУРА HTML
+=================================================================
+
+Раздел "Демонтажные работы" (строка 2072):
+- Обернут в div с классом bg-gray-50 dark:bg-gray-800 rounded-lg
+- Заголовок с иконкой toggle (стрелка), иконкой fa-dumpster и текстом "Демонтажные работы"
+- При клике вызывается функция toggleWhatToDoSubSection('demolitionWorks')
+- Контент внутри id="demolitionWorksContent" (скрыт по умолчанию)
+
+Внутри два подраздела:
+
+1. "Жилое помещение" (строка 2081):
+   - Обернут в div bg-white dark:bg-gray-700 rounded-lg
+   - Заголовок с иконкой toggle, иконкой fa-home и текстом "Жилое помещение"
+   - При клике toggleWhatToDoSubSection('demolitionLiving')
+   - Контент: пустой div id="demolitionLivingRooms"
+
+2. "Нежилое помещение" (строка 2092):
+   - Аналогичная структура
+   - id="demolitionNonlivingRooms"
+
+=================================================================
+КОМНАТЫ (ROOM DATA)
+=================================================================
+
+Для каждого типа помещения (жилое/нежилое) создаются комнаты.
+Формат ID комнаты: demo_living_0, demo_living_1, ... (для жилых)
+                 demo_nonliving_0, demo_nonliving_1, ... (для нежилых)
+
+HTML комнаты (строка ~5128):
+- div с id="${roomId}Room" (например: demo_living_0Room)
+- Заголовок: иконка + название комнаты + площадь + кнопка удаления
+- Контент внутри id="${roomId}Content"
+
+=================================================================
+СЕКЦИИ ВНУТРИ КОМНАТЫ
+=================================================================
+
+Каждая комната содержит 3 секции:
+
+1. Демонтаж внутренних конструкций (строка ~5139):
+   - ID заголовка: ${roomId}_constructHeader
+   - ID контента: ${roomId}_constructContent
+   - Иконка галки: ${roomId}_constructDone
+   - Внутри содержит:
+     * Демонтаж перегородок (partitionsSection)
+       - ID section: ${roomId}_partitionsSection
+       - ID заголовка: ${roomId}_partitionsHeader
+       - ID контента: ${roomId}_partitionsContent
+       - Количество (qty), список перегородок
+     * Демонтаж проёмов (openingsSection)
+       - ID section: ${roomId}_openingsSection
+       - Внутри: дверной/оконный/балконный проем
+
+2. Демонтаж инженерных систем (строка ~5160):
+   - ID: ${roomId}_engineeringHeader
+   - Контент: ${roomId}_engineeringContent
+   - Внутри: электрика, водоснабжение, канализация, сантехника, отопление
+
+3. Демонтаж отделочных материалов (строка ~5190):
+   - ID: ${roomId}_finishingHeader
+   - Контент: ${roomId}_finishingContent
+   - Внутри три подраз��ела:
+     * Снятие напольных покрытий (floor)
+     * Удаление стеновых покрытий (wall)
+     * Демонтаж потолочных конструкций (ceiling)
+
+=================================================================
+ФУНКЦИИ JAVASCRIPT
+=================================================================
+
+ toggleWhatToDoSubSection(id):
+   - Переключает видимость контента (display: none/block)
+   - Поворачивает иконку chevron
+   - Сохраняет состояние в openWhatToDoSubSections Set
+   - Вызывает checkDemolitionDone() для измененных подсекций
+
+ updatePartitionCount(roomId, delta):
+   - Изменяет количество перегородок (+/-)
+   - Вызывает renderPartitionFields()
+   - Вызывает checkDemolitionDone(roomId, 'partitions')
+   - Вызывает checkDemolitionDone(roomId, '_construct')
+
+ renderPartitionFields(roomId, count):
+   - Рендерит поля для перегородок
+   - Для каждой: материал, площадь, опционально демонтируемая площадь
+
+ updatePartitionData(roomId, index, field, value):
+   - Сохраняет данные в roomData.demolitionData[roomId].partitions[index]
+   - Вызывает checkDemolitionDone(roomId, 'partitions')
+   - Вызывает checkDemolitionDone(roomId, '_construct')
+
+ handlePartitionInput(roomId):
+   - Обрабатывает ввод количества
+   - При 0 очищает данные partitions
+   - Вызывает checkDemolitionDone()
+
+ checkDemolitionDone(roomId, subType):
+   - Проверяет заполненность данных
+   - subType: 'partitions', '_construct', 'finishing', 'electrical', 'water' и т.д.
+   - Показывает/скрывает галку (check icon)
+   - Добавляет/убирает зеленую рамку (border-green-500)
+
+Логика отображения галки:
+   - ПОКАЗЫВАТЬ: 'finishing', '_construct'
+   - НЕ ПОКАЗЫВАТЬ: 'partitions', 'finishing_floor', 'finishing_wall', 'finishing_ceiling'
+
+Логика зеленой рамки (border-green-500):
+   - ДЛЯ: 'partitions' -> ${roomId}_partitionsSection
+   - 'finishing_floor/wall/ceiling' -> ${roomId}_finishing_floor/wall/ceilingHeader
+   - '_construct' -> ${roomId}_constructHeader
+
+=================================================================
+СТРУКТУРА ДАННЫХ (ROOM DATA)
+=================================================================
+
+roomData = {
+  demolitionData: {
+    [roomId]: {
+      partitions: [
+        { material: 'Пеноблок', area: 5.2, demolishedArea: 5.2 },
+        { material: 'Гипсокартон', area: 3.1, demolishedArea: 3.1 }
+      ],
+      doorOpenings: [{ length: 0.9, width: 0.08, material: 'Брус' }],
+      windowOpenings: [...],
+      balconyOpenings: [...],
+      electrical: [{ type: 'Розетка', qty: 5 }],
+      water: [...],
+      drainage: [...],
+      plumbing: [...],
+      heating: [...],
+      finishing: {
+        floor: [{ type: 'Ламинат', area: 15.0 }],
+        wall: [{ type: 'Обои', area: 32.5 }],
+        ceiling: [{ type: 'Натяжной потолок', area: 15.0 }]
+      }
+    }
+  }
+}
+
+=================================================================
+ОПЦИИ ДЛЯ ПЕРЕГОРОДОК
+=================================================================
+
+Материалы перегородок:
+- Пеноблок
+- Газобетон
+- Гипсокартон
+- Кирпич
+- Пазогребневая плита
+- Другое
+
+=================================================================
+ОПЦИИ ДЛЯ ИНЖЕНЕРНЫХ СИСТЕМ
+=================================================================
+
+Электрика:
+- Розетка
+- Выключатель
+- Светильник
+- Электрический щит
+- Проводка
+
+Водоснабжение:
+- Водопроводные трубы
+- Запорная арматура
+- Фильтры
+- Счётчики
+
+Канализация:
+- Канализационные трубы
+- Ревизии
+
+Сантехника:
+- Унитаз
+- Раковина
+- Ванна/душ
+- Стиральная машина
+
+Отопление:
+- Радиатор
+- Конвектор
+- Тёплый пол
+- Трубы отопления
+
+=================================================================
+ОПЦИИ ДЛЯ ОТДЕЛОЧНЫХ МАТЕРИАЛОВ
+=================================================================
+
+Пол:
+- Ламинат
+- Линолеум
+- Паркет
+- Керамическая плитка
+- Ковролин
+- Армированная цементно-песчаная стяжка от 5 см
+
+Стены:
+- Обои
+- Краска
+- Гипсовая штукатурка
+- Керамическая плитка
+- Пластиковые панели
+
+Потолок:
+- Натяжной потолок
+- Подвесные потолки
+- Покраска
+- Обои
+
+=================================================================
+ID ЭЛЕМЕНТОВ (НА ПРИМЕРЕ demo_living_0)
+=================================================================
+
+Комната:
+- demo_living_0Room (контейнер комнаты)
+- demo_living_0Content (контент)
+
+Демонтаж конструкций:
+- demo_living_0_constructHeader
+- demo_living_0_constructContent
+- demo_living_0_constructDone (галка)
+- demo_living_0_partitionsSection
+- demo_living_0_partitionsHeader
+- demo_living_0_partitionsContent
+- demo_living_0_partitionsDone (галка - скрыта)
+- demo_living_0_partitionCount (количество)
+- demo_living_0_partitionsList (список)
+- demo_living_0_openingsSection
+- demo_living_0_openingsHeader
+- demo_living_0_doorCount
+- demo_living_0_windowCount
+- demo_living_0_balconyCount
+
+Инженерные системы:
+- demo_living_0_engineeringHeader
+- demo_living_0_engineeringContent
+- demo_living_0_electricalHeader
+- demo_living_0_waterHeader
+- demo_living_0_drainageHeader
+- demo_living_0_plumbingHeader
+- demo_living_0_heatingHeader
+
+Отделочные материалы:
+- demo_living_0_finishingHeader
+- demo_living_0_finishingContent
+- demo_living_0_finishingDone (галка)
+- demo_living_0_finishing_floorHeader
+- demo_living_0_finishing_wallHeader
+- demo_living_0_finishing_ceilingHeader
+
+=================================================================
+CSS КЛАССЫ
+=================================================================
+
+Оформление:
+- bg-gray-50 dark:bg-gray-800 (фон секций)
+- bg-white dark:bg-gray-700 ( фон вложенных блоков)
+- border-2 border-green-500 rounded (зеленая рамка при заполнении)
+- hidden (скрыть элемент)
+- text-brand-500 (основной цвет иконок)
+
+=================================================================
+ЦЕНЫ И РАСЧЕТ (В functions.js)
+=================================================================
+
+getDemolitionRoomMetrics(roomId):
+   - Возвращает площади: wallsArea, floorArea, ceilingArea
+
+getDemolitionPartitionsPrice(item):
+   - price = материаЛ * площадь * 0.7 (демонтаж)
+   - price = материал * площадь * 0.5 (упаковка)
+   - price = площадь * 0.7 (погрузка)
+
+getDemolitionOpeningsPrice(item):
+   - price = материал * размер * коэффициент
+
+getDemolitionFinishingPrice(item):
+   - price = тип * площадь * к��эффициент

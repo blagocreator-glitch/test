@@ -1,0 +1,2166 @@
+﻿<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Смета Про от Ваши мастера - онлайн-платформа профессионального расчета ремонта, работ и материалов за несколько минут.">
+  <meta name="keywords" content="ремонт квартир, отделка квартир, ремонт под ключ, ремонт в Москве, дизайн интерьера, ремонт квартир недорого, ремонт под ключ цена, косметический ремонт, капитальный ремонт">
+  <meta name="author" content="ООО Система софт 360">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noai, noimageai">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="GPTBot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="CCBot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="language" content="Russian">
+  <meta name="geo.region" content="RU-MOW">
+  <meta name="geo.placename" content="Москва">
+  <meta name="geo.position" content="55.7558;37.6173">
+  <meta name="ICBM" content="55.7558, 37.6173">
+  <link rel="canonical" href="https://вашимастера.рус/">
+  
+  <!-- Open Graph Enhanced -->
+  <meta property="og:title" content="Смета Про ВМ - онлайн-калькулятор ремонта">
+  <meta property="og:description" content="Точная смета по работам и материалам за несколько минут без звонков, ожиданий и Excel.">
+  <meta property="og:image" content="https://вашимастера.рус/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://вашимастера.рус/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Ваши мастера">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Смета Про ВМ - онлайн-калькулятор ремонта">
+  <meta name="twitter:description" content="Профессиональный расчет работ и материалов за несколько минут.">
+  <meta name="twitter:image" content="https://вашимастера.рус/images/og-image.jpg">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#f59e0b">
+  <meta name="color-scheme" content="light dark">
+  <meta name="msapplication-TileColor" content="#f59e0b">
+  <link rel="icon" type="image/svg+xml" href="smeta-pro-favicon.svg?v=20260527">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>Смета Про ВМ - онлайн-калькулятор ремонта</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              900: '#78350f',
+            },
+            dark: {
+              bg: '#0f172a',
+              surface: '#1e293b',
+              border: '#334155'
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'fade-in': 'fadeIn 0.5s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    try {
+      document.documentElement.classList.toggle('dark', localStorage.getItem('vmTheme') === 'dark');
+      document.documentElement.classList.toggle('vision-accessibility', localStorage.getItem('vmVisionMode') === 'on');
+    } catch (error) {}
+  </script>
+  
+  
+  
+  <link rel="stylesheet" href="styles.css?v=room-editor-ceiling-final-20260601">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://вашимастера.рус/#organization",
+   "name": "Ваши мастера",
+   "alternateName": "ООО Система софт 360",
+   "url": "https://вашимастера.рус/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://вашимастера.рус/logo.png",
+    "width": 512,
+    "height": 512
+   },
+   "description": "Профессиональный ремонт квартир под ключ в Москве и области. Более 250 выполненных проектов. Гарантия до 3 лет.",
+   "foundingDate": "2015",
+   "sameAs": [
+    "https://wa.me/79851234532",
+    "https://t.me/vashimastera"
+   ]
+  },
+  {
+   "@type": "LocalBusiness",
+   "@id": "https://вашимастера.рус/#localbusiness",
+   "name": "Ваши мастера - Ремонт квартир",
+   "description": "Ремонт квартир под ключ в Москве от 20 000 ₽/м². Косметический, капитальный и премиальный ремонт.",
+   "url": "https://вашимастера.рус/",
+   "telephone": "+7-985-123-45-32",
+   "email": "info@вашимастера.рус",
+   "priceRange": "₽₽",
+   "areaServed": {
+    "@type": "City",
+    "name": "Москва",
+    "containedInPlace": {
+     "@type": "Country",
+     "name": "Россия"
+    }
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "корпус 829",
+    "addressLocality": "Зеленоград",
+    "addressRegion": "Москва",
+    "postalCode": "124683",
+    "addressCountry": "RU"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "55.9872",
+    "longitude": "37.1984"
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+     "opens": "09:00",
+     "closes": "20:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": "Saturday",
+     "opens": "10:00",
+     "closes": "18:00"
+    }
+   ],
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+   },
+"hasOfferCatalog": {
+     "@type": "OfferCatalog",
+     "name": "Услуги ремонта",
+     "itemListElement": [
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Ремонт для аренды",
+        "description": "Минимальный ремонт для сдачи в аренду"
+       },
+       "price": "25000",
+       "priceCurrency": "RUB",
+       "unitText": "м²"
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Ремонт Комфорт",
+        "description": "Оптимальное соотношение цены и качества"
+       },
+       "price": "40000",
+       "priceCurrency": "RUB",
+       "unitText": "м²"
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Ремонт Бизнес",
+        "description": "Доступный вариант качественной отделки"
+       },
+       "price": "55000",
+       "priceCurrency": "RUB",
+       "unitText": "м²"
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Премиальный ремонт",
+        "description": "Отделка материалами высшего качества"
+       },
+       "price": "85000",
+       "priceCurrency": "RUB",
+       "unitText": "м²"
+      }
+     ]
+    }
+   }
+  ]
+ }
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Главная",
+   "item": "https://вашимастера.рус/"
+  }
+ ]
+}
+  </script>
+  <style>
+    body.smeta-pro-page #detailedCalc {
+      display: block !important;
+      min-height: 100vh;
+      padding-top: 6rem;
+      padding-bottom: 4rem;
+    }
+
+    body.smeta-pro-page #main,
+    body.smeta-pro-page #advantages,
+    body.smeta-pro-page #services,
+    body.smeta-pro-page #calculator,
+    body.smeta-pro-page #trustIndicators,
+    body.smeta-pro-page [aria-labelledby="why-choose-title"],
+    body.smeta-pro-page #portfolio,
+    body.smeta-pro-page #process,
+    body.smeta-pro-page #reviews,
+    body.smeta-pro-page #about,
+    body.smeta-pro-page #faq,
+    body.smeta-pro-page #cta,
+    body.smeta-pro-page #bottomNav,
+    body.smeta-pro-page #stickyCTA {
+      display: none !important;
+    }
+  </style>
+
+
+</head>
+<body class="antialiased overflow-x-hidden smeta-pro-page">
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="fixed inset-0 bg-slate-900 z-50 flex items-center justify-center transition-opacity duration-500">
+    <div class="text-center">
+      <div class="w-16 h-16 border-4 border-brand-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <div class="text-white text-lg font-medium">Загрузка...</div>
+    </div>
+  </div>
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-500 text-white px-4 py-2 rounded-lg z-50">
+    Перейти к содержимому
+  </a>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 glass" role="navigation">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-amber-100 via-amber-300 to-brand-600 rounded-xl flex items-center justify-center text-amber-900 font-black text-lg lg:text-xl shadow-lg group-hover:scale-110 transition-transform">
+            ВМ
+          </div>
+          <div>
+            <span class="block text-lg lg:text-xl font-bold tracking-tight font-display">ВМ Смета Про</span>
+            <p class="text-xs text-text-secondary hidden sm:block">онлайн-калькулятор ремонта</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium hover:text-brand-600 transition-colors relative group">
+            Услуги
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all"></span>
+          </a>
+          <a href="#calculator" class="text-sm font-medium hover:text-brand-600 transition-colors relative group">
+            Смета Про
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all"></span>
+          </a>
+          <a href="#portfolio" class="text-sm font-medium hover:text-brand-600 transition-colors relative group">
+            Портфолио
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all"></span>
+          </a>
+          <a href="#process" class="text-sm font-medium hover:text-brand-600 transition-colors relative group">
+            Как работаем
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 group-hover:w-full transition-all"></span>
+          </a>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-3 lg:gap-6">
+          <!-- Theme toggle -->
+          <button onclick="toggleTheme()" class="touch-target w-10 h-10 rounded-full bg-bg-secondary flex items-center justify-center hover:bg-brand-100 transition-colors" aria-label="Переключить тему">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block text-brand-400"></i>
+          </button>
+          <button onclick="toggleVisionMode()" id="visionModeBtn" class="touch-target w-10 h-10 rounded-full bg-bg-secondary flex items-center justify-center hover:bg-brand-100 transition-colors" aria-label="Режим для слабовидящих" aria-pressed="false" title="Режим для слабовидящих">
+            <i class="fas fa-glasses"></i>
+          </button>
+
+          <!-- Phone -->
+          <div class="hidden md:flex items-center gap-2">
+            <button onclick="togglePhone()" id="phoneBtn" class="text-sm lg:text-base font-semibold hover:text-brand-600 transition-colors flex items-center gap-2">
+              <i class="fas fa-phone-alt text-brand-500"></i>
+              <span id="phoneDisplay">+7 (985) 123-XX-XX</span>
+            </button>
+          </div>
+
+          <!-- CTA -->
+          <button onclick="openModal()" class="hidden sm:flex bg-brand-500 hover:bg-brand-600 text-white px-4 lg:px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 shadow-lg hover:shadow-xl">
+            Замер
+          </button>
+
+          <!-- Mobile menu button -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden touch-target w-10 h-10 flex items-center justify-center" aria-label="Меню" aria-expanded="false" id="mobileMenuBtn">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ИСПРАВЛЕННОЕ: Mobile Menu с НЕПРОЗРАЧНЫМ фоном -->
+    <div id="mobileMenu" class="lg:hidden fixed inset-0 z-[60] transform translate-x-full transition-transform duration-300" 
+       style="background-color: #ffffff !important;" 
+       role="dialog" aria-modal="true" aria-labelledby="mobileMenuTitle" aria-hidden="true">
+      <div class="flex flex-col h-full p-6" style="background-color: #ffffff !important;">
+        <div class="flex justify-between items-center mb-8">
+          <span id="mobileMenuTitle" class="text-xl font-bold font-display" style="color: #0f172a;">Меню</span>
+          <button onclick="toggleMobileMenu()" class="touch-target w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors" style="color: #0f172a;" aria-label="Закрыть">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="#services" onclick="handleMobileNavClick(event, 'services')" style="color: #0f172a; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; font-size: 1.125rem; font-weight: 500; display: block; text-decoration: none;">Услуги</a>
+          <a href="#calculator" onclick="handleMobileNavClick(event, 'calculator')" style="color: #0f172a; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; font-size: 1.125rem; font-weight: 500; display: block; text-decoration: none;">Смета Про</a>
+          <a href="#portfolio" onclick="handleMobileNavClick(event, 'portfolio')" style="color: #0f172a; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; font-size: 1.125rem; font-weight: 500; display: block; text-decoration: none;">Портфолио</a>
+          <a href="#process" onclick="handleMobileNavClick(event, 'process')" style="color: #0f172a; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; font-size: 1.125rem; font-weight: 500; display: block; text-decoration: none;">Как работаем</a>
+          <a href="#about" onclick="handleMobileNavClick(event, 'about')" style="color: #0f172a; border-bottom: 1px solid #e2e8f0; padding: 1rem 0; font-size: 1.125rem; font-weight: 500; display: block; text-decoration: none;">О компании</a>
+        </nav>
+        <div class="mt-auto pt-6">
+          <button onclick="openModal(); toggleMobileMenu();" class="w-full bg-brand-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform">
+            Бесплатный замер
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="content">
+  <!-- Hero Section -->
+  <section id="main" class="relative min-h-[92svh] lg:min-h-screen flex items-center pt-24 pb-12 lg:pt-28 lg:pb-16 overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(245,158,11,0.28),_transparent_26%),linear-gradient(135deg,_#0f172a_0%,_#111827_38%,_#1f2937_100%)]"></div>
+      <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 40px 40px;"></div>
+      <div class="absolute -top-16 right-0 h-72 w-72 rounded-full bg-amber-300/12 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-brand-500/12 blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid items-center gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,430px)]">
+        <div class="max-w-4xl">
+          <div class="inline-flex items-center gap-2 premium-chip rounded-full px-4 py-2 mb-5 animate-slide-up">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-sm text-white/90">250+ проектов выполнено без срывов по качеству</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 leading-[1.02] font-display animate-slide-up" style="animation-delay: 0.1s">
+            Ремонт квартир<br>
+            <span class="gradient-text">уровня премиум</span><br>
+            с прозрачной сметой
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-300 mb-7 max-w-2xl leading-relaxed animate-slide-up" style="animation-delay: 0.2s">
+            Берём на себя весь цикл: от замера и дизайн-решения до чистовой сдачи. Фиксируем стоимость, держим ритм работ и показываем прогресс в понятном формате.
+            <strong class="text-white">Бесплатный замер и персональная стратегия ремонта на старте.</strong>
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-8 animate-slide-up" style="animation-delay: 0.3s">
+            <div class="premium-stat rounded-2xl px-4 py-3">
+              <div class="text-xs uppercase tracking-[0.22em] text-white/60">Средний рейтинг</div>
+              <div class="text-2xl font-bold text-white mt-1">4.9/5</div>
+            </div>
+            <div class="premium-stat rounded-2xl px-4 py-3">
+              <div class="text-xs uppercase tracking-[0.22em] text-white/60">Срок проекта</div>
+              <div class="text-2xl font-bold text-white mt-1">45 дней</div>
+            </div>
+            <div class="premium-stat rounded-2xl px-4 py-3">
+              <div class="text-xs uppercase tracking-[0.22em] text-white/60">Гарантия</div>
+              <div class="text-2xl font-bold text-white mt-1">3 года</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 animate-slide-up" style="animation-delay: 0.4s">
+            <button onclick="scrollToSection('calculator')" class="touch-target bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 group">
+              Рассчитать стоимость
+              <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </button>
+            <a href="tel:+79851234532" class="touch-target border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition-all backdrop-blur-sm active:scale-95 flex items-center justify-center gap-2">
+              <i class="fas fa-phone-alt"></i>
+              Позвонить сейчас
+            </a>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-3 mt-7 max-w-3xl animate-slide-up" style="animation-delay: 0.5s">
+            <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-4">
+              <div class="text-sm font-semibold text-white">Смета за 1 день</div>
+              <div class="text-sm text-gray-300 mt-1">Цена разбита по этапам и понятна до старта работ.</div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-4">
+              <div class="text-sm font-semibold text-white">Фотоотчёты каждую неделю</div>
+              <div class="text-sm text-gray-300 mt-1">Контролируете ход ремонта, даже если вы не на объекте.</div>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 py-4">
+              <div class="text-sm font-semibold text-white">Договор и гарантия</div>
+              <div class="text-sm text-gray-300 mt-1">Фиксируем сроки, объём работ и ответственность сторон.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative animate-slide-up lg:pl-2" style="animation-delay: 0.35s">
+          <div class="premium-frame p-3 sm:p-4">
+            <img src="images/flat5.jpg" alt="Премиальный интерьер после ремонта" class="h-[380px] w-full rounded-[1.4rem] object-cover sm:h-[460px] lg:h-[520px]">
+            <div class="absolute left-6 top-6 premium-chip rounded-2xl px-4 py-3 text-white">
+              <div class="text-xs uppercase tracking-[0.22em] text-white/60">Проект недели</div>
+              <div class="mt-1 text-lg font-semibold">Кухня-гостиная, 95 м²</div>
+              <div class="text-sm text-white/70">Бизнес-класс, Москва</div>
+            </div>
+            <div class="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 premium-card p-4 sm:p-5 text-slate-900 dark:text-white">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div class="min-w-0 flex-1">
+                  <div class="text-xs uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">Формат работы</div>
+                  <div class="mt-2 text-lg sm:text-xl font-semibold">Точный бюджет, авторский контроль, чистая сдача</div>
+                </div>
+                <div class="self-start whitespace-nowrap rounded-2xl bg-brand-500 px-3 py-2 text-sm font-semibold text-white shadow-lg">от 25 000 ₽/м²</div>
+              </div>
+              <div class="mt-4 grid grid-cols-1 gap-2 text-sm sm:grid-cols-3 sm:gap-3">
+                <div class="rounded-xl bg-slate-100/80 px-3 py-3 dark:bg-white/5">
+                  <div class="text-slate-500 dark:text-slate-400">Срок</div>
+                  <div class="mt-1 font-semibold">6.5 недель</div>
+                </div>
+                <div class="rounded-xl bg-slate-100/80 px-3 py-3 dark:bg-white/5">
+                  <div class="text-slate-500 dark:text-slate-400">Команда</div>
+                  <div class="mt-1 text-sm font-semibold sm:text-[15px]">5 специалистов</div>
+                </div>
+                <div class="rounded-xl bg-slate-100/80 px-3 py-3 dark:bg-white/5">
+                  <div class="text-slate-500 dark:text-slate-400">Контроль</div>
+                  <div class="mt-1 text-sm font-semibold sm:text-[15px]">еженедельно</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section id="trustIndicators" class="section-shell py-10 lg:py-11 bg-bg-secondary border-b border-gray-200 dark:border-gray-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 lg:gap-x-12 text-sm text-text-secondary">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-500"></i>
+          <span>Лицензированные мастера</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-500"></i>
+          <span>Официальный договор</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-500"></i>
+          <span>Бесплатный замер</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-500"></i>
+          <span>Собственный склад материалов</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-check-circle text-green-500"></i>
+          <span>Работаем без предоплаты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages -->
+  <section id="advantages" class="section-shell py-16 lg:py-24 bg-bg-secondary" aria-labelledby="advantages-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-14">
+        <h2 id="advantages-title" class="text-3xl lg:text-5xl font-bold mb-4 font-display reveal">
+          Почему выбирают именно нас
+        </h2>
+        <p class="text-text-secondary text-lg reveal">
+          Мы не просто делаем ремонт — мы создаем комфортное пространство для вашей жизни
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <div class="calm-card p-6 lg:p-7 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:rotate-6 transition-transform">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Прозрачность</h3>
+          <p class="text-text-secondary text-sm">Фиксированная цена в договоре. Никаких скрытых платежей и дополнительных расходов.</p>
+        </div>
+
+        <div class="calm-card p-6 lg:p-7 text-center reveal" style="transition-delay: 0.1s">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:rotate-6 transition-transform">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Соблюдение сроков</h3>
+          <p class="text-text-secondary text-sm">Строго соблюдаем график работ. Каждый этап контролируется и фиксируется фотоотчетом.</p>
+        </div>
+
+        <div class="calm-card p-6 lg:p-7 text-center reveal" style="transition-delay: 0.2s">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-orange-600 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:rotate-6 transition-transform">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Опытные мастера</h3>
+          <p class="text-text-secondary text-sm">Бригады с опытом от 5 лет. Проходят обучение и сертификацию по новым технологиям.</p>
+        </div>
+
+        <div class="calm-card p-6 lg:p-7 text-center reveal" style="transition-delay: 0.3s">
+          <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg group-hover:rotate-6 transition-transform">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Качество материалов</h3>
+          <p class="text-text-secondary text-sm">Работаем только с проверенными поставщиками. Предоставляем сертификаты на все материалы.</p>
+        </div>
+      </div>
+
+      <!-- Additional advantages -->
+      <div class="mt-12 lg:mt-14 grid md:grid-cols-3 gap-8">
+        <div class="text-center reveal">
+          <div class="w-12 h-12 mx-auto mb-4 bg-brand-500 rounded-full flex items-center justify-center text-white">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4 class="font-bold mb-2">Гарантия до 3 лет</h4>
+          <p class="text-sm text-text-secondary">На все виды работ и материалы</p>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.1s">
+          <div class="w-12 h-12 mx-auto mb-4 bg-brand-500 rounded-full flex items-center justify-center text-white">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h4 class="font-bold mb-2">Доставка материалов</h4>
+          <p class="text-sm text-text-secondary">Бесплатная доставка на объект</p>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.2s">
+          <div class="w-12 h-12 mx-auto mb-4 bg-brand-500 rounded-full flex items-center justify-center text-white">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4 class="font-bold mb-2">Поддержка 24/7</h4>
+          <p class="text-sm text-text-secondary">Круглосуточная связь с прорабом</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section-shell py-16 lg:py-24" aria-labelledby="services-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-14">
+        <h2 id="services-title" class="text-3xl lg:text-5xl font-bold mb-4 font-display reveal">Виды ремонта</h2>
+        <p class="text-text-secondary reveal">Выберите подходящий тип ремонта под ваш бюджет и требования</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <!-- Бюджет -->
+        <div class="service-card calm-card overflow-hidden reveal">
+          <div class="h-32 lg:h-36 bg-gradient-to-br from-gray-300 to-gray-500 flex items-center justify-center relative overflow-hidden">
+            <i class="fas fa-wallet text-5xl text-white/30 absolute transform -rotate-12 scale-150"></i>
+            <span class="relative z-10 text-white font-bold text-xl">Бюджет/Аренда</span>
+          </div>
+          <div class="p-5 lg:p-6">
+            <p class="text-text-secondary mb-4 text-xs">Минимальный ремонт для сдачи в аренду или быстрого обновления</p>
+            <ul class="space-y-2 mb-4 text-xs">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Подготовка поверхностей</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Обои или покраска стен</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Ламинат или линолеум</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Установка дверей и плинтусов</span>
+              </li>
+            </ul>
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-2xl font-bold gradient-text">от 25 000 ₽</span>
+              <span class="text-text-secondary text-xs">/м²</span>
+            </div>
+            <div class="text-xs text-text-secondary mb-3">
+              <span class="font-medium">Срок:</span> 2-3 недели
+            </div>
+            <button onclick="openModal('Бюджет/Аренда')" class="w-full touch-target bg-bg-primary border-2 border-brand-500 text-brand-600 hover:bg-brand-50 dark:hover:bg-brand-900/20 py-2 rounded-xl font-bold transition-all active:scale-95 text-sm">
+              Заказать
+            </button>
+          </div>
+        </div>
+
+        <!-- Комфорт -->
+        <div class="service-card calm-card overflow-hidden reveal" style="transition-delay: 0.05s">
+          <div class="h-32 lg:h-36 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center relative overflow-hidden">
+            <i class="fas fa-home text-5xl text-white/30 absolute transform -rotate-12 scale-150"></i>
+            <span class="relative z-10 text-white font-bold text-xl">Комфорт</span>
+          </div>
+          <div class="p-5 lg:p-6">
+            <p class="text-text-secondary mb-4 text-xs">Оптимальное соотношение цены и качества для комфортного проживания</p>
+            <ul class="space-y-2 mb-4 text-xs">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Выравнивание стен и потолков</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Качественная отделка стен</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Укладка напольных покрытий</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Монтаж сантехники и электрики</span>
+              </li>
+            </ul>
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-2xl font-bold gradient-text">от 40 000 ₽</span>
+              <span class="text-text-secondary text-xs">/м²</span>
+            </div>
+            <div class="text-xs text-text-secondary mb-3">
+              <span class="font-medium">Срок:</span> 1-1.5 месяца
+            </div>
+            <button onclick="openModal('Комфорт')" class="w-full touch-target bg-bg-primary border-2 border-brand-500 text-brand-600 hover:bg-brand-50 dark:hover:bg-brand-900/20 py-2 rounded-xl font-bold transition-all active:scale-95 text-sm">
+              Заказать
+            </button>
+          </div>
+        </div>
+
+        <!-- Business (Featured) -->
+        <div class="service-card premium-card overflow-hidden border-2 border-brand-500 relative reveal" style="transition-delay: 0.1s">
+          <div class="absolute top-0 right-0 bg-brand-500 text-white px-3 py-1 text-xs font-bold rounded-bl-xl">ПОПУЛЯРНЫЙ</div>
+          <div class="h-32 lg:h-36 bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center relative overflow-hidden">
+            <i class="fas fa-star text-5xl text-white/30 absolute transform rotate-12 scale-150"></i>
+            <span class="relative z-10 text-white font-bold text-xl">Бизнес</span>
+          </div>
+          <div class="p-5 lg:p-6">
+            <p class="text-text-secondary mb-4 text-xs">Полноценный ремонт с тщательной подготовкой и качественными материалами</p>
+            <ul class="space-y-2 mb-4 text-xs">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Основательная подготовка</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Черновая и чистовая отделка</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Качественные материалы</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Полный комплекс работ</span>
+              </li>
+            </ul>
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-2xl font-bold gradient-text">от 55 000 ₽</span>
+              <span class="text-text-secondary text-xs">/м²</span>
+            </div>
+            <div class="text-xs text-text-secondary mb-3">
+              <span class="font-medium">Срок:</span> 1.5-2 месяца
+            </div>
+            <button onclick="openModal('Бизнес')" class="w-full touch-target bg-brand-500 hover:bg-brand-600 text-white py-2 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl active:scale-95 text-sm">
+              Заказать
+            </button>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="service-card calm-card overflow-hidden reveal" style="transition-delay: 0.2s">
+          <div class="h-32 lg:h-36 bg-gradient-to-br from-slate-800 via-slate-700 to-amber-700 flex items-center justify-center relative overflow-hidden">
+            <i class="fas fa-gem text-5xl text-white/30 absolute transform -rotate-12 scale-150"></i>
+            <span class="relative z-10 text-white font-bold text-xl">Премиум</span>
+          </div>
+          <div class="p-5 lg:p-6">
+            <p class="text-text-secondary mb-4 text-xs">Элитный ремонт с премиальными материалами и индивидуальным дизайном</p>
+            <ul class="space-y-2 mb-4 text-xs">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Премиальные материалы</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Индивидуальный дизайн-проект</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Авторский надзор</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-green-500"></i>
+                <span>Элитная фурнитура</span>
+              </li>
+            </ul>
+            <div class="flex items-baseline justify-between mb-4">
+              <span class="text-2xl font-bold gradient-text">от 85 000 ₽</span>
+              <span class="text-text-secondary text-xs">/м²</span>
+            </div>
+            <div class="text-xs text-text-secondary mb-3">
+              <span class="font-medium">Срок:</span> 2-3 месяца
+            </div>
+            <button onclick="openModal('Премиум')" class="w-full touch-target bg-bg-primary border-2 border-brand-500 text-brand-600 hover:bg-brand-50 dark:hover:bg-brand-900/20 py-2 rounded-xl font-bold transition-all active:scale-95 text-sm">
+              Заказать
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section-shell py-16 lg:py-24 bg-white dark:bg-dark-bg" aria-labelledby="why-choose-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-14">
+        <h2 id="why-choose-title" class="text-3xl lg:text-5xl font-bold mb-4 font-display reveal">
+          Почему клиенты выбирают нас
+        </h2>
+        <p class="text-text-secondary text-lg reveal">
+          Реальные отзывы от наших клиентов о работе с командой "Ваши мастера"
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6 lg:gap-7 mb-12 lg:mb-14">
+        <div class="calm-card p-6 lg:p-7 reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <blockquote class="text-text-secondary mb-6 text-sm leading-relaxed">
+            "Заказывали ремонт 3-комнатной квартиры. Всё сделали в срок, качество на высоте. Особенно порадовало отношение к работе — приходили вовремя, убирали за собой. Дизайн-проект сделали бесплатно, что стало приятным бонусом."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-brand-400 to-brand-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              АК
+            </div>
+            <div>
+              <div class="font-bold text-sm">Александр К.</div>
+              <div class="text-xs text-text-secondary">Москва, 3-комнатная квартира</div>
+              <div class="text-xs text-brand-600 font-medium">Ремонт "Бизнес"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calm-card p-6 lg:p-7 reveal" style="transition-delay: 0.1s">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <blockquote class="text-text-secondary mb-6 text-sm leading-relaxed">
+            "Делали ремонт в студии для сдачи в аренду. Результат превзошел ожидания! Быстро, качественно и по фиксированной цене. Уже сдали квартиру и получили хорошую прибыль. Рекомендую!"
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              МС
+            </div>
+            <div>
+              <div class="font-bold text-sm">Мария С.</div>
+              <div class="text-xs text-text-secondary">Зеленоград, студия</div>
+              <div class="text-xs text-brand-600 font-medium">Ремонт "Бюджет"</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calm-card p-6 lg:p-7 reveal" style="transition-delay: 0.2s">
+          <div class="flex items-center gap-1 mb-4">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+          </div>
+          <blockquote class="text-text-secondary mb-6 text-sm leading-relaxed">
+            "Заказывали премиальный ремонт с дизайном. Всё продумано до мелочей, материалы высшего качества. Процесс ремонта был комфортным — постоянная связь с прорабом, фотоотчеты. Очень довольны результатом!"
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              ДВ
+            </div>
+            <div>
+              <div class="font-bold text-sm">Дмитрий В.</div>
+              <div class="text-xs text-text-secondary">Москва, 2-комнатная квартира</div>
+              <div class="text-xs text-brand-600 font-medium">Ремонт "Премиум"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center reveal">
+          <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">98%</div>
+          <div class="text-sm text-text-secondary">Клиентов рекомендуют нас</div>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.1s">
+          <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">4.9/5</div>
+          <div class="text-sm text-text-secondary">Средний рейтинг</div>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.2s">
+          <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">45 дней</div>
+          <div class="text-sm text-text-secondary">Средний срок ремонта</div>
+        </div>
+        <div class="text-center reveal" style="transition-delay: 0.3s">
+          <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">0</div>
+          <div class="text-sm text-text-secondary">Срывов сроков за 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator" class="section-shell py-16 lg:py-24 bg-bg-secondary" aria-labelledby="calc-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="premium-card rounded-3xl p-6 lg:p-10 shadow-2xl reveal">
+          <h2 id="calc-title" class="text-3xl lg:text-4xl font-bold text-center mb-7 lg:mb-8 font-display">Расчет стоимости ремонта</h2>
+          
+          <div class="grid lg:grid-cols-2 gap-7 lg:gap-10">
+            <!-- Controls -->
+            <div class="space-y-6">
+              <!-- Premise type -->
+              <div>
+                <label class="block text-sm font-medium mb-3">Тип помещения</label>
+                <div class="grid grid-cols-3 gap-2" role="radiogroup">
+                  <button class="type-btn active touch-target bg-brand-500 text-white py-3 rounded-xl font-medium transition-all active:scale-95" onclick="selectType(this, 1)" role="radio" aria-checked="true">
+                    <i class="fas fa-building-columns mb-1 block"></i>
+                    Квартира
+                  </button>
+                  <button class="type-btn touch-target bg-bg-primary border-2 border-gray-200 dark:border-gray-600 py-3 rounded-xl font-medium transition-all hover:border-brand-500 active:scale-95" onclick="selectType(this, 1)" role="radio" aria-checked="false">
+                    <i class="fas fa-building mb-1 block"></i>
+                    Апартаменты
+                  </button>
+                  <button class="type-btn touch-target bg-bg-primary border-2 border-gray-200 dark:border-gray-600 py-3 rounded-xl font-medium transition-all hover:border-brand-500 active:scale-95" onclick="selectType(this, 1.05)" role="radio" aria-checked="false">
+                    <i class="fas fa-person-half-dress mb-1 block"></i>
+                    Студия
+                  </button>
+                  <button class="type-btn touch-target bg-bg-primary border-2 border-gray-200 dark:border-gray-600 py-3 rounded-xl font-medium transition-all hover:border-brand-500 active:scale-95" onclick="selectType(this, 1.2)" role="radio" aria-checked="false">
+                    <i class="fas fa-home mb-1 block"></i>
+                    Дом
+                  </button>
+                  <button class="type-btn touch-target bg-bg-primary border-2 border-gray-200 dark:border-gray-600 py-3 rounded-xl font-medium transition-all hover:border-brand-500 active:scale-95" onclick="selectType(this, 0.9)" role="radio" aria-checked="false">
+                    <i class="fas fa-briefcase mb-1 block"></i>
+                    Офис
+                  </button>
+                </div>
+              </div>
+
+              <!-- Area slider -->
+              <div>
+                <label class="block text-sm font-medium mb-3 flex justify-between">
+                  <span>Площадь</span>
+                  <span class="text-brand-600 font-bold text-lg"><span id="areaValue">50</span> м²</span>
+                </label>
+                <input type="range" min="20" max="200" value="50" class="w-full touch-target" id="areaRange" oninput="updateCalc()" aria-valuemin="20" aria-valuemax="200" aria-valuenow="50">
+                <div class="flex justify-between text-xs text-text-secondary mt-2">
+                  <span>20 м²</span>
+                  <span>200 м²</span>
+                </div>
+              </div>
+
+              <!-- Repair type -->
+              <div>
+                <label class="block text-sm font-medium mb-3">Тип ремонта</label>
+                <div class="space-y-2" role="radiogroup" id="repairTypeGroup">
+                  <button class="repair-btn w-full touch-target flex items-center justify-between p-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 hover:border-brand-500 transition-all active:scale-[0.98]" onclick="selectRepair(this, 25000)" role="radio" aria-checked="false">
+                    <div class="flex items-center gap-3">
+                      <div class="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                      <span class="font-medium">Бюджет/Аренда</span>
+                    </div>
+                    <span class="font-bold text-brand-600">25 000 ₽/м²</span>
+                  </button>
+                  <button class="repair-btn active w-full touch-target flex items-center justify-between p-4 rounded-xl border-2 border-brand-500 bg-brand-50 dark:bg-brand-900/20 transition-all active:scale-[0.98]" onclick="selectRepair(this, 40000)" role="radio" aria-checked="true">
+                    <div class="flex items-center gap-3">
+                      <div class="w-4 h-4 rounded-full border-2 border-brand-500 bg-brand-500"></div>
+                      <span class="font-medium">Комфорт</span>
+                    </div>
+                    <span class="font-bold text-brand-600">40 000 ₽/м²</span>
+                  </button>
+                  <button class="repair-btn w-full touch-target flex items-center justify-between p-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 hover:border-brand-500 transition-all active:scale-[0.98]" onclick="selectRepair(this, 55000)" role="radio" aria-checked="false">
+                    <div class="flex items-center gap-3">
+                      <div class="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                      <span class="font-medium">Бизнес</span>
+                    </div>
+                    <span class="font-bold text-brand-600">55 000 ₽/м²</span>
+                  </button>
+                  <button class="repair-btn w-full touch-target flex items-center justify-between p-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 hover:border-brand-500 transition-all active:scale-[0.98]" onclick="selectRepair(this, 85000)" role="radio" aria-checked="false">
+                    <div class="flex items-center gap-3">
+                      <div class="w-4 h-4 rounded-full border-2 border-gray-300"></div>
+                      <span class="font-medium">Премиум</span>
+                    </div>
+                    <span class="font-bold text-brand-600">85 000 ₽/м²</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result -->
+            <div class="flex flex-col justify-center">
+              <div class="calc-visual rounded-2xl p-8 text-white text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+                
+                <p class="text-white/80 mb-2 relative z-10">Примерная стоимость</p>
+                <div class="text-5xl lg:text-6xl font-bold mb-4 relative z-10" id="totalPrice">1 000 000 ₽</div>
+                <p class="text-sm text-white/60 relative z-10">* Точная стоимость после осмотра</p>
+              </div>
+
+              <button onclick="showDetailedCalc()" class="touch-target mt-6 w-full bg-gradient-to-r from-slate-800 to-amber-700 text-white py-4 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl flex items-center justify-center gap-2">
+                <i class="fas fa-laptop"></i>
+                Выполнить точный расчет онлайн
+              </button>
+
+              <button onclick="openModalWithCalc()" class="touch-target mt-3 w-full bg-gradient-to-r from-brand-500 to-brand-600 text-white py-4 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-transform shadow-xl flex items-center justify-center gap-2">
+                <i class="fas fa-paper-plane"></i>
+                Получить финальный расчет
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED CALCULATOR -->
+  <section id="detailedCalc" class="py-20 lg:py-32" aria-labelledby="detailed-calc-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-6">
+          <h2 id="detailed-calc-title" class="text-4xl lg:text-5xl font-black mb-3 font-display reveal gradient-text uppercase">Смета-про</h2>
+          <p class="text-lg text-text-secondary reveal">детализированный он-лайн расчет работ и материалов</p>
+          <a href="index.html" class="mt-3 inline-flex items-center gap-2 text-sm text-brand-600 hover:text-brand-700 underline">
+            <i class="fas fa-house"></i> Вернуться домой
+          </a>
+        </div>
+
+        <!-- Estimate Data Section (above rooms) -->
+        <div class="glass rounded-2xl calc-section estimate-data-section estimate-object-premium mb-6">
+          <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('estimateDataSection')">
+            <h3 class="font-bold flex items-center gap-2">
+              <i class="fas fa-clipboard-list text-brand-500"></i>
+              Информация об объекте ремонта
+              <span class="required-section-status" id="estimateDataRequiredStatus">Обязательно</span>
+            </h3>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-chevron-down text-sm transition-transform" id="estimateDataSectionIcon"></i>
+            </div>
+          </div>
+          <div class="calc-section-content px-4 pt-0 pb-4" id="estimateDataSection">
+            <div id="estimateDataContent">
+              <!-- Row 1: Тип здания + Тип строения -->
+              <div class="grid md:grid-cols-2 gap-3 mb-3 estimate-object-grid">
+                <div class="estimate-object-field">
+                  <label class="block text-sm font-medium mb-1">Тип здания</label>
+                  <select id="buildingType" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" onchange="updateBuildingSubtype()">
+                    <option value="">Выберите тип здания</option>
+                    <option value="multiapartment">Многоквартирный дом</option>
+                    <option value="business">Бизнес-центр</option>
+                    <option value="individual">Индивидуальный жилой дом</option>
+                    <option value="blocked">Блокированный дом</option>
+                  </select>
+                </div>
+                <div id="buildingSubtypeContainer" class="estimate-object-field" style="display: block;">
+                  <label class="block text-sm font-medium mb-1">Тип строения</label>
+                  <select id="buildingSubtype" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" onchange="updateBuildingMaterial()">
+                    <option value="">Сначала выберите тип здания</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Row 3: Материал здания + Грузовой лифт -->
+              <div class="grid md:grid-cols-2 gap-3 mb-3 estimate-object-grid">
+                <div id="buildingMaterialContainer" class="estimate-object-field" style="display: none;">
+                  <label class="block text-sm font-medium mb-1">Материал здания</label>
+                  <select id="buildingMaterial" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" onchange="handleBuildingMaterialChange()">
+                    <option value="">Выберите материал</option>
+                  </select>
+                </div>
+                <div class="estimate-object-field">
+                  <label class="block text-sm font-medium mb-1">Наличие грузового лифта</label>
+                  <select id="cargoElevator" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" onchange="toggleFloorField()">
+                    <option value="">Не указано</option>
+                    <option value="yes">Да</option>
+                    <option value="no">Нет</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Row 4: Этаж + Местоположение -->
+              <div id="estimateLocationRow" class="grid md:grid-cols-[100px_1fr] gap-3">
+                <div id="floorContainer" class="estimate-object-field">
+                  <label class="block text-sm font-medium mb-1">Этаж</label>
+                  <input type="number" id="floorNumber" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" min="-3" max="50" value="0">
+                </div>
+                <div id="addressContainer" class="estimate-object-field">
+                  <label class="block text-sm font-medium mb-1">Местоположение объекта</label>
+                  <div class="relative">
+                    <input type="text" id="addressInput" class="w-full px-3 py-2 border rounded-lg bg-bg-primary" placeholder="Начните вводить адрес..." oninput="handleAddressInput(this.value)">
+                    <div id="addressSuggestions" class="absolute z-50 w-full bg-white dark:bg-gray-800 border rounded-lg mt-1 shadow-lg" style="display: none;"></div>
+                  </div>
+                  <input type="hidden" id="selectedCity">
+                </div>
+              </div>
+              <div id="tariffCityRow" class="grid md:grid-cols-[100px_1fr] gap-3 mt-3">
+                <div class="hidden md:block"></div>
+                <div id="tariffCityContainer" class="estimate-object-field">
+                  <label class="block text-sm font-medium mb-1">Город применения тарифов</label>
+                  <div id="tariffCityControl" class="tariff-city-control-placeholder">
+                    <div class="city-region-hint city-region-hint--warning">Загрузка списка городов...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-2xl calc-section rooms-main-section mb-6" id="roomsSidePanel">
+          <div class="calc-section-header rooms-main-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('roomsMainSection')">
+            <div class="min-w-0">
+              <h3 class="font-bold flex items-center gap-2 flex-wrap">
+                <i class="fas fa-map-marked-alt text-brand-500"></i>
+                <span>Дом, этажи и помещения</span>
+                <span class="required-section-status" id="roomsRequiredStatus">Обязательно</span>
+              </h3>
+              <div class="text-[11px] leading-tight text-gray-500 dark:text-gray-400 mt-1">
+                Сначала задайте структуру объекта: этажи, помещения и комнаты. Эти данные дальше используются в квесте, работах, материалах и смете.
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-chevron-down text-sm transition-transform" id="roomsMainSectionIcon"></i>
+            </div>
+          </div>
+          <div class="calc-section-content rooms-main-content px-4 pt-0 pb-4" id="roomsMainSection" style="display: none;">
+            <div class="rooms-main-toolbar">
+              <div class="rooms-main-field">
+                <label>Тип ремонта</label>
+                <select id="detailedRepairType" class="w-full px-3 py-2 text-sm border rounded-lg bg-bg-primary" onchange="syncPriceListFromRepairType(this.value); updateAllPricesDisplay(); updateDetailedCalc();">
+                  <option value="budget">Бюджет/Аренда</option>
+                  <option value="comfort" selected>Комфорт</option>
+                  <option value="business">Бизнес</option>
+                  <option value="premium">Премиум</option>
+                </select>
+              </div>
+              <div class="rooms-main-field">
+                <label>Этажность ремонта</label>
+                <select id="detailedBuildingType" class="w-full px-3 py-2 text-sm border rounded-lg bg-bg-primary" onchange="resetRoomDataOnTypeChange(); renderRoomInputs(); updateDetailedCalc()">
+                  <option value="single_floor" selected>Один этаж</option>
+                  <option value="multi_floor">Более 1-го этажа</option>
+                </select>
+              </div>
+              <div class="rooms-main-totals">
+                <div>
+                  <span>Общая площадь</span>
+                  <strong id="totalAreaCalc">0 м²</strong>
+                </div>
+                <div>
+                  <span>Площадь стен</span>
+                  <strong id="totalWallsCalc">0 м²</strong>
+                </div>
+              </div>
+            </div>
+            <div id="roomInputs" class="rooms-main-grid space-y-4">
+              <div class="room-card object-floors-card">
+                <div class="room-card-header">
+                  <i class="fas fa-layer-group text-brand-500"></i>
+                  <span class="font-semibold flex-1">Структура объекта</span>
+                  <span class="object-house-chip">1 эт. · 0 помещ.</span>
+                  <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                </div>
+                <div class="room-card-content open" style="display: block; max-height: none; overflow: visible;">
+                  <div class="object-house-summary">
+                    <div><span>Сущность</span><strong>Дом</strong></div>
+                    <div><span>Сквозные помещения</span><strong>0</strong></div>
+                    <div><span>Этажи</span><strong>1</strong></div>
+                  </div>
+                  <div class="text-xs text-gray-500 mb-3">На этаже создаются нейтральные помещения. Внутри каждого помещения есть “Комната” с классификацией: жилая или нежилая зона.</div>
+                  <div class="rounded-xl bg-brand-50/70 dark:bg-brand-900/20 border border-brand-100 dark:border-brand-800 px-3 py-2 text-xs text-brand-700 dark:text-brand-200 mb-3">
+                    По умолчанию создан Этаж 1. Чтобы добавить этажи, выберите “Более 1-го этажа”.
+                  </div>
+                  <div class="object-floor-shell">
+                    <div class="object-floor-head">
+                      <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                      <div class="flex-1">
+                        <strong>Этаж 1</strong>
+                        <span>0 помещ. · 0 жил. · 0 нежил.</span>
+                      </div>
+                      <div class="object-floor-location object-floor-location--inline">
+                        <div class="object-floor-location-select-wrap">
+                          <i class="fas fa-building"></i>
+                          <span>Расположение:</span>
+                          <select class="object-floor-location-select" disabled>
+                            <option>Надземный этаж</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="object-floor-body">
+                      <div class="object-floor-category neutral">
+                        <div class="object-floor-category-head">
+                          <div class="flex items-center gap-2">
+                            <i class="fas fa-vector-square text-brand-500"></i>
+                            <span class="text-sm font-bold">Помещения на этаже</span>
+                          </div>
+                          <span class="text-xs text-gray-500">0 помещ.</span>
+                        </div>
+                        <div class="area-input-group mt-2">
+                          <label class="text-sm text-gray-500 w-44 font-bold">Помещения (шт.):</label>
+                          <div class="qty-controls">
+                            <button type="button" class="qty-btn" disabled>−</button>
+                            <input type="number" value="0" min="0" max="30" class="qty-input" disabled>
+                            <button type="button" class="qty-btn" disabled>+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detailed-calc-layout detailed-calc-layout--no-rooms" id="detailedCalcLayout">
+          <!-- Center: Works & Materials -->
+          <div class="detailed-main-panel space-y-4">
+            <!-- Collapsible sections -->
+            
+            <div class="glass rounded-2xl calc-section">
+              <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('repairPlanSection')">
+                <h3 class="font-bold flex items-center gap-2">
+                  <i class="fas fa-house-chimney text-brand-500"></i>
+                  Какой ремонт вы планируете?
+                </h3>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-chevron-down text-sm transition-transform" id="repairPlanSectionIcon"></i>
+                </div>
+              </div>
+              <div class="calc-section-content px-4 pt-0 pb-4" id="repairPlanSection" style="display: none;">
+                <div class="px-2 md:px-0 space-y-4">
+                  <div class="grid gap-3 md:grid-cols-2">
+                    <label class="repair-plan-option is-active" id="repairPlanApproxOption">
+                      <input type="radio" name="repairQuestMode" value="approx" checked onchange="setRepairQuestMode(this.value)">
+                      <div class="flex items-start justify-between gap-3">
+                        <div>
+                          <div class="font-semibold text-base">Сделать примерный расчет</div>
+                          <div class="text-xs text-gray-500 mt-1">Займет 5-7 минут</div>
+                        </div>
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-100 text-brand-600">
+                          <i class="fas fa-bolt text-sm"></i>
+                        </span>
+                      </div>
+                    </label>
+                    <label class="repair-plan-option" id="repairPlanFullOption">
+                      <input type="radio" name="repairQuestMode" value="full" onchange="setRepairQuestMode(this.value)">
+                      <div class="flex items-start justify-between gap-3">
+                        <div>
+                          <div class="font-semibold text-base">Сделать полный расчет</div>
+                          <div class="text-xs text-gray-500 mt-1">Займет 12-15 минут</div>
+                        </div>
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-100 text-brand-600">
+                          <i class="fas fa-wand-magic-sparkles text-sm"></i>
+                        </span>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="rounded-2xl border border-brand-100 dark:border-slate-700 bg-gradient-to-r from-brand-50 via-white to-amber-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 p-4">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                      <div>
+                        <div class="font-medium">Опрос поможет автоматически заполнить демонтаж и работы по ремонту.</div>
+                        <div class="text-sm text-gray-500 mt-1" id="repairQuestModeHint">Для примерного расчета мы спросим только самое важное, а остальное подставим по типу ремонта.</div>
+                      </div>
+                      <button type="button" class="px-5 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-orange-500 text-white font-semibold shadow-lg hover:from-brand-600 hover:to-orange-600 transition-all" onclick="startRepairQuest()">
+                        Пройти опрос о ремонте
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What Needs to Do Section -->
+            <div class="glass rounded-2xl calc-section">
+              <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('whatToDoSection')">
+                <div class="min-w-0">
+                  <h3 class="font-bold flex items-center gap-2 flex-wrap">
+                    <i class="fas fa-tasks text-brand-500"></i>
+                    <span>Что нужно сделать</span>
+                    <span id="whatToDoAutofillBadge" class="inline-flex items-center gap-1 flex-wrap"></span>
+                  </h3>
+                  <div id="whatToDoAutofillHeaderText" class="hidden text-[11px] leading-tight text-gray-500 dark:text-gray-400 mt-1">
+                    Раздел заполнен на данных опроса (можно скорректировать вручную).
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-chevron-down text-sm transition-transform" id="whatToDoSectionIcon"></i>
+                </div>
+              </div>
+              <div class="calc-section-content p-3 sm:p-4 pt-0" id="whatToDoSection" style="display: none;">
+                <label class="flex items-start gap-3 rounded-xl border border-brand-100 dark:border-slate-700 bg-white/80 dark:bg-slate-900/70 p-3 mb-3 cursor-pointer hover:border-brand-300 transition-colors" for="whatToDoIncludeMaterials">
+                  <input type="checkbox" id="whatToDoIncludeMaterials" class="mt-1" checked onchange="toggleWhatToDoMaterialsEstimate(this.checked)">
+                  <span class="min-w-0">
+                    <span class="block text-sm font-semibold text-gray-800 dark:text-gray-100">Расчет с материалами</span>
+                    <span class="block text-xs text-gray-500 dark:text-gray-400 mt-1">При выборе работ материалы автоматически добавляются в итоговую смету по рецептам прайс-листа.</span>
+                  </span>
+                </label>
+                <div id="whatToDoContent" class="space-y-2 sm:space-y-3">
+                  <div id="whatToDoAutofillNotice"></div>
+                  <div id="whatToDoTree"></div>
+                  <div id="demolitionFloorRooms" class="hidden"></div>
+                  <div id="repairFloorRooms" class="hidden"></div>
+                  <div id="demolitionLivingRooms" class="hidden"></div>
+                  <div id="demolitionNonlivingRooms" class="hidden"></div>
+                  <div id="repairLivingRooms" class="hidden"></div>
+                  <div id="repairNonlivingRooms" class="hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Estimate Export Section -->
+            <div class="glass rounded-2xl calc-section estimate-export-section">
+              <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('estimateExportSection')">
+                <div>
+                  <h3 class="font-bold flex items-center gap-2">
+                    <i class="fas fa-file-invoice-dollar text-brand-500"></i>
+                    <span>Сформировать смету</span>
+                  </h3>
+                  <div class="text-[11px] leading-tight text-gray-500 dark:text-gray-400 mt-1">
+                    Профессиональная смета по этажам, помещениям, работам и материалам.
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="estimate-pro-badge">Смета-про</span>
+                  <i class="fas fa-chevron-down text-sm transition-transform" id="estimateExportSectionIcon"></i>
+                </div>
+              </div>
+              <div class="calc-section-content p-3 sm:p-4 pt-0" id="estimateExportSection" style="display: none;">
+                <div class="estimate-export-grid">
+                  <div class="estimate-export-card">
+                    <div class="estimate-export-label">
+                      <i class="fas fa-layer-group"></i>
+                      <span>Тип сметы</span>
+                    </div>
+                    <div class="estimate-export-options" role="radiogroup" aria-label="Тип сметы">
+                      <label class="estimate-export-option">
+                        <input type="radio" name="estimateExportType" value="works">
+                        <span>Смета по работам</span>
+                      </label>
+                      <label class="estimate-export-option">
+                        <input type="radio" name="estimateExportType" value="materials">
+                        <span>Смета по материалам</span>
+                      </label>
+                      <label class="estimate-export-option">
+                        <input type="radio" name="estimateExportType" value="all" checked>
+                        <span>Общая смета</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="estimate-export-card">
+                    <div class="estimate-export-label">
+                      <i class="fas fa-sitemap"></i>
+                      <span>Уровень группировки</span>
+                    </div>
+                    <select id="estimateGroupingLevel" class="estimate-export-select" aria-label="Уровень группировки">
+                      <option value="1">1 — Демонтажные / Монтажные</option>
+                      <option value="2" selected>2 — основные группы работ</option>
+                      <option value="3">3 — подгруппы работ</option>
+                      <option value="4">4 — детальные подгруппы</option>
+                    </select>
+                    <div class="estimate-export-note">
+                      Чем выше уровень, тем подробнее будут промежуточные итоги внутри помещения.
+                    </div>
+                  </div>
+                  <div class="estimate-export-card">
+                    <div class="estimate-export-label">
+                      <i class="fas fa-file-export"></i>
+                      <span>Формат выгрузки</span>
+                    </div>
+                    <div class="estimate-export-options estimate-export-options--compact" role="radiogroup" aria-label="Формат выгрузки">
+                      <label class="estimate-export-option">
+                        <input type="radio" name="estimateExportFormat" value="pdf" checked>
+                        <span>PDF</span>
+                      </label>
+                      <label class="estimate-export-option">
+                        <input type="radio" name="estimateExportFormat" value="xlsx">
+                        <span>Excel (XLSX)</span>
+                      </label>
+                    </div>
+                    <div class="estimate-export-note">
+                      Экспорт уже готов к проверке прав доступа: флаг <code>paid_access</code> можно подключить к оплате или подписке.
+                    </div>
+                  </div>
+                  <div class="estimate-export-card">
+                    <div class="estimate-export-label">
+                      <i class="fas fa-clock"></i>
+                      <span>Технологические интервалы</span>
+                    </div>
+                    <label class="estimate-export-check">
+                      <input type="checkbox" id="estimateShowTechIntervals" checked>
+                      <span>Выводить тех. интервалы</span>
+                    </label>
+                    <label class="estimate-export-check mt-2">
+                      <input type="checkbox" id="estimateShowZoneTotals">
+                      <span>Выводить итоги по жилой и нежилой зоне</span>
+                    </label>
+                    <div class="estimate-export-note">
+                      Тех. интервалы — это паузы между работами: высыхание, набор прочности, выдержка грунтовок, клеев, стяжек и других составов. Итоги по зонам нужны для объектов, где важно отдельно видеть жилую и нежилую часть.
+                    </div>
+                  </div>
+                </div>
+                <div class="estimate-export-actions">
+                  <button type="button" class="estimate-export-button" onclick="handleEstimateExportClick()">
+                    <i class="fas fa-file-circle-check"></i>
+                    <span>Сформировать смету</span>
+                  </button>
+                  <div id="estimateExportMessage" class="estimate-export-message">
+                    Смета будет собрана из рассчитанных работ и материалов в разделе «Что нужно сделать».
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Price List Section -->
+            <div class="glass rounded-2xl calc-section">
+              <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('priceListSection')">
+                <h3 class="font-bold flex items-center gap-2">
+                  <i class="fas fa-list-ul text-brand-500"></i>
+                  Прайс-лист по работам
+                </h3>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-semibold text-brand-600" id="worksTotalDisplay">0 ₽</span>
+                  <i class="fas fa-chevron-down text-sm transition-transform" id="priceListSectionIcon"></i>
+                </div>
+              </div>
+              <div class="calc-section-content p-4 pt-0" id="priceListSection">
+                <div id="priceListSettings"></div>
+                <div id="priceListContent" class="mt-4"></div>
+              </div>
+            </div>
+            
+            <div class="glass rounded-2xl calc-section">
+              <div class="calc-section-header flex items-center justify-between p-4 cursor-pointer" onclick="toggleSection('materialsSection')">
+                <h3 class="font-bold flex items-center gap-2">
+                  <i class="fas fa-box-open text-brand-500"></i>
+                  Прайс-лист по материалам
+                </h3>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-semibold text-brand-600" id="materialsTotalDisplay">0 ₽</span>
+                  <i class="fas fa-chevron-down text-sm transition-transform" id="materialsSectionIcon"></i>
+                </div>
+              </div>
+              <div class="calc-section-content p-4 pt-0" id="materialsSection">
+                <div id="materialsPriceListSettings"></div>
+                <div id="materialsPriceListContent" class="mt-4"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Results -->
+          <div class="detailed-side-panel detailed-summary-panel" id="summarySidePanel">
+            <div class="result-card sticky top-24 detailed-side-card" id="summarySideCard">
+              <div class="result-card-header">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-white/80 text-sm">Итого</p>
+                  <div class="side-panel-actions">
+                    <button type="button" class="side-tool-btn side-tool-btn-dark" onclick="toggleDetailedPanelScroll('summary')" aria-label="Выключить скроллинг панели Итого" aria-pressed="true" id="summaryScrollToggle" title="Скроллинг панели">
+                      <i class="fas fa-arrows-up-down"></i>
+                    </button>
+                    <button type="button" class="side-tool-btn side-tool-btn-dark" onclick="toggleDetailedSummaryPin()" aria-label="Отключить фиксацию панели Итого" aria-pressed="true" id="summaryPinToggle" title="Фиксация при прокрутке">
+                      <i class="fas fa-thumbtack"></i>
+                    </button>
+                    <button type="button" class="side-collapse-btn side-collapse-btn-dark" onclick="toggleDetailedSidePanel('summary')" aria-label="Свернуть раздел Итого" aria-controls="summarySidePanel" aria-expanded="true" id="summarySideToggle">
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="text-3xl font-bold text-white" id="detailedTotal">0 ₽</div>
+              </div>
+                <div class="p-4">
+                <!-- Category breakdown -->
+                <div class="summary-row">
+                  <span class="text-gray-400 text-sm">Работы:</span>
+                  <span class="text-white font-semibold text-sm" id="detailedWorksTotal">0 ₽</span>
+                </div>
+                <div class="summary-row">
+                  <span class="text-gray-400 text-sm">Материалы:</span>
+                  <span class="text-white font-semibold text-sm" id="detailedMaterialsTotal">0 ₽</span>
+                </div>
+                
+                <!-- Room breakdown - after Materials -->
+                <div id="roomBreakdown" class="mb-3 text-sm">
+                  <!-- Filled by JavaScript -->
+                </div>
+                <div class="mb-3 rounded-2xl border border-white/10 bg-white/5 px-3 py-3">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="text-xs uppercase tracking-[0.18em] text-white/55">Статус калькулятора</span>
+                    <span id="calcAuditBadge" class="rounded-full border border-amber-400/30 bg-amber-500/10 px-2.5 py-1 text-[11px] font-semibold text-amber-200">Заполните помещения</span>
+                  </div>
+                  <div class="mt-3 grid grid-cols-2 gap-2 text-xs">
+                    <div class="rounded-xl bg-black/10 px-3 py-2">
+                      <div class="text-white/45">Помещения</div>
+                      <div class="mt-1 font-semibold text-white" id="calcAuditRooms">0</div>
+                    </div>
+                    <div class="rounded-xl bg-black/10 px-3 py-2">
+                      <div class="text-white/45">Площадь</div>
+                      <div class="mt-1 font-semibold text-white" id="calcAuditArea">0 м²</div>
+                    </div>
+                    <div class="rounded-xl bg-black/10 px-3 py-2">
+                      <div class="text-white/45">Работы, часы</div>
+                      <div class="mt-1 font-semibold text-white" id="calcAuditWorks">0</div>
+                    </div>
+                    <div class="rounded-xl bg-black/10 px-3 py-2">
+                      <div class="text-white/45">Материалы, количество</div>
+                      <div class="mt-1 font-semibold text-white" id="calcAuditMaterials">0</div>
+                    </div>
+                  </div>
+                  <p class="mt-3 text-xs leading-5 text-white/60" id="calcAuditHint">Добавьте хотя бы одно помещение, чтобы калькулятор начал собирать итоговые данные.</p>
+                  <div id="calcAuditWarnings" class="mt-3 hidden rounded-xl border border-amber-400/20 bg-amber-500/10 px-3 py-3">
+                    <div class="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-200">Замечания аудита</div>
+                    <div id="calcAuditWarningsList" class="mt-2 space-y-1 text-xs leading-5 text-amber-50/90"></div>
+                  </div>
+                </div>
+                
+                <div class="summary-row">
+                  <span class="text-gray-400 text-sm">Доп. услуги:</span>
+                  <span class="text-white font-semibold text-sm" id="detailedAdditionalTotal">0 ₽</span>
+                </div>
+                <div class="summary-row total-row">
+                  <span class="text-white font-bold">ИТОГО:</span>
+                  <span class="text-brand-400 font-bold" id="detailedGrandTotal">0 ₽</span>
+                </div>
+                
+                <div class="mt-4 space-y-2">
+                  <button onclick="openModalWithDetailedCalc()" class="w-full touch-target bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white py-3 rounded-xl font-bold transition-all hover:scale-[1.02] active:scale-95 shadow-lg flex items-center justify-center gap-2 text-sm">
+                    <i class="fas fa-paper-plane"></i>
+                    Получить финальный расчет
+                  </button>
+                  <button onclick="resetDetailedCalc()" class="w-full touch-target border border-gray-400 hover:border-brand-500 text-gray-600 hover:text-brand-600 dark:text-gray-400 dark:hover:text-brand-400 py-2 rounded-xl font-medium transition-all active:scale-95 text-sm">
+                    Сбросить
+                  </button>
+                </div>
+                
+                <p class="text-xs text-gray-500 mt-3 text-center">
+                  * Окончательная стоимость после осмотра
+                </p>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="side-rail-toggle side-rail-toggle-right" onclick="toggleDetailedSidePanel('summary')" aria-label="Развернуть раздел Итого" id="summarySideRailToggle">
+            <i class="fas fa-chevron-left"></i>
+            <span>Итого</span>
+            <i class="fas fa-calculator"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section-shell py-16 lg:py-24" aria-labelledby="portfolio-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10 lg:mb-12">
+        <h2 id="portfolio-title" class="text-3xl lg:text-5xl font-bold mb-4 font-display reveal">Наши работы</h2>
+        <p class="text-text-secondary reveal">Реальные проекты, выполненные нашими мастерами</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" role="group">
+        <button class="portfolio-filter active touch-target px-6 py-2 rounded-full font-medium bg-brand-500 text-white transition-all active:scale-95" data-filter="all" onclick="filterPortfolio('all')" aria-pressed="true" aria-label="Фильтр портфолио">Все</button>
+        <button class="portfolio-filter touch-target px-6 py-2 rounded-full font-medium bg-bg-secondary hover:bg-brand-100 dark:hover:bg-brand-900/20 transition-all active:scale-95" data-filter="living" onclick="filterPortfolio('living')" aria-pressed="false" aria-label="Фильтр портфолио">Гостиные</button>
+        <button class="portfolio-filter touch-target px-6 py-2 rounded-full font-medium bg-bg-secondary hover:bg-brand-100 dark:hover:bg-brand-900/20 transition-all active:scale-95" data-filter="kitchen" onclick="filterPortfolio('kitchen')" aria-pressed="false" aria-label="Фильтр портфолио">Кухни</button>
+        <button class="portfolio-filter touch-target px-6 py-2 rounded-full font-medium bg-bg-secondary hover:bg-brand-100 dark:hover:bg-brand-900/20 transition-all active:scale-95" data-filter="bedroom" onclick="filterPortfolio('bedroom')" aria-pressed="false" aria-label="Фильтр портфолио">Спальни</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6" id="portfolioGrid">
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" data-category="living" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Современная гостиная" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat1.jpg" 
+             alt="Современная гостиная с панорамными окнами" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Современная гостиная</h3>
+              <p class="text-white/80 text-sm">Москва, 115 м² • Бизнес</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" style="transition-delay: 0.1s" data-category="kitchen" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Скандинавская кухня" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat2.png" 
+             alt="Кухня в скандинавском стиле" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Скандинавская кухня</h3>
+              <p class="text-white/80 text-sm">Москва, 85 м² • Комфорт</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" style="transition-delay: 0.2s" data-category="bedroom" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Спальня в теплых тонах" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat3.jpg" 
+             alt="Спальня в теплых тонах" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Спальня в теплых тонах</h3>
+              <p class="text-white/80 text-sm">Москва, 78 м² • Премиум</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" data-category="living" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Лофт-апартаменты" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat4.png" 
+             alt="Гостиная в стиле лофт" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Лофт-апартаменты</h3>
+              <p class="text-white/80 text-sm">Москва, 120 м² • Премиум</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" style="transition-delay: 0.1s" data-category="kitchen" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Кухня-гостиная" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat5.jpg" 
+             alt="Современная кухня-гостиная" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Кухня-гостиная</h3>
+              <p class="text-white/80 text-sm">Москва, 95 м² • Бизнес</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item interactive-card group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] reveal" style="transition-delay: 0.2s" data-category="bedroom" onclick="openLightbox(this)" tabindex="0" role="button" aria-label="Открыть проект Детская комната" onkeydown="handlePortfolioKey(event, this)">
+          <img src="images/flat6.jpg" 
+             alt="Детская комната" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+             loading="lazy"
+             decoding="async"
+             width="800"
+             height="600">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform">
+              <h3 class="text-xl font-bold text-white mb-1">Детская комната</h3>
+              <p class="text-white/80 text-sm">Москва, 65 м² • Комфорт</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-16 lg:py-24 text-white relative overflow-hidden" aria-labelledby="process-title">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,_#111827_0%,_#1f2937_48%,_#92400e_100%)]"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    <div class="absolute -top-16 left-10 h-60 w-60 rounded-full bg-amber-300/10 blur-3xl"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <h2 id="process-title" class="text-3xl lg:text-5xl font-bold text-center mb-12 lg:mb-14 font-display reveal">Как мы работаем</h2>
+      
+      <div class="grid md:grid-cols-5 gap-6 lg:gap-8">
+        <div class="text-center reveal">
+          <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl text-brand-600 shadow-xl transform hover:scale-110 transition-transform">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">1. Заявка</h3>
+          <p class="text-white/80 text-sm">Звоните или оставляете заявку</p>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center text-white/30">
+          <i class="fas fa-arrow-right text-2xl"></i>
+        </div>
+
+        <div class="text-center reveal" style="transition-delay: 0.1s">
+          <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl text-brand-600 shadow-xl transform hover:scale-110 transition-transform">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">2. Замер</h3>
+          <p class="text-white/80 text-sm">Бесплатный выезд на объект</p>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center text-white/30">
+          <i class="fas fa-arrow-right text-2xl"></i>
+        </div>
+
+        <div class="text-center reveal" style="transition-delay: 0.2s">
+          <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl text-brand-600 shadow-xl transform hover:scale-110 transition-transform">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">3. Договор</h3>
+          <p class="text-white/80 text-sm">Согласование сроков и цены</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-6 lg:gap-8 mt-6 lg:mt-8">
+        <div class="text-center reveal" style="transition-delay: 0.3s">
+          <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl text-brand-600 shadow-xl transform hover:scale-110 transition-transform">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">4. Ремонт</h3>
+          <p class="text-white/80 text-sm">Выполнение с контролем</p>
+        </div>
+
+        <div class="hidden md:flex items-center justify-center text-white/30">
+          <i class="fas fa-arrow-right text-2xl"></i>
+        </div>
+
+        <div class="text-center reveal" style="transition-delay: 0.4s">
+          <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl text-brand-600 shadow-xl transform hover:scale-110 transition-transform">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">5. Сдача</h3>
+          <p class="text-white/80 text-sm">Подписание актов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section-shell py-16 lg:py-24 bg-bg-secondary" aria-labelledby="reviews-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="reviews-title" class="text-3xl lg:text-5xl font-bold text-center mb-12 lg:mb-14 font-display reveal">Отзывы клиентов</h2>
+      
+      <div class="grid md:grid-cols-3 gap-5 lg:gap-6">
+        <div class="premium-card rounded-2xl p-6 lg:p-8 reveal">
+          <div class="flex text-brand-500 mb-4 text-sm">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-text-secondary mb-6 text-sm leading-relaxed">"Работали мастера из компании, которые показали себя только с лучшей стороны. Уже изначально были обговорены наши пожелания, подобраны материалы."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-sm">ВК</div>
+            <div>
+              <div class="font-bold text-sm">Владислав К.</div>
+              <div class="text-xs text-text-secondary">Москва, 2-комнатная</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="premium-card rounded-2xl p-6 lg:p-8 reveal" style="transition-delay: 0.1s">
+          <div class="flex text-brand-500 mb-4 text-sm">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-text-secondary mb-6 text-sm leading-relaxed">"Квартиру приобрела без отделки. Фирму подбирала долго, остановилась на 'Ваши мастера' и не пожалела! Все сделали качественно и в срок."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-sm">НП</div>
+            <div>
+              <div class="font-bold text-sm">Наталья П.</div>
+              <div class="text-xs text-text-secondary">Южное Бутово, студия</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="premium-card rounded-2xl p-6 lg:p-8 reveal" style="transition-delay: 0.2s">
+          <div class="flex text-brand-500 mb-4 text-sm">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-text-secondary mb-6 text-sm leading-relaxed">"Была на 6 месяце беременности, и надо было сделать ремонт до рождения малыша. Сделали в срок, даже раньше! Качество отличное."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-sm">НМ</div>
+            <div>
+              <div class="font-bold text-sm">Надежда М.</div>
+              <div class="text-xs text-text-secondary">Москва, 3-комнатная</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section-shell py-16 lg:py-24" aria-labelledby="about-title">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 id="about-title" class="text-3xl lg:text-5xl font-bold text-center mb-10 lg:mb-12 font-display reveal">О компании</h2>
+        
+        <div class="premium-card rounded-3xl p-6 lg:p-10 reveal">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+              <i class="fas fa-building text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">ООО «Система софт 360»</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">
+                Управляем цифровой платформой «Ваши мастера», объединяющей опытные бригады с 10+ летней практикой. Наша цель — сделать ремонт прозрачным и комфортным.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center p-4 bg-bg-secondary rounded-xl">
+              <div class="text-2xl font-bold text-brand-600">2015</div>
+              <div class="text-xs text-text-secondary">Основание</div>
+            </div>
+            <div class="text-center p-4 bg-bg-secondary rounded-xl">
+              <div class="text-2xl font-bold text-brand-600">250+</div>
+              <div class="text-xs text-text-secondary">Проектов</div>
+            </div>
+            <div class="text-center p-4 bg-bg-secondary rounded-xl">
+              <div class="text-2xl font-bold text-brand-600">50+</div>
+              <div class="text-xs text-text-secondary">Бригад</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-text-secondary border-t border-gray-200 dark:border-gray-700 pt-4">
+            <p>ИНН 7735212340 • ОГРН 1257700436509</p>
+            <p class="mt-1">г. Москва, г. Зеленоград, кор. 829</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  
+<!-- FAQ Section for SEO -->
+<section id="faq" class="section-shell py-16 lg:py-24 bg-bg-secondary" aria-labelledby="faq-title">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="faq-title" class="text-3xl lg:text-5xl font-bold text-center mb-12 lg:mb-14 font-display reveal">Частые вопросы</h2>
+
+    <div class="max-w-3xl mx-auto space-y-3 lg:space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Сколько длится ремонт квартиры под ключ?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">Средний срок ремонта квартиры под ключ составляет 1.5-2 месяца. Косметический ремонт можно выполнить за 2-4 недели, капитальный — за 1-2 месяца, премиальный — за 2-3 месяца. Точные сроки зависят от площади, сложности работ и выбранных материалов.</p>
+        </div>
+      </div>
+
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Какая гарантия на ремонт?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">Мы предоставляем расширенную гарантию до 3 лет на все виды работ и материалов. Гарантия распространяется на отделочные работы, электрику, сантехнику и инженерные системы. В случае возникновения проблем устраняем их бесплатно в течение гарантийного срока.</p>
+        </div>
+      </div>
+
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Можно ли сделать ремонт в рассрочку?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">Да, мы предоставляем возможность оплаты в рассрочку без процентов на 3-6 месяцев. Также доступны кредитные программы от наших банков-партнёров с процентной ставкой от 4.9% годовых. Для рассрочки требуется первоначальный взнос от 30%.</p>
+        </div>
+      </div>
+
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Нужен ли дизайн-проект для ремонта?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">Для косметического и капитального ремонта дизайн-проект не обязателен — можно выбрать готовые решения из нашего каталога. Для премиального ремонта разработка индивидуального дизайн-проекта включена в стоимость и обязательна для достижения заявленного качества.</p>
+        </div>
+      </div>
+
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Что входит в стоимость ремонта?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">В стоимость входит полный комплекс работ: демонтаж старых покрытий, подготовка поверхностей, все отделочные работы, монтаж сантехники и электрики, установка дверей и плинтусов. Материалы рассчитываются отдельно или могут быть включены в фиксированную цену в зависимости от выбранного пакета.</p>
+        </div>
+      </div>
+
+      <div class="premium-card rounded-2xl p-6 reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="font-bold text-lg mb-2" itemprop="name">Как контролировать ход работ?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-text-secondary" itemprop="text">Вы получаете доступ к личному кабинету с фотоотчетами по этапам работ. Прораб ежедневно отчитывается о прогрессе. Мы соблюдаем график и информируем о любых изменениях заранее. Возможны онлайн-трансляции с объекта.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,_rgba(245,158,11,0.18),_transparent_35%),linear-gradient(180deg,_rgba(255,255,255,0.03),_transparent_28%)]"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl lg:text-5xl font-bold mb-5 font-display reveal">Готовы начать ремонт?</h2>
+      <p class="text-lg text-gray-400 mb-7 max-w-2xl mx-auto reveal">Получите бесплатную консультацию и расчет стоимости</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+        <button onclick="openModal()" class="touch-target bg-brand-500 hover:bg-brand-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-xl">
+          Бесплатный замер
+        </button>
+        <a href="tel:+79851234532" class="touch-target border-2 border-white/30 text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 active:scale-95">
+          <i class="fas fa-phone-alt"></i>
+          +7 (985) 123-45-32
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  </main>
+
+  <footer class="bg-bg-secondary border-t border-gray-200 dark:border-gray-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">ВМ</div>
+            <span class="font-bold font-display">Ваши мастера</span>
+          </div>
+          <p class="text-sm text-text-secondary">Ремонт квартир под ключ в Москве и области</p>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4 text-sm">Услуги</h4>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li><a href="#services" onclick="scrollToSection('services'); return false;" class="hover:text-brand-600 transition-colors">Косметический ремонт</a></li>
+            <li><a href="#services" onclick="scrollToSection('services'); return false;" class="hover:text-brand-600 transition-colors">Капитальный ремонт</a></li>
+            <li><a href="#services" onclick="scrollToSection('services'); return false;" class="hover:text-brand-600 transition-colors">Премиальный ремонт</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4 text-sm">Информация</h4>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li><a href="#portfolio" onclick="scrollToSection('portfolio'); return false;" class="hover:text-brand-600 transition-colors">Портфолио</a></li>
+            <li><a href="#about" onclick="scrollToSection('about'); return false;" class="hover:text-brand-600 transition-colors">О компании</a></li>
+            <li><a href="#faq" onclick="scrollToSection('faq'); return false;" class="hover:text-brand-600 transition-colors">Частые вопросы</a></li>
+            <li><a href="#" class="hover:text-brand-600 transition-colors">Политика конфиденциальности</a></li>
+            <li><a href="#" class="hover:text-brand-600 transition-colors">Договор оферты</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-4 text-sm">Контакты</h4>
+          <ul class="space-y-2 text-sm text-text-secondary">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-map-marker-alt text-brand-500"></i>
+              <span>г. Зеленоград, кор. 829</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-phone text-brand-500"></i>
+              <a href="tel:+79851234532" class="hover:text-brand-600 transition-colors">+7 (985) 123-45-32</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-brand-500"></i>
+              <a href="mailto:info@вашимастера.рус" class="hover:text-brand-600 transition-colors">info@вашимастера.рус</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-clock text-brand-500"></i>
+              <span>Пн-Пт: 9:00-20:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-secondary">
+        <p>© ООО «Система софт 360», 2015-<span id="currentYear">2026</span></p>
+        <p>Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ИСПРАВЛЕННЫЙ BOTTOM NAVIGATION (MOBILE) -->
+  <nav class="bottom-nav md:hidden" aria-label="Мобильная навигация" id="bottomNav">
+    <div class="flex justify-around items-stretch h-full max-w-lg mx-auto">
+      <!-- Services -->
+      <a href="#services" class="bottom-nav-item" data-section="services" onclick="handleBottomNavClick(event, 'services')">
+        <i class="fas fa-tools"></i>
+        <span>Услуги</span>
+      </a>
+      
+      <!-- Calculator -->
+      <a href="#calculator" class="bottom-nav-item" data-section="calculator" onclick="handleBottomNavClick(event, 'calculator')">
+        <i class="fas fa-calculator"></i>
+        <span>Смета</span>
+      </a>
+      
+      <!-- Call Button -->
+      <a href="tel:+79851234532" class="bottom-nav-item bottom-nav-call" data-section="call">
+        <div class="call-button">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <span>Звонок</span>
+      </a>
+      
+      <!-- Portfolio -->
+      <a href="#portfolio" class="bottom-nav-item" data-section="portfolio" onclick="handleBottomNavClick(event, 'portfolio')">
+        <i class="fas fa-images"></i>
+        <span>Работы</span>
+      </a>
+      
+      <!-- About -->
+      <a href="#about" class="bottom-nav-item" data-section="about" onclick="handleBottomNavClick(event, 'about')">
+        <i class="fas fa-info-circle"></i>
+        <span>О нас</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- AI Chat Widget -->
+  <div class="chat-widget hidden">
+    <button onclick="toggleChat()" class="w-14 h-14 bg-brand-500 hover:bg-brand-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 active:scale-95 touch-target" aria-label="Открыть чат с ассистентом">
+      <i class="fas fa-robot text-2xl"></i>
+    </button>
+    
+    <!-- Chat Window -->
+    <div id="chatWindow" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-bg-primary rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div class="bg-brand-500 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-robot"></i>
+          <span class="font-bold">Ассистент</span>
+        </div>
+        <button onclick="toggleChat()" class="text-white/80 hover:text-white touch-target w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/20 active:scale-95" aria-label="Закрыть чат">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div id="chatMessages" class="h-80 overflow-y-auto p-4 space-y-3 bg-bg-secondary">
+        <div class="bg-white dark:bg-dark-surface p-3 rounded-xl rounded-tl-none text-sm shadow-sm max-w-[85%]">
+          Привет! 👋 Я помогу рассчитать стоимость ремонта или отвечу на вопросы. Что вас интересует?
+        </div>
+      </div>
+      <div class="p-3 bg-bg-primary border-t border-gray-200 dark:border-gray-700">
+        <div class="flex gap-2">
+          <input type="text" id="chatInput" placeholder="Напишите сообщение..." class="flex-1 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 bg-bg-secondary text-sm focus:outline-none focus:border-brand-500" onkeypress="if(event.key==='Enter')sendChatMessage()">
+          <button onclick="sendChatMessage()" class="w-10 h-10 bg-brand-500 text-white rounded-full flex items-center justify-center hover:bg-brand-600 active:scale-95 transition-colors touch-target">
+            <i class="fas fa-paper-plane text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="if (event.target === this) closeLightbox()" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+    <button id="lightboxCloseBtn" class="absolute top-4 right-4 text-white text-3xl z-10 touch-target w-12 h-12 flex items-center justify-center bg-black/50 rounded-full hover:bg-black/70 active:scale-95 transition-colors" aria-label="Закрыть" onclick="closeLightbox()">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="lightboxImg" src="" alt="" class="rounded-lg">
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="bg-bg-primary rounded-2xl max-w-md w-full p-6 relative transform transition-all scale-95 opacity-0 max-h-[90vh] overflow-y-auto" id="modalContent">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-text-secondary hover:text-text-primary touch-target w-10 h-10 flex items-center justify-center rounded-full hover:bg-bg-secondary active:scale-95 transition-colors" aria-label="Закрыть">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <h3 id="modal-title" class="text-2xl font-bold mb-2 font-display">Бесплатная консультация</h3>
+      <p class="text-text-secondary text-sm mb-6">Перезвоним за 10 минут</p>
+      
+      <form id="contactForm" class="space-y-4" novalidate>
+        <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
+        
+        <div>
+          <label class="block text-sm font-medium mb-1" for="formName">Имя *</label>
+          <input type="text" id="formName" name="name" required autocomplete="name" class="w-full touch-target px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-bg-secondary focus:border-brand-500 focus:outline-none transition-colors" placeholder="Ваше имя">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium mb-1" for="formPhone">Телефон *</label>
+          <input type="tel" id="formPhone" name="phone" required autocomplete="tel" inputmode="tel" class="w-full touch-target px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-bg-secondary focus:border-brand-500 focus:outline-none transition-colors" placeholder="+7 (___) ___-__-__">
+        </div>
+        
+        <input type="hidden" id="formService" name="service" value="">
+        <input type="hidden" id="formCalcData" name="calcData" value="">
+        
+        <button type="submit" id="submitBtn" class="w-full touch-target bg-brand-500 hover:bg-brand-600 text-white py-4 rounded-xl font-bold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 mt-6">
+          <span>Отправить</span>
+        </button>
+        
+        <p class="text-xs text-text-secondary text-center">
+          Нажимая кнопку, вы соглашаетесь с <a href="#" class="underline hover:text-brand-600">политикой конфиденциальности</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notifications -->
+  <div id="notification" class="fixed bottom-24 md:bottom-4 right-4 bg-green-500 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all z-50 flex items-center gap-3 max-w-sm" role="status" aria-live="polite">
+    <i class="fas fa-check-circle text-xl"></i>
+    <div>
+      <div class="font-bold">Заявка отправлена!</div>
+      <div class="text-sm opacity-90">Мы перезвоним вам</div>
+    </div>
+  </div>
+
+  <div id="errorNotification" class="fixed bottom-24 md:bottom-4 right-4 bg-red-500 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all z-50 flex items-center gap-3 max-w-sm" role="alert" aria-live="assertive">
+    <i class="fas fa-exclamation-circle text-xl"></i>
+    <div>
+      <div class="font-bold">Ошибка</div>
+      <div class="text-sm opacity-90">Позвоните нам: <a href="tel:+79851234532" class="underline font-bold">+7 (985) 123-45-32</a></div>
+    </div>
+  </div>
+
+  <script>
+    window.__smetaProPage = true;
+  </script>
+  <script src="ui-core.js?v=side-panels-open-20260521"></script>
+
+  <!-- Sticky CTA for mobile -->
+  <div class="fixed bottom-24 left-4 right-4 md:hidden z-30 transform translate-y-0 transition-transform duration-300" id="stickyCTA">
+    <button onclick="openModal()" class="w-full bg-gradient-to-r from-brand-500 to-brand-600 text-white py-3 rounded-full font-bold shadow-lg hover:from-brand-600 hover:to-brand-700 active:scale-95 transition-all flex items-center justify-center border-2 border-white/80">
+      Бесплатный замер
+    </button>
+  </div>
+
+  <div id="repairQuestScreen" class="repair-quest-screen" aria-hidden="true">
+    <div class="repair-quest-shell">
+      <div class="repair-quest-layout">
+        <div class="repair-quest-card">
+          <div class="repair-quest-card-head">
+            <div class="repair-quest-head-row">
+              <div class="repair-quest-head-copy">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold" id="repairQuestModeBadge">Примерный расчет</div>
+                <h3 class="text-2xl font-bold mt-3">Квест по ремонту</h3>
+                <div class="mt-3 inline-flex flex-wrap items-center gap-2 text-sm text-slate-600" id="repairQuestRoomTypeLabelContainer">
+                  <span class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 text-slate-700">
+                    <strong>Тип помещения:</strong>
+                    <span id="repairQuestRoomTypeLabel">—</span>
+                  </span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2" id="repairQuestLead">Ответьте на несколько понятных вопросов. По ходу опроса мы будем “строить” ваш дом и готовить разделы сметы автоматически.</p>
+              </div>
+              <div class="repair-quest-head-actions">
+                <button type="button" class="repair-quest-head-btn" id="repairQuestCompactToggle" onclick="toggleRepairQuestCompactHeader()" aria-label="Свернуть или развернуть верхнюю панель">
+                  <i class="fas fa-compress"></i>
+                  <span>Компактно</span>
+                </button>
+                <button type="button" class="repair-quest-info-toggle" id="repairQuestInfoToggle" onclick="toggleRepairQuestInfoPanel()">
+                  <i class="fas fa-circle-info"></i>
+                  <span>Информация</span>
+                </button>
+                <button type="button" class="repair-quest-close w-11 h-11 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onclick="closeRepairQuest()" aria-label="Закрыть опрос">
+                  <i class="fas fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="repair-quest-progress mb-2">
+              <span id="repairQuestProgressBar" style="width: 0%;"></span>
+            </div>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-5">
+              <span id="repairQuestProgressText">Шаг 1 из 1</span>
+              <span id="repairQuestProgressPercent">0%</span>
+            </div>
+          </div>
+          <div id="repairQuestContent"></div>
+        </div>
+        <aside class="repair-quest-side">
+          <div class="quest-scene mb-4" id="repairQuestScene"></div>
+          <div class="text-lg font-semibold">Ваш дом строится по ответам</div>
+          <div class="text-sm text-gray-500 mt-1">Каждый шаг добавляет новую часть дома. На финальном шаге он будет полностью готов к расчету.</div>
+          <div class="quest-room-list" id="repairQuestRoomList"></div>
+        </aside>
+      </div>
+    </div>
+    <div class="repair-quest-info-backdrop" id="repairQuestInfoBackdrop" onclick="toggleRepairQuestInfoPanel(false)"></div>
+    <aside class="repair-quest-info-panel" id="repairQuestInfoPanel" aria-hidden="true"></aside>
+  </div>
+
+
+  <script src="calc-core.js?v=retail-premise-type-20260525"></script>
+  <script src="calc-utils.js?v=section-audit-20260508"></script>
+  <script src="demolition.js"></script>
+  <script src="installation.js?v=repair-partitions-20260508"></script>
+  <!-- Detailed Calculator Script -->
+  <script src="calc-stairs.js?v=8"></script>
+  <script src="installation-stairs.js?v=13"></script>
+  <script src="calc-init.js?v=room-price-tier-20260528"></script>
+  <script src="repair-coverings-api.js?v=room-editor-backend-materials-20260601"></script>
+  <script src="calc-render.js?v=room-editor-ceiling-final-20260601"></script>
+  <script src="calc-pdf-export.js?v=estimate-premium-table-fallback-20260524"></script>
+  <script src="calc-repair-quest.js?v=quest-approx-self-contained-20260601"></script>
+  <script src="calc-building.js?v=retail-premise-type-20260525"></script>
+  <script src="calc-ui-toggles.js"></script>
+  <script src="calc-address.js?v=tariff-city-20260520"></script>
+  <script src="calc-room-ui.js?v=retail-premise-type-20260525"></script>
+  <script src="calc-summary-render.js?v=estimate-object-floors-20260520"></script>
+  <script src="calc-pricing.js?v=room-repair-metadata-flow-20260525"></script>
+  <script src="calc-flow.js?v=retail-premise-type-20260525"></script>
+  <script src="calc-estimate-export.js?v=estimate-export-totals-20260601"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (document.body.classList.contains('smeta-pro-page') && typeof showDetailedCalc === 'function') {
+        showDetailedCalc();
+      } else if (window.location.hash === '#detailedCalc' && typeof showDetailedCalc === 'function') {
+        showDetailedCalc();
+      }
+    });
+  </script>
+  
+  <!-- Price List Scripts -->
+  <script src="prices_list.js?v=room-repair-scenarios-library-20260526"></script>
+  <script src="prices_materials.js?v=tariff-city-20260520"></script>
+
+</body>
+</html>
