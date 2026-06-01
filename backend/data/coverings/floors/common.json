@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "2026-05-30.1",
+  "visibility": "backend-controlled",
+  "category": "floors",
+  "coverId": "floor.common",
+  "title": "Напольные покрытия",
+  "requiredGroups": [
+    "Формат покрытия",
+    "Класс покрытия",
+    "Тип покрытия",
+    "Форма покрытия",
+    "Размер покрытия",
+    "Цветовая гамма",
+    "Способ укладки"
+  ],
+  "optionGroups": [
+    {
+      "group": "Формат покрытия",
+      "options": [
+        { "label": "Формат: доска / планка", "covers": ["laminate", "quartz", "wood"], "format": "plank" },
+        { "label": "Формат: плитка / модуль", "covers": ["quartz", "tile"], "format": "tile_module" },
+        { "label": "Формат: фигурная", "covers": ["quartz", "tile"], "format": "figured" },
+        { "label": "Формат: крупноформатная плита", "covers": ["tile"], "format": "large_tile" },
+        { "label": "Формат: рулонное покрытие", "covers": ["linoleum"], "format": "roll" },
+        { "label": "Формат: замковая пробка", "covers": ["cork"], "format": "cork_lock" },
+        { "label": "Формат: клеевая пробка", "covers": ["cork"], "format": "cork_glue" },
+        { "label": "Формат: полимерные полы", "covers": ["self_leveling"], "format": "polymer_floor" },
+        { "label": "Формат: эпоксидные полы", "covers": ["self_leveling"], "format": "epoxy_floor" },
+        { "label": "Формат: полиуретановые полы", "covers": ["self_leveling"], "format": "polyurethane_floor" },
+        { "label": "Формат: кварцевые полы", "covers": ["self_leveling"], "format": "quartz_floor" },
+        { "label": "Формат: декоративные 3D полы", "covers": ["self_leveling"], "format": "decor_3d_floor" }
+      ]
+    },
+    {
+      "group": "Класс покрытия",
+      "options": [
+        { "label": "Класс: 31 бытовой усиленный", "covers": ["laminate", "quartz", "linoleum", "cork"], "formats": ["plank", "tile_module", "roll", "cork_lock", "cork_glue"] },
+        { "label": "Класс: 32 для активной жилой зоны", "covers": ["laminate", "quartz", "linoleum", "cork"], "formats": ["plank", "tile_module", "roll", "cork_lock", "cork_glue"] },
+        { "label": "Класс: 33 коммерческий легкий", "covers": ["laminate", "quartz", "linoleum", "cork"], "formats": ["plank", "tile_module", "roll", "cork_lock", "cork_glue"] },
+        { "label": "Класс: 34 повышенная нагрузка", "covers": ["laminate", "quartz", "linoleum"], "formats": ["plank", "tile_module", "roll"] },
+        { "label": "Класс: 43 промышленная нагрузка", "covers": ["quartz", "linoleum"], "formats": ["plank", "tile_module", "roll"] },
+        { "label": "Класс: PEI III для жилых помещений", "covers": ["tile"], "formats": ["tile_module", "figured", "large_tile"] },
+        { "label": "Класс: PEI IV для активной зоны", "covers": ["tile"], "formats": ["tile_module", "figured", "large_tile"] },
+        { "label": "Класс: PEI V для высокой нагрузки", "covers": ["tile"], "formats": ["tile_module", "figured", "large_tile"] }
+      ]
+    },
+    {
+      "group": "Тип покрытия",
+      "options": [
+        { "label": "Тип: влагостойкий ламинат", "covers": ["laminate"] },
+        { "label": "Тип: водостойкий ламинат", "covers": ["laminate"] },
+        { "label": "Тип: клеевая LVT-плитка", "covers": ["quartz"], "formats": ["plank", "tile_module"] },
+        { "label": "Тип: замковый SPC", "covers": ["quartz"], "formats": ["plank", "tile_module"] },
+        { "label": "Тип: жесткий Rigid Vinyl", "covers": ["quartz"], "formats": ["plank", "tile_module"] },
+        { "label": "Тип: матовая поверхность", "covers": ["tile"] },
+        { "label": "Тип: лаппатированная поверхность", "covers": ["tile"] },
+        { "label": "Тип: замковая пробка с лаком", "covers": ["cork"], "formats": ["cork_lock"] },
+        { "label": "Тип: клеевая пробка с заводским лаком", "covers": ["cork"], "formats": ["cork_glue"] },
+        { "label": "Тип: лакированное матовое / полуматовое покрытие", "covers": ["wood"], "formats": ["plank"] },
+        { "label": "Тип: масляно-восковое покрытие", "covers": ["wood"], "formats": ["plank"] },
+        { "label": "Тип: полукоммерческий линолеум", "covers": ["linoleum"], "formats": ["roll"] },
+        { "label": "Тип: однотонный наливной пол", "covers": ["self_leveling"], "formats": ["polymer_floor", "epoxy_floor", "polyurethane_floor", "quartz_floor"] },
+        { "label": "Тип: декоративный наливной пол", "covers": ["self_leveling"] }
+      ]
+    },
+    {
+      "group": "Форма покрытия",
+      "options": [
+        { "label": "Форма: монолитная", "formats": ["polymer_floor", "epoxy_floor", "polyurethane_floor", "quartz_floor", "decor_3d_floor"] },
+        { "label": "Форма: прямоугольная", "formats": ["plank", "short_plank", "roll", "cork_lock", "tile_module", "figured", "large_tile", "cork_glue"] },
+        { "label": "Форма: квадратная", "formats": ["tile_module", "figured", "large_tile", "cork_glue"] }
+      ]
+    },
+    {
+      "group": "Размер покрытия",
+      "options": [
+        { "label": "Размер: по площади заливки", "formats": ["polymer_floor", "epoxy_floor", "polyurethane_floor", "quartz_floor", "decor_3d_floor"] },
+        { "label": "Размер: стандартный формат", "formats": ["plank", "tile_module", "figured", "large_tile", "roll", "cork_lock", "cork_glue"] },
+        { "label": "Размер: широкий формат", "formats": ["plank", "cork_lock", "cork_glue"] },
+        { "label": "Размер: крупный формат", "formats": ["plank", "tile_module", "figured", "large_tile", "cork_lock", "cork_glue"] },
+        { "label": "Размер: свой размер элемента", "formats": ["plank", "tile_module", "figured", "large_tile", "cork_lock", "cork_glue"] }
+      ]
+    },
+    {
+      "group": "Цветовая гамма",
+      "options": [
+        { "label": "Цвет: светло-коричневый · RAL 8025", "covers": ["laminate", "quartz", "linoleum"] },
+        { "label": "Цвет: натуральный дуб · Oak Natural", "covers": ["laminate", "quartz", "cork", "wood"] },
+        { "label": "Цвет: под камень каррара · Carrara Marble", "covers": ["tile"] },
+        { "label": "Цвет: серый пыльный · RAL 7044", "covers": ["self_leveling"] },
+        { "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор", "covers": ["self_leveling"] }
+      ]
+    },
+    {
+      "group": "Способ укладки",
+      "options": [
+        { "label": "Базовая прямая укладка", "formats": ["plank", "tile_module", "figured", "large_tile", "cork_lock"] },
+        { "label": "Бесшовная заливка по подготовленному основанию", "formats": ["polymer_floor", "epoxy_floor", "polyurethane_floor", "quartz_floor", "decor_3d_floor"] },
+        { "label": "Плавающий способ укладки", "formats": ["plank", "cork_lock"] },
+        { "label": "Клеевой способ укладки", "formats": ["plank", "tile_module", "figured", "large_tile", "cork_glue"] },
+        { "label": "Укладка линолеума на клей", "formats": ["roll"] }
+      ]
+    }
+  ],
+  "autofillRules": {
+    "laminate": {
+      "budget": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Класс покрытия", "label": "Класс: 32 для активной жилой зоны" },
+        { "group": "Тип покрытия", "label": "Тип: влагостойкий ламинат" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: светло-коричневый · RAL 8025" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ],
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Класс покрытия", "label": "Класс: 33 коммерческий легкий" },
+        { "group": "Тип покрытия", "label": "Тип: водостойкий ламинат" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ]
+    },
+    "quartz": {
+      "budget": [
+        { "group": "Формат покрытия", "label": "Формат: плитка / модуль" },
+        { "group": "Класс покрытия", "label": "Класс: 32 для активной жилой зоны" },
+        { "group": "Тип покрытия", "label": "Тип: клеевая LVT-плитка" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: светло-коричневый · RAL 8025" },
+        { "group": "Способ укладки", "label": "Клеевой способ укладки" }
+      ],
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Класс покрытия", "label": "Класс: 33 коммерческий легкий" },
+        { "group": "Тип покрытия", "label": "Тип: замковый SPC" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ],
+      "business": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Класс покрытия", "label": "Класс: 33 коммерческий легкий" },
+        { "group": "Тип покрытия", "label": "Тип: замковый SPC" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: широкий формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Класс покрытия", "label": "Класс: 34 повышенная нагрузка" },
+        { "group": "Тип покрытия", "label": "Тип: жесткий Rigid Vinyl" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: широкий формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ]
+    },
+    "tile": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: плитка / модуль" },
+        { "group": "Класс покрытия", "label": "Класс: PEI III для жилых помещений" },
+        { "group": "Тип покрытия", "label": "Тип: матовая поверхность" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: под камень каррара · Carrara Marble" },
+        { "group": "Способ укладки", "label": "Клеевой способ укладки" }
+      ],
+      "business": [
+        { "group": "Формат покрытия", "label": "Формат: крупноформатная плита" },
+        { "group": "Класс покрытия", "label": "Класс: PEI IV для активной зоны" },
+        { "group": "Тип покрытия", "label": "Тип: матовая поверхность" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: широкий формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: под камень каррара · Carrara Marble" },
+        { "group": "Способ укладки", "label": "Клеевой способ укладки" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: крупноформатная плита" },
+        { "group": "Класс покрытия", "label": "Класс: PEI IV для активной зоны" },
+        { "group": "Тип покрытия", "label": "Тип: лаппатированная поверхность" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: крупный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: под камень каррара · Carrara Marble" },
+        { "group": "Способ укладки", "label": "Клеевой способ укладки" }
+      ]
+    },
+    "cork": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: замковая пробка" },
+        { "group": "Класс покрытия", "label": "Класс: 32 для активной жилой зоны" },
+        { "group": "Тип покрытия", "label": "Тип: замковая пробка с лаком" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Плавающий способ укладки" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: клеевая пробка" },
+        { "group": "Класс покрытия", "label": "Класс: 33 коммерческий легкий" },
+        { "group": "Тип покрытия", "label": "Тип: клеевая пробка с заводским лаком" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Клеевой способ укладки" }
+      ]
+    },
+    "wood": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Тип покрытия", "label": "Тип: лакированное матовое / полуматовое покрытие" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: доска / планка" },
+        { "group": "Тип покрытия", "label": "Тип: масляно-восковое покрытие" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: широкий формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: натуральный дуб · Oak Natural" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ]
+    },
+    "linoleum": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: рулонное покрытие" },
+        { "group": "Класс покрытия", "label": "Класс: 32 для активной жилой зоны" },
+        { "group": "Тип покрытия", "label": "Тип: полукоммерческий линолеум" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: светло-коричневый · RAL 8025" },
+        { "group": "Способ укладки", "label": "Базовая прямая укладка" }
+      ]
+    },
+    "self_leveling": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: полимерные полы" },
+        { "group": "Тип покрытия", "label": "Тип: однотонный наливной пол" },
+        { "group": "Форма покрытия", "label": "Форма: монолитная" },
+        { "group": "Размер покрытия", "label": "Размер: по площади заливки" },
+        { "group": "Цветовая гамма", "label": "Цвет: серый пыльный · RAL 7044" },
+        { "group": "Способ укладки", "label": "Бесшовная заливка по подготовленному основанию" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: декоративные 3D полы" },
+        { "group": "Тип покрытия", "label": "Тип: декоративный наливной пол" },
+        { "group": "Форма покрытия", "label": "Форма: монолитная" },
+        { "group": "Размер покрытия", "label": "Размер: по площади заливки" },
+        { "group": "Цветовая гамма", "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" },
+        { "group": "Способ укладки", "label": "Бесшовная заливка по подготовленному основанию" }
+      ]
+    }
+  }
+}

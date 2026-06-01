@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "2026-05-30.1",
+  "visibility": "backend-controlled",
+  "category": "walls",
+  "coverId": "wall.decorative_plaster",
+  "title": "Декоративная / Венецианская штукатурка",
+  "requiredGroups": [
+    "Формат покрытия",
+    "Тип покрытия",
+    "Система / эффект",
+    "Цветовая гамма",
+    "Фактура",
+    "Защитный финиш",
+    "Способ монтажа / нанесения"
+  ],
+  "format": {
+    "id": "coat",
+    "label": "Формат: нанесение сплошным слоем"
+  },
+  "techniques": [
+    {
+      "id": "marmorino_carrara",
+      "label": "Marmorino Carrara / венецианская штукатурка",
+      "level": "premium",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/marmorino-carrara/preview.webp",
+        "fallbackStyle": "linear-gradient(135deg, #f8fafc, #e5e7eb 42%, #94a3b8 44%, #ffffff 70%, #cbd5e1)",
+        "sourceUrl": "https://settef.ru/marmorinocarrara/"
+      },
+      "systems": ["marmorino_carrara", "mineral_lime_base"],
+      "textures": ["marble_gloss", "mineral_satin"],
+      "colorFamilies": ["mineral_light", "marble_venetian"],
+      "finishes": ["specchio_cera", "umbrella"]
+    },
+    {
+      "id": "venetian_marble",
+      "label": "Венецианская штукатурка под мрамор",
+      "level": "premium",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/venetian-marble/preview.webp",
+        "fallbackStyle": "linear-gradient(135deg, #fff7ed, #f8fafc 36%, #cbd5e1 39%, #ffffff 64%, #94a3b8)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["venetian_smooth", "mineral_lime_base"],
+      "textures": ["marble_gloss", "mineral_satin"],
+      "colorFamilies": ["mineral_light", "marble_venetian", "onyx_stone"],
+      "finishes": ["specchio_cera", "velatura"]
+    },
+    {
+      "id": "encausto_granite",
+      "label": "Encausto / гранитная глубина",
+      "level": "premium",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/encausto-granite/preview.webp",
+        "fallbackStyle": "radial-gradient(circle at 26% 28%, #94a3b8 0 3%, transparent 4%), linear-gradient(135deg, #111827, #374151 55%, #6b7280)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["encausto_granite"],
+      "textures": ["granite_depth"],
+      "colorFamilies": ["marble_venetian", "deep_dark"],
+      "finishes": ["specchio_cera"]
+    },
+    {
+      "id": "travertino",
+      "label": "Travertino / травертин",
+      "level": "comfort",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/travertino/preview.webp",
+        "fallbackStyle": "repeating-linear-gradient(135deg, #ead7b5 0 8px, #c8aa78 8px 11px, #fff3d8 11px 20px)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["travertino_veins"],
+      "textures": ["travertine_horizontal", "travertine_vertical"],
+      "colorFamilies": ["travertine_sand"],
+      "finishes": ["velatura", "umbrella"]
+    },
+    {
+      "id": "concrete_loft",
+      "label": "Декоративный бетон / Loft",
+      "level": "business",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/concrete-loft/preview.webp",
+        "fallbackStyle": "linear-gradient(135deg, #e5e7eb, #9ca3af 48%, #6b7280)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["decorative_concrete"],
+      "textures": ["fine_concrete", "formwork_concrete"],
+      "colorFamilies": ["concrete_loft"],
+      "finishes": ["umbrella", "velatura"]
+    },
+    {
+      "id": "damasco_silk",
+      "label": "Эффект шелка / Damasco",
+      "level": "business",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/damasco-silk/preview.webp",
+        "fallbackStyle": "linear-gradient(135deg, #fff7ed, #f9d9a7 35%, #ffffff 52%, #dbeafe 78%)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["damasco_silk", "cristallo_pearl"],
+      "textures": ["soft_silk", "pearl_silk"],
+      "colorFamilies": ["silk_pearl"],
+      "finishes": ["velatura"]
+    },
+    {
+      "id": "world_map",
+      "label": "Карта мира / островная фактура",
+      "level": "comfort",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/world-map/preview.webp",
+        "fallbackStyle": "radial-gradient(circle at 24% 34%, #d6d3d1 0 12%, transparent 13%), radial-gradient(circle at 70% 62%, #a8a29e 0 10%, transparent 11%), #f5f5f4",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["world_map"],
+      "textures": ["world_map_fine", "world_map_large"],
+      "colorFamilies": ["mineral_light", "concrete_loft"],
+      "finishes": ["velatura"]
+    },
+    {
+      "id": "sabbia",
+      "label": "Sabbia / песчаный эффект",
+      "level": "comfort",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/sabbia/preview.webp",
+        "fallbackStyle": "radial-gradient(circle at 24% 28%, #fde68a 0 4%, transparent 5%), radial-gradient(circle at 70% 66%, #f59e0b 0 3%, transparent 4%), linear-gradient(135deg, #e7c781, #8a6a2f)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["sabbia_shimmer"],
+      "textures": ["sand_shimmer"],
+      "colorFamilies": ["travertine_sand", "metal_effects"],
+      "finishes": ["velatura"]
+    },
+    {
+      "id": "metalline",
+      "label": "Metalline / металлизированная техника",
+      "level": "premium",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/metalline/preview.webp",
+        "fallbackStyle": "linear-gradient(135deg, #3b2416, #b7793f 45%, #f4c27a 48%, #5a2e18)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["metalline_bronze_argento"],
+      "textures": ["metal_smooth", "metal_brushed"],
+      "colorFamilies": ["metal_effects"],
+      "finishes": ["metalline"]
+    },
+    {
+      "id": "flock",
+      "label": "Флоковое декоративное покрытие",
+      "level": "comfort",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/flock/preview.webp",
+        "fallbackStyle": "radial-gradient(circle at 25% 30%, #92400e 0 6%, transparent 7%), radial-gradient(circle at 68% 35%, #334155 0 5%, transparent 6%), #f8fafc",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["flock_decorative"],
+      "textures": ["flock_decorative"],
+      "colorFamilies": ["individual"],
+      "finishes": ["velatura"]
+    },
+    {
+      "id": "author_stencil",
+      "label": "Авторская / трафаретная техника",
+      "level": "premium",
+      "preview": {
+        "asset": "/assets/repair-coverings/walls/plaster/author-stencil/preview.webp",
+        "fallbackStyle": "repeating-linear-gradient(45deg, #f8fafc 0 8px, #d6d3d1 8px 10px, #ffffff 10px 18px)",
+        "sourceUrl": "https://settef.ru/catalog/"
+      },
+      "systems": ["stencil_author"],
+      "textures": ["stencil_relief"],
+      "colorFamilies": ["individual", "mineral_light", "metal_effects"],
+      "finishes": ["velatura"]
+    }
+  ],
+  "systems": {
+    "marmorino_carrara": "Система: Marmorino Carrara / каррарский мрамор",
+    "mineral_lime_base": "Система: минеральная известковая база",
+    "venetian_smooth": "Система: гладкая венецианская техника",
+    "encausto_granite": "Система: энкаусто / гранитная глубина",
+    "travertino_veins": "Система: травертин с прожилками",
+    "decorative_concrete": "Система: декоративный бетон / loft",
+    "damasco_silk": "Система: Damasco / мокрый шелк",
+    "cristallo_pearl": "Система: Cristallo / перламутровый шелк",
+    "world_map": "Система: карта мира / островная фактура",
+    "sabbia_shimmer": "Система: Sabbia / песчаное мерцание",
+    "metalline_bronze_argento": "Система: Metalline Bronzo / Argento",
+    "flock_decorative": "Система: флоковое декоративное покрытие",
+    "stencil_author": "Система: трафарет / авторский рисунок"
+  },
+  "textures": {
+    "marble_gloss": "Фактура: гладкий мраморный глянец",
+    "mineral_satin": "Фактура: сатиновая минеральная",
+    "granite_depth": "Фактура: гранитная глубина",
+    "travertine_horizontal": "Фактура: травертин с горизонтальными прожилками",
+    "travertine_vertical": "Фактура: травертин с вертикальными прожилками",
+    "fine_concrete": "Фактура: мелкозернистый бетон",
+    "formwork_concrete": "Фактура: опалубочный бетон",
+    "soft_silk": "Фактура: мягкий шелковый перелив",
+    "pearl_silk": "Фактура: перламутровый шелк",
+    "world_map_fine": "Фактура: карта мира мелкая",
+    "world_map_large": "Фактура: карта мира крупная",
+    "sand_shimmer": "Фактура: песчаная с мерцанием",
+    "metal_smooth": "Фактура: металлизированная гладкая",
+    "metal_brushed": "Фактура: металлизированная брашированная",
+    "flock_decorative": "Фактура: флоковая декоративная",
+    "stencil_relief": "Фактура: трафаретная рельефная"
+  },
+  "finishes": {
+    "none": "Финиш: без дополнительной защиты",
+    "specchio_cera": "Финиш: воск SPECCHIO CERA / глянцевая защита",
+    "velatura": "Финиш: матовая лессировка VELATURA",
+    "umbrella": "Финиш: водоотталкивающая защита UMBRELLA",
+    "metalline": "Финиш: металлизированное покрытие METALLINE"
+  },
+  "colorFamilies": {
+    "mineral_light": {
+      "title": "Минеральные светлые",
+      "colors": [
+        { "label": "Marmorino Bianco Calce", "code": "RAL 9016 ориентир", "style": "linear-gradient(135deg, #fffef7, #f1efe3 46%, #ffffff 48%, #dedbd0)" },
+        { "label": "Marmorino Avorio", "code": "RAL 1013 ориентир", "style": "linear-gradient(135deg, #f6ead0, #fffaf0 44%, #d8c7a2 46%, #f8f1df)" }
+      ]
+    },
+    "travertine_sand": {
+      "title": "Травертин и песок",
+      "colors": [
+        { "label": "Travertino Sabbia", "code": "RAL 1015 ориентир", "style": "repeating-linear-gradient(135deg, #ead7b5 0 8px, #c8aa78 8px 11px, #fff3d8 11px 20px)" },
+        { "label": "Travertino Noce", "code": "RAL 1001 ориентир", "style": "repeating-linear-gradient(135deg, #b98f5d 0 9px, #7c5a38 9px 12px, #dfc098 12px 23px)" }
+      ]
+    },
+    "concrete_loft": {
+      "title": "Бетон и лофт",
+      "colors": [
+        { "label": "Concrete Grigio Chiaro", "code": "RAL 7047 ориентир", "style": "linear-gradient(135deg, #e5e7eb, #b8bec6 45%, #f8fafc 48%, #9ca3af)" },
+        { "label": "Concrete Grigio Medio", "code": "RAL 7044 ориентир", "style": "linear-gradient(135deg, #c9c5b8, #8f8b80 46%, #d6d3c8 48%, #6b7280)" },
+        { "label": "Concrete Antracite", "code": "RAL 7016 ориентир", "style": "linear-gradient(135deg, #4b5563, #111827 52%, #6b7280)" }
+      ]
+    },
+    "silk_pearl": {
+      "title": "Шелк и перламутр",
+      "colors": [
+        { "label": "Seta Champagne", "code": "Seta Champagne", "style": "linear-gradient(135deg, #fff7ed, #f9d9a7 35%, #ffffff 52%, #dbeafe 78%)" },
+        { "label": "Seta Madreperla", "code": "Seta Madreperla", "style": "linear-gradient(135deg, #f8fafc, #f5d0fe 32%, #dbeafe 64%, #ffffff)" }
+      ]
+    },
+    "metal_effects": {
+      "title": "Металлик и спецэффекты",
+      "colors": [
+        { "label": "Sabbia Oro", "code": "Sabbia Oro", "style": "radial-gradient(circle at 24% 28%, #fde68a 0 4%, transparent 5%), radial-gradient(circle at 70% 66%, #f59e0b 0 3%, transparent 4%), linear-gradient(135deg, #e7c781, #8a6a2f)" },
+        { "label": "Metalline Bronzo", "code": "Metalline Bronzo", "style": "linear-gradient(135deg, #3b2416, #b7793f 45%, #f4c27a 48%, #5a2e18)" },
+        { "label": "Metalline Argento", "code": "Metalline Argento", "style": "linear-gradient(135deg, #f8fafc, #94a3b8 42%, #ffffff 48%, #475569)" }
+      ]
+    },
+    "marble_venetian": {
+      "title": "Мрамор и венецианские эффекты",
+      "colors": [
+        { "label": "Settef Imperiale Nero Oro", "code": "Settef Imperiale Nero Oro", "style": "linear-gradient(135deg, #09090b, #1f2937 48%, #d4af37 50%, #6b4f12)" },
+        { "label": "Settef Marmorino Carrara", "code": "Settef Marmorino Carrara", "style": "linear-gradient(135deg, #f8fafc, #e5e7eb 42%, #94a3b8 44%, #ffffff 70%, #cbd5e1)" },
+        { "label": "Encausto Granito Nero", "code": "Encausto Granito Nero", "style": "radial-gradient(circle at 28% 22%, #94a3b8 0 3%, transparent 4%), radial-gradient(circle at 70% 64%, #e5e7eb 0 2%, transparent 3%), linear-gradient(135deg, #111827, #374151)" }
+      ]
+    },
+    "onyx_stone": {
+      "title": "Оникс и камень",
+      "colors": [
+        { "label": "Onice Ambra", "code": "Onice Ambra", "style": "linear-gradient(135deg, #7c2d12, #f59e0b 42%, #fff7ed 45%, #b45309 72%, #431407)" },
+        { "label": "Malachite Deep", "code": "Malachite Deep", "style": "linear-gradient(135deg, #022c22, #059669 35%, #a7f3d0 38%, #065f46 70%, #011f18)" }
+      ]
+    },
+    "deep_dark": {
+      "title": "Глубокие темные",
+      "colors": [
+        { "label": "Nero Profondo", "code": "RAL 9005 ориентир", "style": "linear-gradient(135deg, #09090b, #1f2937)" },
+        { "label": "Antracite", "code": "RAL 7016 ориентир", "style": "linear-gradient(135deg, #374151, #111827)" }
+      ]
+    },
+    "individual": {
+      "title": "Индивидуальная колеровка",
+      "colors": [
+        { "label": "NCS / RAL на выбор", "code": "NCS / RAL", "style": "linear-gradient(135deg, #f59e0b, #22c55e 34%, #38bdf8 67%, #a855f7)" }
+      ]
+    }
+  },
+  "autofillRules": {
+    "budget": { "technique": "travertino", "system": "travertino_veins", "texture": "travertine_horizontal", "finish": "velatura", "colorFamily": "travertine_sand" },
+    "comfort": { "technique": "travertino", "system": "travertino_veins", "texture": "travertine_horizontal", "finish": "velatura", "colorFamily": "travertine_sand" },
+    "business": { "technique": "damasco_silk", "system": "damasco_silk", "texture": "soft_silk", "finish": "velatura", "colorFamily": "silk_pearl" },
+    "premium": { "technique": "marmorino_carrara", "system": "marmorino_carrara", "texture": "marble_gloss", "finish": "specchio_cera", "colorFamily": "marble_venetian" }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vashi-mastera.local/contracts/covering-catalog.contract.json",
+  "title": "Repair covering catalog contract",
+  "type": "object",
+  "required": ["schemaVersion", "category", "coverId", "title", "requiredGroups", "techniques", "systems", "textures", "finishes", "colorFamilies"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "visibility": { "type": "string" },
+    "category": { "type": "string" },
+    "coverId": { "type": "string" },
+    "title": { "type": "string" },
+    "requiredGroups": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "format": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    },
+    "techniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "systems", "textures", "colorFamilies", "finishes"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "level": { "type": "string" },
+          "preview": {
+            "type": "object",
+            "properties": {
+              "asset": { "type": "string" },
+              "fallbackStyle": { "type": "string" },
+              "sourceUrl": { "type": "string" }
+            }
+          },
+          "systems": { "type": "array", "items": { "type": "string" } },
+          "textures": { "type": "array", "items": { "type": "string" } },
+          "colorFamilies": { "type": "array", "items": { "type": "string" } },
+          "finishes": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "systems": { "type": "object", "additionalProperties": { "type": "string" } },
+    "textures": { "type": "object", "additionalProperties": { "type": "string" } },
+    "finishes": { "type": "object", "additionalProperties": { "type": "string" } },
+    "colorFamilies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "colors"],
+        "properties": {
+          "title": { "type": "string" },
+          "colors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "style"],
+              "properties": {
+                "label": { "type": "string" },
+                "code": { "type": "string" },
+                "style": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "autofillRules": { "type": "object" }
+  }
+}

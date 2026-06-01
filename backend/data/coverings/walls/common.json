@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "2026-06-02.1",
+  "visibility": "backend-controlled",
+  "category": "walls",
+  "coverId": "wall.common",
+  "title": "Настенные покрытия",
+  "requiredGroups": [
+    "Формат покрытия",
+    "Класс покрытия",
+    "Тип покрытия",
+    "Система / эффект",
+    "Рисунок / раппорт",
+    "Форма покрытия",
+    "Размер покрытия",
+    "Цветовая гамма",
+    "Фактура",
+    "Защитный финиш",
+    "Финиш профиля",
+    "Способ монтажа / нанесения"
+  ],
+  "optionGroups": [
+    {
+      "group": "Формат покрытия",
+      "options": [
+        { "label": "Формат: нанесение сплошным слоем", "covers": ["paint", "decorative_plaster", "microcement"], "format": "coat" },
+        { "label": "Формат: рулонное покрытие", "covers": ["wallpaper", "photo_wallpaper"], "format": "roll" },
+        { "label": "Формат: обои под покраску", "covers": ["wallpaper"], "format": "wallpaper_paint" },
+        { "label": "Формат: плитка / модуль", "covers": ["tile", "porcelain", "mdf", "gypsum_3d", "stone_veneer", "glass", "mirror"], "format": "tile_module" },
+        { "label": "Формат: крупноформатная плита", "covers": ["porcelain", "gypsum_3d", "glass", "mirror"], "format": "large_tile" },
+        { "label": "Формат: рейки / ламели", "covers": ["slat", "bamboo"], "format": "slat" },
+        { "label": "Формат: листовой гибкий камень", "covers": ["flex_marble", "stone_veneer"], "format": "flex_stone_sheet" },
+        { "label": "Формат: настенный молдинг", "covers": ["molding"], "format": "wall_molding" },
+        { "label": "Формат: декоративная рейка / профиль", "covers": ["molding"], "format": "decor_profile" },
+        { "label": "Формат: рамочная композиция", "covers": ["molding"], "format": "frame_molding" },
+        { "label": "Формат: угловой профиль", "covers": ["molding"], "format": "corner_profile" },
+        { "label": "Формат: каретная стяжка", "covers": ["soft_panel"], "format": "soft_carriage" },
+        { "label": "Формат: мягкие панели простой формы", "covers": ["soft_panel"], "format": "soft_plain" },
+        { "label": "Формат: мягкие панели с декоративными вставками", "covers": ["soft_panel"], "format": "soft_insert" }
+      ]
+    },
+    {
+      "group": "Класс покрытия",
+      "options": [
+        { "label": "Класс: базовая жилая зона", "covers": ["paint", "wallpaper", "photo_wallpaper", "mdf", "gypsum_3d", "soft_panel", "bamboo", "slat"] },
+        { "label": "Класс: моющееся покрытие", "covers": ["paint", "wallpaper", "tile", "porcelain", "glass"] },
+        { "label": "Класс: износостойкое покрытие", "covers": ["paint", "wallpaper", "mdf", "gypsum_3d", "bamboo", "slat", "microcement"] },
+        { "label": "Класс: влагостойкое покрытие", "covers": ["paint", "wallpaper", "tile", "porcelain", "microcement", "glass", "flex_marble"] },
+        { "label": "Класс: антивандальное покрытие", "covers": ["paint", "mdf", "gypsum_3d", "porcelain", "microcement"] },
+        { "label": "Класс: премиальная декоративная отделка", "covers": ["decorative_plaster", "soft_panel", "flex_marble", "stone_veneer", "mirror", "molding"] }
+      ]
+    },
+    {
+      "group": "Тип покрытия",
+      "options": [
+        { "label": "Тип: матовая моющаяся краска", "covers": ["paint"] },
+        { "label": "Тип: глубокоматовая краска", "covers": ["paint"] },
+        { "label": "Тип: влагостойкая краска", "covers": ["paint"] },
+        { "label": "Тип: антивандальная краска", "covers": ["paint"] },
+        { "label": "Тип: флизелиновые обои", "covers": ["wallpaper"] },
+        { "label": "Тип: виниловые моющиеся обои", "covers": ["wallpaper"] },
+        { "label": "Тип: бесшовные фотообои", "covers": ["photo_wallpaper"] },
+        { "label": "Тип: Marmorino Carrara / венецианская штукатурка", "covers": ["decorative_plaster"] },
+        { "label": "Тип: Travertino / травертин", "covers": ["decorative_plaster"] },
+        { "label": "Тип: Декоративный бетон / Loft", "covers": ["decorative_plaster", "microcement"] },
+        { "label": "Тип: микроцемент влагостойкий", "covers": ["microcement"] },
+        { "label": "Тип: матовая поверхность", "covers": ["tile", "porcelain"] },
+        { "label": "Тип: полированная поверхность", "covers": ["tile", "porcelain"] },
+        { "label": "Тип: структурированная поверхность", "covers": ["tile", "porcelain"] },
+        { "label": "Тип: шпонированные панели", "covers": ["mdf"] },
+        { "label": "Тип: окрашенные панели", "covers": ["mdf"] },
+        { "label": "Тип: реечные панели / ламели", "covers": ["slat"] },
+        { "label": "Тип: гипсовые 3D панели под покраску", "covers": ["gypsum_3d"] },
+        { "label": "Тип: мягкие панели с обивкой из велюра", "covers": ["soft_panel"] },
+        { "label": "Тип: мягкие панели с обивкой из экокожи", "covers": ["soft_panel"] },
+        { "label": "Тип: мягкие панели с шумоизоляционной основой", "covers": ["soft_panel"] },
+        { "label": "Тип: бамбуковые панели / ламели", "covers": ["bamboo"] },
+        { "label": "Тип: гибкий мрамор на стену", "covers": ["flex_marble"] },
+        { "label": "Тип: декоративный каменный шпон", "covers": ["stone_veneer"] },
+        { "label": "Тип: закаленное стекло", "covers": ["glass"] },
+        { "label": "Тип: зеркальное полотно", "covers": ["mirror"] },
+        { "label": "Тип: полиуретановый молдинг", "covers": ["molding"] },
+        { "label": "Тип: дюрополимерный профиль", "covers": ["molding"] },
+        { "label": "Тип: гипсовый декоративный профиль", "covers": ["molding"] },
+        { "label": "Тип: деревянный профиль", "covers": ["molding"] },
+        { "label": "Тип: металлический / латунный профиль", "covers": ["molding"] }
+      ]
+    },
+    {
+      "group": "Форма покрытия",
+      "options": [
+        { "label": "Форма: прямоугольная", "formats": ["tile_module", "large_tile", "slat", "flex_stone_sheet", "soft_plain", "soft_insert"] },
+        { "label": "Форма: квадратная", "formats": ["tile_module", "soft_plain", "soft_carriage"] },
+        { "label": "Форма: фигурная", "formats": ["tile_module", "soft_insert"] },
+        { "label": "Форма: прямой профиль", "covers": ["molding"], "formats": ["wall_molding", "decor_profile", "corner_profile"] },
+        { "label": "Форма: радиусный / гибкий профиль", "covers": ["molding"], "formats": ["wall_molding", "decor_profile"] },
+        { "label": "Форма: рамочная раскладка", "covers": ["molding"], "formats": ["frame_molding"] }
+      ]
+    },
+    {
+      "group": "Система / эффект",
+      "options": [
+        { "label": "Система: гладкая венецианская техника", "covers": ["decorative_plaster"] },
+        { "label": "Система: травертин с прожилками", "covers": ["decorative_plaster"] },
+        { "label": "Система: декоративный бетон / loft", "covers": ["decorative_plaster", "microcement"] },
+        { "label": "Система: мокрый шелк / перламутровый эффект", "covers": ["decorative_plaster"] }
+      ]
+    },
+    {
+      "group": "Рисунок / раппорт",
+      "options": [
+        { "label": "Раппорт: без подгонки рисунка", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Раппорт: свободная стыковка / мелкий рисунок", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Раппорт: подгонка рисунка до 32 см", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Раппорт: подгонка рисунка до 64 см", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Раппорт: крупный рисунок / панно", "covers": ["wallpaper", "photo_wallpaper"] }
+      ]
+    },
+    {
+      "group": "Размер покрытия",
+      "options": [
+        { "label": "Размер: стандартный рулон 0.53 x 10.05 м", "covers": ["wallpaper", "photo_wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: широкий рулон 1.06 x 10.05 м", "covers": ["wallpaper", "photo_wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: виниловый рулон 0.53 x 15 м", "covers": ["wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: длинный флизелиновый рулон 1.06 x 25 м", "covers": ["wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: профессиональные обои 1.43 x 10.05 м", "covers": ["wallpaper", "photo_wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: художественный рулон 2.00 x 30 м", "covers": ["photo_wallpaper"], "formats": ["roll"] },
+        { "label": "Размер: свой размер обоев", "covers": ["wallpaper", "photo_wallpaper"], "formats": ["roll", "wallpaper_paint"] },
+        { "label": "Размер: стандартный формат", "formats": ["tile_module", "flex_stone_sheet", "soft_plain", "soft_carriage", "soft_insert"] },
+        { "label": "Размер: крупный формат", "formats": ["large_tile", "tile_module", "soft_plain", "soft_insert"] },
+        { "label": "Размер: узкая рейка / ламель", "formats": ["slat"] },
+        { "label": "Размер: узкий профиль", "covers": ["molding"], "formats": ["wall_molding", "decor_profile", "frame_molding", "corner_profile"] },
+        { "label": "Размер: средний профиль", "covers": ["molding"], "formats": ["wall_molding", "decor_profile", "frame_molding", "corner_profile"] },
+        { "label": "Размер: широкий профиль", "covers": ["molding"], "formats": ["wall_molding", "decor_profile", "frame_molding", "corner_profile"] },
+        { "label": "Размер: свой размер элемента", "formats": ["tile_module", "large_tile", "slat", "flex_stone_sheet", "soft_plain", "soft_carriage", "soft_insert"] }
+      ]
+    },
+    {
+      "group": "Цветовая гамма",
+      "options": [
+        { "label": "Цвет: белый теплый · RAL 9010" },
+        { "label": "Цвет: белый холодный · RAL 9003" },
+        { "label": "Цвет: кремовый · RAL 1013" },
+        { "label": "Цвет: светлый серо-бежевый · RAL 7044" },
+        { "label": "Цвет: графитовый · RAL 7021" },
+        { "label": "Цвет: глубокий черный · RAL 9005" },
+        { "label": "Цвет: натуральный дуб · NCS S 3020-Y20R ориентир", "covers": ["mdf", "slat", "bamboo", "molding"] },
+        { "label": "Цвет: натуральный бамбук · Bamboo Natural", "covers": ["bamboo"] },
+        { "label": "Цвет: теплый травертин · RAL 1015 ориентир", "covers": ["decorative_plaster", "flex_marble", "stone_veneer"] },
+        { "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" }
+      ]
+    },
+    {
+      "group": "Фактура",
+      "options": [
+        { "label": "Фактура: гладкая матовая", "covers": ["paint", "wallpaper", "photo_wallpaper", "mdf", "gypsum_3d"] },
+        { "label": "Фактура: сатиновая", "covers": ["paint", "decorative_plaster", "microcement"] },
+        { "label": "Фактура: рельефная 3D", "covers": ["gypsum_3d", "soft_panel"] },
+        { "label": "Фактура: тканевая мягкая", "covers": ["soft_panel"] },
+        { "label": "Фактура: кожаная мягкая", "covers": ["soft_panel"] },
+        { "label": "Фактура: каменная прожилка", "covers": ["flex_marble", "stone_veneer", "porcelain", "tile"] },
+        { "label": "Фактура: древесная", "covers": ["mdf", "slat", "bamboo", "molding"] },
+        { "label": "Фактура: зеркальная / глянцевая", "covers": ["mirror", "glass", "porcelain", "tile"] }
+      ]
+    },
+    {
+      "group": "Защитный финиш",
+      "options": [
+        { "label": "Финиш: без дополнительной защиты", "covers": ["paint", "wallpaper", "photo_wallpaper", "mdf", "slat", "bamboo", "gypsum_3d"] },
+        { "label": "Финиш: матовый защитный лак", "covers": ["decorative_plaster", "microcement", "gypsum_3d", "mdf"] },
+        { "label": "Финиш: водоотталкивающая защита", "covers": ["decorative_plaster", "microcement", "tile", "porcelain", "flex_marble", "stone_veneer"] },
+        { "label": "Финиш: защитный воск", "covers": ["tile", "porcelain", "decorative_plaster"] },
+        { "label": "Финиш: закаленная / безопасная поверхность", "covers": ["glass", "mirror"] }
+      ]
+    },
+    {
+      "group": "Финиш профиля",
+      "options": [
+        { "label": "Финиш профиля: под окраску", "covers": ["molding"] },
+        { "label": "Финиш профиля: окрашенный в цвет стены", "covers": ["molding"] },
+        { "label": "Финиш профиля: контрастный матовый", "covers": ["molding"] },
+        { "label": "Финиш профиля: металл / латунь", "covers": ["molding"] }
+      ]
+    },
+    {
+      "group": "Способ монтажа / нанесения",
+      "options": [
+        { "label": "Нанесение краски валиком / распылением", "covers": ["paint"] },
+        { "label": "Поклейка обоев без подгонки рисунка", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Поклейка обоев с подгонкой рисунка", "covers": ["wallpaper", "photo_wallpaper"] },
+        { "label": "Нанесение декоративной техники", "covers": ["decorative_plaster"] },
+        { "label": "Нанесение микроцемента с защитным финишем", "covers": ["microcement"] },
+        { "label": "Монтаж плитки / модулей на клей", "covers": ["tile", "porcelain", "gypsum_3d", "flex_marble", "stone_veneer"] },
+        { "label": "Монтаж панелей на подсистему / кляймеры", "covers": ["mdf", "slat", "bamboo"] },
+        { "label": "Монтаж мягких панелей на подготовленное основание", "covers": ["soft_panel"] },
+        { "label": "Монтаж стеклянных / зеркальных панелей с безопасным креплением", "covers": ["glass", "mirror"] },
+        { "label": "Монтаж молдингов / профилей по разметке", "covers": ["molding"] }
+      ]
+    }
+  ],
+  "autofillRules": {
+    "paint": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: нанесение сплошным слоем" },
+        { "group": "Класс покрытия", "label": "Класс: моющееся покрытие" },
+        { "group": "Тип покрытия", "label": "Тип: матовая моющаяся краска" },
+        { "group": "Цветовая гамма", "label": "Цвет: белый теплый · RAL 9010" },
+        { "group": "Фактура", "label": "Фактура: гладкая матовая" },
+        { "group": "Защитный финиш", "label": "Финиш: без дополнительной защиты" },
+        { "group": "Способ монтажа / нанесения", "label": "Нанесение краски валиком / распылением" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: нанесение сплошным слоем" },
+        { "group": "Класс покрытия", "label": "Класс: антивандальное покрытие" },
+        { "group": "Тип покрытия", "label": "Тип: глубокоматовая краска" },
+        { "group": "Цветовая гамма", "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" },
+        { "group": "Фактура", "label": "Фактура: гладкая матовая" },
+        { "group": "Защитный финиш", "label": "Финиш: без дополнительной защиты" },
+        { "group": "Способ монтажа / нанесения", "label": "Нанесение краски валиком / распылением" }
+      ]
+    },
+    "wallpaper": {
+      "comfort": [
+        { "group": "Формат покрытия", "label": "Формат: рулонное покрытие" },
+        { "group": "Класс покрытия", "label": "Класс: моющееся покрытие" },
+        { "group": "Тип покрытия", "label": "Тип: флизелиновые обои" },
+        { "group": "Рисунок / раппорт", "label": "Раппорт: без подгонки рисунка" },
+        { "group": "Размер покрытия", "label": "Размер: широкий рулон 1.06 x 10.05 м" },
+        { "group": "Цветовая гамма", "label": "Цвет: кремовый · RAL 1013" },
+        { "group": "Фактура", "label": "Фактура: гладкая матовая" },
+        { "group": "Способ монтажа / нанесения", "label": "Поклейка обоев без подгонки рисунка" }
+      ]
+    },
+    "decorative_plaster": {
+      "business": [
+        { "group": "Формат покрытия", "label": "Формат: нанесение сплошным слоем" },
+        { "group": "Класс покрытия", "label": "Класс: премиальная декоративная отделка" },
+        { "group": "Тип покрытия", "label": "Тип: Декоративный бетон / Loft" },
+        { "group": "Система / эффект", "label": "Система: декоративный бетон / loft" },
+        { "group": "Цветовая гамма", "label": "Цвет: светлый серо-бежевый · RAL 7044" },
+        { "group": "Фактура", "label": "Фактура: сатиновая" },
+        { "group": "Защитный финиш", "label": "Финиш: водоотталкивающая защита" },
+        { "group": "Способ монтажа / нанесения", "label": "Нанесение декоративной техники" }
+      ],
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: нанесение сплошным слоем" },
+        { "group": "Класс покрытия", "label": "Класс: премиальная декоративная отделка" },
+        { "group": "Тип покрытия", "label": "Тип: Marmorino Carrara / венецианская штукатурка" },
+        { "group": "Система / эффект", "label": "Система: гладкая венецианская техника" },
+        { "group": "Цветовая гамма", "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" },
+        { "group": "Фактура", "label": "Фактура: сатиновая" },
+        { "group": "Защитный финиш", "label": "Финиш: защитный воск" },
+        { "group": "Способ монтажа / нанесения", "label": "Нанесение декоративной техники" }
+      ]
+    },
+    "gypsum_3d": {
+      "business": [
+        { "group": "Формат покрытия", "label": "Формат: плитка / модуль" },
+        { "group": "Класс покрытия", "label": "Класс: износостойкое покрытие" },
+        { "group": "Тип покрытия", "label": "Тип: гипсовые 3D панели под покраску" },
+        { "group": "Форма покрытия", "label": "Форма: прямоугольная" },
+        { "group": "Размер покрытия", "label": "Размер: стандартный формат" },
+        { "group": "Цветовая гамма", "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" },
+        { "group": "Фактура", "label": "Фактура: рельефная 3D" },
+        { "group": "Защитный финиш", "label": "Финиш: матовый защитный лак" },
+        { "group": "Способ монтажа / нанесения", "label": "Монтаж плитки / модулей на клей" }
+      ]
+    },
+    "molding": {
+      "premium": [
+        { "group": "Формат покрытия", "label": "Формат: рамочная композиция" },
+        { "group": "Класс покрытия", "label": "Класс: премиальная декоративная отделка" },
+        { "group": "Тип покрытия", "label": "Тип: дюрополимерный профиль" },
+        { "group": "Форма покрытия", "label": "Форма: рамочная раскладка" },
+        { "group": "Размер покрытия", "label": "Размер: средний профиль" },
+        { "group": "Цветовая гамма", "label": "Цвет: индивидуальный оттенок · NCS / RAL на выбор" },
+        { "group": "Фактура", "label": "Фактура: гладкая матовая" },
+        { "group": "Финиш профиля", "label": "Финиш профиля: под окраску" },
+        { "group": "Способ монтажа / нанесения", "label": "Монтаж молдингов / профилей по разметке" }
+      ]
+    }
+  }
+}

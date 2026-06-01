@@ -1,0 +1,1428 @@
+[2026-03-22 14:31:25] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 14:31:25] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-22 14:31:25] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Капитальный ремонт","comment":"test","date":"22.03.2026, 14:31:25","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 14:31:25] SMTP: Credentials not configured
+--------------------------------------------------
+[2026-03-22 14:48:32] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 14:48:32] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-22 14:48:32] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-22 14:48:32] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"test","date":"22.03.2026, 14:48:31","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 14:48:32] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-22 14:48:32] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 14:48:32] SMTP greeting
+220 mail-nwsmtp-smtp-production-canary-88.sas.yp-c.yandex.net Ok 1774180112-WmPOvARG9Ko0
+--------------------------------------------------
+[2026-03-22 14:48:32] EHLO response
+250-mail-nwsmtp-smtp-production-canary-88.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 14:48:32] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 14:48:32] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 14:48:32] Password response
+235 2.7.0 Authentication successful. 1774180112-Wm
+--------------------------------------------------
+[2026-03-22 14:54:39] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 14:54:39] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-22 14:54:39] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-22 14:54:39] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"test","date":"22.03.2026, 14:54:38","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 14:54:39] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-22 14:54:39] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 14:54:39] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net Ok 1774180479-dsPxY8RG1W20
+--------------------------------------------------
+[2026-03-22 14:54:39] EHLO response
+250-mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 14:54:39] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 14:54:39] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 14:54:39] Password response
+235 2.7.0 Authentication successful. 1774180479-ds
+--------------------------------------------------
+[2026-03-22 14:54:39] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net 1774180479-dsPxY8RG1
+--------------------------------------------------
+[2026-03-22 14:54:39] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-22 14:54:39] Sending to Telegram...
+--------------------------------------------------
+[2026-03-22 14:54:39] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:11] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:11] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:11] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:11] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:11","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:11] SMTP: Credentials not configured properly
+Array
+(
+    [username_empty] => 1
+    [password_empty] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:18] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:18] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:18] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:18] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:17","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:18] SMTP: Credentials not configured properly
+Array
+(
+    [username_empty] => 1
+    [password_empty] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:19] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:19] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:19] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:19] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:19","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:19] SMTP: Credentials not configured properly
+Array
+(
+    [username_empty] => 1
+    [password_empty] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:20] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:20] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:20] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:20] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:20","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:21] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:21] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:21] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:21] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:20","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:21] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:21] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:21] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:21] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:21","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:22] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:22] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:22] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:22] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:21","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:22] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:22] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:22] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:22] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:22","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:22] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:22] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:22] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:22] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:22","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:23] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:23] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:23] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:23] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:22","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:23] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:23] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:23] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:23] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"все хорошо","date":"22.03.2026, 17:30:22","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:46] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:46] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:46] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:46] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"вашимастера","date":"22.03.2026, 17:30:45","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:30:46] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:30:46] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:30:46] ENV check
+Array
+(
+    [SMTP_HOST] => NOT SET
+    [SMTP_USERNAME] => NOT SET
+    [TELEGRAM_BOT_TOKEN] => NOT SET
+)
+
+--------------------------------------------------
+[2026-03-22 17:30:46] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"Косметический ремонт","comment":"вашимастера","date":"22.03.2026, 17:30:46","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:32:52] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:32:52] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:32:52] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-22 17:32:52] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"тест","date":"22.03.2026, 17:32:52","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:32:52] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-22 17:32:52] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 17:32:53] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-74.sas.yp-c.yandex.net Ok 1774189972-qWSrQFSH3Gk0
+--------------------------------------------------
+[2026-03-22 17:32:53] EHLO response
+250-mail-nwsmtp-smtp-production-main-74.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 17:32:53] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 17:32:53] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 17:32:53] Password response
+235 2.7.0 Authentication successful. 1774189973-qW
+--------------------------------------------------
+[2026-03-22 17:32:53] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-74.sas.yp-c.yandex.net 1774189973-qWSrQFSH3
+--------------------------------------------------
+[2026-03-22 17:32:53] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-22 17:32:53] Sending to Telegram...
+--------------------------------------------------
+[2026-03-22 17:32:53] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 17:34:22] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 17:34:22] IP: 157.173.25.89
+--------------------------------------------------
+[2026-03-22 17:34:22] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-22 17:34:22] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"Косметический ремонт","comment":"тест","date":"22.03.2026, 17:34:21","url":"https://xn--80aaafrq2a8ahk5d.xn--p1acf/","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 YaBrowser/26.3.0.0 Safari/537.36"}
+--------------------------------------------------
+[2026-03-22 17:34:22] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-22 17:34:22] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 17:34:22] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net Ok 1774190062-MYS1cNOGCSw0
+--------------------------------------------------
+[2026-03-22 17:34:22] EHLO response
+250-mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 17:34:22] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 17:34:22] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 17:34:22] Password response
+235 2.7.0 Authentication successful. 1774190062-MY
+--------------------------------------------------
+[2026-03-22 17:34:22] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-74.iva.yp-c.yandex.net 1774190062-MYS1cNOGC
+--------------------------------------------------
+[2026-03-22 17:34:22] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-22 17:34:22] Sending to Telegram...
+--------------------------------------------------
+[2026-03-22 17:34:22] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-22 19:13:23] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-22 19:13:23] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-22 19:13:23] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-22 19:13:23] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"22.03.2026, 19:13:23"}
+--------------------------------------------------
+[2026-03-22 19:13:23] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-22 19:13:23] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-22 19:13:23] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-84.vla.yp-c.yandex.net Ok 1774196003-NDUd9lUG10U0
+--------------------------------------------------
+[2026-03-22 19:13:23] EHLO response
+250-mail-nwsmtp-smtp-production-main-84.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-22 19:13:23] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-22 19:13:23] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-22 19:13:23] Password response
+235 2.7.0 Authentication successful. 1774196003-ND
+--------------------------------------------------
+[2026-03-22 19:13:23] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-84.vla.yp-c.yandex.net 1774196003-NDUd9lUG1
+--------------------------------------------------
+[2026-03-22 19:13:23] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-22 19:13:23] Sending to Telegram...
+--------------------------------------------------
+[2026-03-22 19:13:24] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 00:24:35] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 00:24:35] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-23 00:24:35] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 00:24:35] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 00:24:35"}
+--------------------------------------------------
+[2026-03-23 00:24:35] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 00:24:35] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 00:24:36] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-74.vla.yp-c.yandex.net Ok 1774214676-ZOZ0taXG2iE0
+--------------------------------------------------
+[2026-03-23 00:24:36] EHLO response
+250-mail-nwsmtp-smtp-production-main-74.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 00:24:36] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 00:24:36] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 00:24:36] Password response
+235 2.7.0 Authentication successful. 1774214676-ZO
+--------------------------------------------------
+[2026-03-23 00:24:36] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-74.vla.yp-c.yandex.net 1774214676-ZOZ0taXG2
+--------------------------------------------------
+[2026-03-23 00:24:36] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 00:24:36] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 00:24:36] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 01:19:22] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 01:19:22] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 01:19:22] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 01:19:22] RAW INPUT
+{"name":"Петр","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 01:19:21"}
+--------------------------------------------------
+[2026-03-23 01:19:22] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 01:19:22] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 01:19:22] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-89.sas.yp-c.yandex.net Ok 1774217962-MJadk4WG2Os0
+--------------------------------------------------
+[2026-03-23 01:19:22] EHLO response
+250-mail-nwsmtp-smtp-production-main-89.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 01:19:22] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 01:19:22] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 01:19:22] Password response
+235 2.7.0 Authentication successful. 1774217962-MJ
+--------------------------------------------------
+[2026-03-23 01:19:22] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-89.sas.yp-c.yandex.net 1774217962-MJadk4WG2
+--------------------------------------------------
+[2026-03-23 01:19:22] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 01:19:22] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 01:19:23] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 02:14:41] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 02:14:41] IP: 46.138.46.253
+--------------------------------------------------
+[2026-03-23 02:14:41] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 02:14:41] RAW INPUT
+{"name":"Иван","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 02:14:40"}
+--------------------------------------------------
+[2026-03-23 02:14:41] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 02:14:41] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 02:14:41] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-97.vla.yp-c.yandex.net Ok 1774221281-fEb4nCYH4eA0
+--------------------------------------------------
+[2026-03-23 02:14:41] EHLO response
+250-mail-nwsmtp-smtp-production-main-97.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 02:14:41] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 02:14:41] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 02:14:41] Password response
+235 2.7.0 Authentication successful. 1774221281-fE
+--------------------------------------------------
+[2026-03-23 02:14:41] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-97.vla.yp-c.yandex.net 1774221281-fEb4nCYH4
+--------------------------------------------------
+[2026-03-23 02:14:41] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 02:14:41] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 02:14:42] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 02:16:33] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 02:16:33] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 02:16:33] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 02:16:33] RAW INPUT
+{"name":"Dmitry","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 02:16:32"}
+--------------------------------------------------
+[2026-03-23 02:16:33] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 02:16:33] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 02:16:33] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net Ok 1774221393-XGbH8EWGaKo0
+--------------------------------------------------
+[2026-03-23 02:16:33] EHLO response
+250-mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 02:16:33] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 02:16:33] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 02:16:33] Password response
+235 2.7.0 Authentication successful. 1774221393-XG
+--------------------------------------------------
+[2026-03-23 02:16:34] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net 1774221394-XGbH8EWGa
+--------------------------------------------------
+[2026-03-23 02:16:34] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 02:16:34] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 02:16:34] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 03:03:29] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 03:03:29] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 03:03:29] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 03:03:29] RAW INPUT
+{"name":"Dmiпетр","phone":"+7 (985) 123-45-08","service":"","calcData":"","date":"23.03.2026, 03:03:29"}
+--------------------------------------------------
+[2026-03-23 03:03:29] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 03:03:29] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 03:03:30] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net Ok 1774224210-U3FqGGXGB0U0
+--------------------------------------------------
+[2026-03-23 03:03:30] EHLO response
+250-mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 03:03:30] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 03:03:30] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 03:03:30] Password response
+235 2.7.0 Authentication successful. 1774224210-U3
+--------------------------------------------------
+[2026-03-23 03:03:30] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-57.sas.yp-c.yandex.net 1774224210-U3FqGGXGB
+--------------------------------------------------
+[2026-03-23 03:03:30] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 03:03:30] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 03:03:30] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 03:12:36] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 03:12:36] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 03:12:36] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 03:12:36] RAW INPUT
+{"name":"Петр","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 03:12:35"}
+--------------------------------------------------
+[2026-03-23 03:12:36] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 03:12:36] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 03:12:36] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-73.iva.yp-c.yandex.net Ok 1774224756-aCFdAYSG4Sw0
+--------------------------------------------------
+[2026-03-23 03:12:36] EHLO response
+250-mail-nwsmtp-smtp-production-main-73.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 03:12:36] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 03:12:36] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 03:12:36] Password response
+235 2.7.0 Authentication successful. 1774224756-aC
+--------------------------------------------------
+[2026-03-23 03:12:36] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-73.iva.yp-c.yandex.net 1774224756-aCFdAYSG4
+--------------------------------------------------
+[2026-03-23 03:12:36] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 03:12:36] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 03:12:36] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 04:18:38] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 04:18:38] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 04:18:38] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 04:18:38] RAW INPUT
+{"name":"Петр","phone":"+7 (985) 123-45-08","service":"","calcData":"","date":"23.03.2026, 04:18:37"}
+--------------------------------------------------
+[2026-03-23 04:18:38] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 04:18:38] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 04:18:38] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net Ok 1774228718-cIGIDSTGIuQ0
+--------------------------------------------------
+[2026-03-23 04:18:38] EHLO response
+250-mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 04:18:38] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 04:18:38] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 04:18:38] Password response
+235 2.7.0 Authentication successful. 1774228718-cI
+--------------------------------------------------
+[2026-03-23 04:18:38] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-59.iva.yp-c.yandex.net 1774228718-cIGIDSTGI
+--------------------------------------------------
+[2026-03-23 04:18:38] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 04:18:38] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 04:18:38] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 13:35:03] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 13:35:03] IP: 213.87.162.223
+--------------------------------------------------
+[2026-03-23 13:35:03] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 13:35:03] RAW INPUT
+{"name":"Петр","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"23.03.2026, 13:35:03"}
+--------------------------------------------------
+[2026-03-23 13:35:03] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 13:35:03] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 13:35:03] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-55.sas.yp-c.yandex.net Ok 1774262103-3ZPRr33GveA0
+--------------------------------------------------
+[2026-03-23 13:35:03] EHLO response
+250-mail-nwsmtp-smtp-production-main-55.sas.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 13:35:03] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 13:35:03] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 13:35:03] Password response
+235 2.7.0 Authentication successful. 1774262103-3Z
+--------------------------------------------------
+[2026-03-23 13:35:04] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-55.sas.yp-c.yandex.net 1774262104-3ZPRr33Gv
+--------------------------------------------------
+[2026-03-23 13:35:04] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 13:35:04] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 13:35:04] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-23 15:05:26] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-23 15:05:26] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-23 15:05:26] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-23 15:05:26] RAW INPUT
+{"name":"Dmitry","phone":"+7 (985) 123-45-08","service":"Комфорт","calcData":"","date":"23.03.2026, 15:05:25"}
+--------------------------------------------------
+[2026-03-23 15:05:26] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-23 15:05:26] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-23 15:05:26] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net Ok 1774267526-Q5R47m3GgW20
+--------------------------------------------------
+[2026-03-23 15:05:26] EHLO response
+250-mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-23 15:05:26] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-23 15:05:26] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-23 15:05:26] Password response
+235 2.7.0 Authentication successful. 1774267526-Q5
+--------------------------------------------------
+[2026-03-23 15:05:28] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-72.klg.yp-c.yandex.net 1774267528-Q5R47m3Gg
+--------------------------------------------------
+[2026-03-23 15:05:28] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-23 15:05:28] Sending to Telegram...
+--------------------------------------------------
+[2026-03-23 15:05:28] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-24 18:08:35] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-24 18:08:35] IP: 194.110.207.211
+--------------------------------------------------
+[2026-03-24 18:08:35] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-24 18:08:35] RAW INPUT
+{"name":"Петр","phone":"+7 (985) 123-45-08","service":"","calcData":"","date":"24.03.2026, 18:08:35"}
+--------------------------------------------------
+[2026-03-24 18:08:35] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-24 18:08:35] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-24 18:08:35] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-55.vla.yp-c.yandex.net Ok 1774364915-Z8VwQRKGOKo0
+--------------------------------------------------
+[2026-03-24 18:08:35] EHLO response
+250-mail-nwsmtp-smtp-production-main-55.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-24 18:08:35] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-24 18:08:35] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-24 18:08:35] Password response
+235 2.7.0 Authentication successful. 1774364915-Z8
+--------------------------------------------------
+[2026-03-24 18:08:36] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-55.vla.yp-c.yandex.net 1774364916-Z8VwQRKGO
+--------------------------------------------------
+[2026-03-24 18:08:36] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-24 18:08:36] Sending to Telegram...
+--------------------------------------------------
+[2026-03-24 18:08:36] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-25 02:06:52] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-25 02:06:52] IP: 46.138.47.76
+--------------------------------------------------
+[2026-03-25 02:06:52] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-25 02:06:52] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-77","service":"","calcData":"","date":"25.03.2026, 02:06:52"}
+--------------------------------------------------
+[2026-03-25 02:06:52] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-25 02:06:52] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-25 02:06:52] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-84.klg.yp-c.yandex.net Ok 1774393612-q6dwpSNGriE0
+--------------------------------------------------
+[2026-03-25 02:06:52] EHLO response
+250-mail-nwsmtp-smtp-production-main-84.klg.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-25 02:06:52] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-25 02:06:52] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-25 02:06:52] Password response
+235 2.7.0 Authentication successful. 1774393612-q6
+--------------------------------------------------
+[2026-03-25 02:06:52] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-84.klg.yp-c.yandex.net 1774393612-q6dwpSNGr
+--------------------------------------------------
+[2026-03-25 02:06:52] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-25 02:06:52] Sending to Telegram...
+--------------------------------------------------
+[2026-03-25 02:06:52] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------
+[2026-03-30 18:16:57] === NEW REQUEST ===
+--------------------------------------------------
+[2026-03-30 18:16:57] IP: 64.253.89.2
+--------------------------------------------------
+[2026-03-30 18:16:57] ENV check
+Array
+(
+    [SMTP_HOST] => smtp.yandex.ru
+    [SMTP_USERNAME] => blagocreator@yandex.ru
+    [TELEGRAM_BOT_TOKEN] => SET (hidden)
+)
+
+--------------------------------------------------
+[2026-03-30 18:16:57] RAW INPUT
+{"name":"Дмитрий","phone":"+7 (985) 123-45-08","service":"","calcData":"","date":"30.03.2026, 18:16:55"}
+--------------------------------------------------
+[2026-03-30 18:16:57] SMTP Config loaded
+Array
+(
+    [host] => smtp.yandex.ru
+    [port] => 465
+    [username] => blagocreator@yandex.ru
+    [to] => dmitry.fedishin@yandex.ru
+)
+
+--------------------------------------------------
+[2026-03-30 18:16:57] Connecting to SMTP
+smtp.yandex.ru:465
+--------------------------------------------------
+[2026-03-30 18:16:57] SMTP greeting
+220 mail-nwsmtp-smtp-production-main-94.vla.yp-c.yandex.net Ok 1774883817-vGbn6A1HnCg0
+--------------------------------------------------
+[2026-03-30 18:16:57] EHLO response
+250-mail-nwsmtp-smtp-production-main-94.vla.yp-c.yandex.net
+250-8BITMIME
+250-PIPELINING
+250-SIZE 53477376
+250-STARTTLS
+250-AUTH LOGIN PLAIN XOAUTH2
+250-DSN
+250 ENHANCEDSTATUSCODES
+--------------------------------------------------
+[2026-03-30 18:16:57] AUTH LOGIN
+334 VXNlcm5hbWU6
+--------------------------------------------------
+[2026-03-30 18:16:57] Username response
+334 UGFzc3dvcmQ6
+--------------------------------------------------
+[2026-03-30 18:16:57] Password response
+235 2.7.0 Authentication successful. 1774883817-vG
+--------------------------------------------------
+[2026-03-30 18:16:57] DATA sent
+250 2.0.0 Ok: queued on mail-nwsmtp-smtp-production-main-94.vla.yp-c.yandex.net 1774883817-vGbn6A1Hn
+--------------------------------------------------
+[2026-03-30 18:16:57] SMTP RESULT
+Array
+(
+    [success] => 1
+    [message] => Email sent successfully
+)
+
+--------------------------------------------------
+[2026-03-30 18:16:57] Sending to Telegram...
+--------------------------------------------------
+[2026-03-30 18:16:57] Telegram result
+Array
+(
+    [success] => 1
+)
+
+--------------------------------------------------

@@ -1,0 +1,19 @@
+[22-Mar-2026 14:48:32 Europe/Moscow] PHP Fatal error:  Uncaught TypeError: md5(): Argument #1 ($string) must be of type string, int given in /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/send-mail.php:322
+Stack trace:
+#0 /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/send-mail.php(322): md5(1774180112)
+#1 /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/send-mail.php(213): sendViaSMTP(Array, '\xD0\x98\xD0\xB2\xD0\xB0\xD0\xBD', '+7 (985) 123-45...', '\xD0\x9A\xD0\xBE\xD1\x81\xD0\xBC\xD0\xB5\xD1\x82\xD0\xB8\xD1...', 'test', '22.03.2026, 14:...', '46.138.46.253', 'Mozilla/5.0 (Wi...')
+#2 {main}
+  thrown in /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/send-mail.php on line 322
+[22-Mar-2026 17:30:11 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:18 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:19 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:20 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:21 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:21 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:22 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:22 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:22 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:23 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:23 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:46 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
+[22-Mar-2026 17:30:46 Europe/Moscow] ENV file not found: /var/www/cl453951/data/www/xn--80aaafrq2a8ahk5d.xn--p1acf/.env
