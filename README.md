@@ -34,6 +34,7 @@
 - **[PROJECT_STATUS.md](./PROJECT_STATUS.md)** — Текущий статус проекта
 - **[ROADMAP.md](./ROADMAP.md)** — План развития проекта
 - **[QUALITY.md](./QUALITY.md)** — Оценка качества кода
+- **[SITE_AUDIT_REPORT.md](./SITE_AUDIT_REPORT.md)** — Аудит сайта: выявленные слабые стороны и план действий
 
 ### История изменений
 - **[CHANGELOG_REFERENCE_PRICE_LIST.md](./CHANGELOG_REFERENCE_PRICE_LIST.md)** — История изменений прайс-листа
